@@ -1,0 +1,47 @@
+{
+  "name": "James Davis",
+  "email": "james.louis.davis@outlook.com",
+  "title": "Senior Full Stack Engineer",
+  "location": "1894 Market Street, Suite 210, San Francisco, California",
+  "linkedin": "https://www.linkedin.com/in/james-davis-diboll",
+  "github": "https://github.com/magnuspinus",
+  "postalCode": "75902",
+  "phone": "+1 (936) 305‑7741",
+  "education": [
+    {
+      "degree": "Master of Science in Computer Science",
+      "school": "The College of Saint Rose, Albany, NY",
+      "start_year": "Aug 2015",
+      "end_year": "May 2017"
+    },
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "The College of Saint Rose, Albany, NY",
+      "start_year": "Aug 2013",
+      "end_year": "May 2017"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Guidehouse",
+      "title": "Senior Software Developer",
+      "start_date": "Aug 2022",
+      "end_date": "Oct 2025",
+      "location": ""
+    },
+    {
+      "company": "Boltive",
+      "title": "Software Engineer",
+      "start_date": "Jun 2018",
+      "end_date": "Jun 2022",
+      "location": ""
+    },
+    {
+      "company": "Google",
+      "title": "Software Developer",
+      "start_date": "July 2017",
+      "end_date": "Mar 2018",
+      "location": ""
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+    "name": "Vinay Matoori",
+    "email": "vinay.matoori@outlook.com",
+    "title": "Software Engineer",
+    "location": "710 Ferree St, Coraopolis, Pennsylvania, United States",
+    "postalCode": "15108",
+    "phone": "+1 213 723 0618",
+    "linkedin": "https://www.linkedin.com/in/vinay-kumar-matoori-aa4407150/",
+    "github": "https://github.com/devsuperstar-ui",
+    "education": [
+      {
+        "degree": "Master's degree, Computer Science",
+        "school": "University of Missouri-Kansas City",
+        "start_year": "2015",
+        "end_year": "2016",
+        "grade": "3.5",
+        "projects": [
+          {
+            "name": "Analysis of Twitter Data",
+            "start_date": "Jan 2016",
+            "end_date": "May 2016",
+            "description": "Collected tweets on a specific topic into MongoDB and ran analytical queries in Spark using Scala, deployed on AWS EC2 with CloudWatch monitoring."
+          },
+          {
+            "name": "Attendance App for University",
+            "start_date": "Aug 2015",
+            "end_date": "Dec 2015",
+            "description": "Client-server software to track class schedules and student attendance using geolocation."
+          }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Thermo Fisher Scientific",
+        "title": "Software Developer",
+        "start_date": "Mar 2021",
+        "end_date": "Present",
+        "location": "Coraopolis, Pennsylvania · On-site",
+        "responsibilities": [
+          "Developed product detail pages and User Management Modules for ecommerce website.",
+          "Developed MicroServices using SpringBoot to migrate ecommerce website from IBM WCS.",
+          "Performed Integration and Unit Testing using Groovy and Spock Framework.",
+          "Installed Kafka and Zookeeper on Linux servers for data processing.",
+          "Used Redis, Cassandra, MongoDB, PostgreSQL for data storage and caching.",
+          "Developed SSO with SAML Authentication.",
+          "Performed CI/CD using Jenkins and zero downtime deployment."
+        ]
+      },
+      {
+        "company": "Pioneer Consulting Services LLC",
+        "title": "Software Developer",
+        "start_date": "Sep 2017",
+        "end_date": "Mar 2021",
+        "location": "Pittsburgh, Pennsylvania, United States · On-site",
+        "responsibilities": [
+          "Developed MicroServices using Spring Boot & Spring-Cloud (Netflix OSS) and Containers.",
+          "Performed Integration and Unit Testing using Groovy and Spock.",
+          "Used Splunk for logs monitoring and alert creation.",
+          "Implemented CI/CD pipelines with Jenkins and deployed applications on AWS Kubernetes cluster.",
+          "Worked on data modeling, schema creation, and CRUD operations using Spring Data JPA."
+        ]
+      },
+      {
+        "company": "Teknatio Inc.",
+        "title": "Programming Analyst",
+        "start_date": "Mar 2017",
+        "end_date": "Aug 2017",
+        "location": "Foster City, California, United States · On-site",
+        "responsibilities": [
+          "Developed data service applications for file transfer using SFTP and SMTP.",
+          "Configured scheduled jobs with Quartz Scheduler and asynchronous processes.",
+          "Developed RESTful web services using Spring and JAX-RS.",
+          "Implemented Hibernate ORM for Oracle DB.",
+          "Performed Integration testing and automated test cases using JUnit."
+        ]
+      }
+    ],
+    "skills": [
+      "Java",
+      "J2EE",
+      "Spring (Core, IOC, AOP, Boot, Security, Batch)",
+      "Struts",
+      "Hibernate",
+      "REST APIs",
+      "SOAP",
+      "MicroServices",
+      "Spring Boot",
+      "Spring Cloud",
+      "Redis",
+      "Cassandra",
+      "MongoDB",
+      "PostgreSQL",
+      "SQL",
+      "PL/SQL",
+      "JUnit",
+      "Groovy",
+      "Spock",
+      "Kafka",
+      "Zookeeper",
+      "Angular JS",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Ajax",
+      "Bootstrap",
+      "CI/CD",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "IBM WCS",
+      "Subversion SVN",
+      "GIT",
+      "Stash",
+      "Maven",
+      "Gradle"
+    ]
+  }
+  
