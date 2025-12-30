@@ -1,5 +1,17 @@
-import fs from "fs";
-import path from "path";
+// Template list - maps to React PDF components
+// All templates will use React PDF renderer
+const TEMPLATE_LIST = [
+  { id: "Resume", name: "Classic (Default)" },
+  { id: "Resume-Academic-Purple", name: "Academic Purple" },
+  { id: "Resume-Bold-Emerald", name: "Bold Emerald" },
+  { id: "Resume-Classic-Charcoal", name: "Classic Charcoal" },
+  { id: "Resume-Consultant-Steel", name: "Consultant Steel" },
+  { id: "Resume-Corporate-Slate", name: "Corporate Slate" },
+  { id: "Resume-Creative-Burgundy", name: "Creative Burgundy" },
+  { id: "Resume-Executive-Navy", name: "Executive Navy" },
+  { id: "Resume-Modern-Green", name: "Modern Green" },
+  { id: "Resume-Tech-Teal", name: "Tech Teal" },
+];
 
 export default function handler(req, res) {
   if (req.method !== "GET") {
@@ -7,34 +19,12 @@ export default function handler(req, res) {
   }
 
   try {
-    const templatesDir = path.join(process.cwd(), "templates");
-    const files = fs.readdirSync(templatesDir);
-    
-    // Filter only .html files and create template objects
-    const templates = files
-      .filter(file => file.endsWith(".html"))
-      .map(file => {
-        const id = file.replace(".html", "");
-        // Convert filename to display name
-        // "Resume-Tech-Teal.html" -> "Tech Teal"
-        // "Resume.html" -> "Classic (Default)"
-        let name;
-        if (id === "Resume") {
-          name = "Classic (Default)";
-        } else {
-          name = id
-            .replace("Resume-", "")
-            .replace(/-/g, " ");
-        }
-        
-        return { id, name, file };
-      })
-      // Sort so default is first, then alphabetically
-      .sort((a, b) => {
-        if (a.id === "Resume") return -1;
-        if (b.id === "Resume") return 1;
-        return a.name.localeCompare(b.name);
-      });
+    // Return template list sorted so default is first, then alphabetically
+    const templates = TEMPLATE_LIST.sort((a, b) => {
+      if (a.id === "Resume") return -1;
+      if (b.id === "Resume") return 1;
+      return a.name.localeCompare(b.name);
+    });
 
     res.status(200).json(templates);
   } catch (error) {

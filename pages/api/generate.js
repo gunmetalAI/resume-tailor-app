@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     if (!profile) return res.status(400).send("Profile required");
     if (!jd) return res.status(400).send("Job description required");
 
-    // Default to Resume.html if no template specified
+    // Default to Resume if no template specified
     const templateName = template || "Resume";
 
     // Validate provider
@@ -326,7 +326,7 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
 
     // Get React PDF template component
     const TemplateComponent = getTemplate(templateName);
-    
+
     if (!TemplateComponent) {
       console.error(`Template not found: ${templateName}`);
       return res.status(404).send(`Template "${templateName}" not found`);
@@ -359,7 +359,7 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
     // Render PDF with React PDF
     const pdfDocument = React.createElement(TemplateComponent, { data: templateData });
     const pdfStream = await renderToStream(pdfDocument);
-    
+
     // Convert stream to buffer
     const chunks = [];
     for await (const chunk of pdfStream) {
@@ -376,13 +376,13 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
     else if (nameParts.length === 1) baseName = nameParts[0];
     else baseName = `${nameParts[0]}_${nameParts[nameParts.length - 1]}`;
     baseName = baseName.replace(/\s+/g, "_").replace(/[^A-Za-z0-9_-]/g, "");
-    
+
     // Append company name if provided
     if (companyName && companyName.trim()) {
       const sanitizedCompanyName = companyName.trim().replace(/\s+/g, "_").replace(/[^A-Za-z0-9_-]/g, "");
       baseName = `${baseName}_${sanitizedCompanyName}`;
     }
-    
+
     const fileName = `${baseName}.pdf`;
 
     res.setHeader("Content-Type", "application/pdf");
