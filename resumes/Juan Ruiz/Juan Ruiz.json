@@ -1,0 +1,30 @@
+{
+  "name": "Juan Ruiz",
+  "email": "juanruizcodes@gmail.com",
+  "phone": "+1 (512) 861-1468",
+  "location": "San Antonio, TX",
+  "postalCode": "78203",
+  "linkedin": "https://www.linkedin.com/in/juan-ruiz-8ab163158",
+  "github": "https://github.com/willywilly-coder",
+  "experience": [
+      {
+          "company": "H-E-B",
+          "title": "Senior Software Engineer",
+          "location": "San Antonio, TX",
+          "start_date": "May 2022",
+          "end_date": "Present",
+          "bullets": [
+              "Led development of scalable web applications using React.js and Next.js, delivering responsive, dynamic interfaces for complex business workflows and customer-facing platforms.",
+              "Architected and implemented backend services in Python (FastAPI, Django) and Node.js, integrating AI-driven solutions including LLMs and NLP models to automate content personalization and predictive decision-making.",
+              "Designed and optimized PostgreSQL and MongoDB schemas and queries for high-volume transactional and analytical workloads.",
+              "Implemented comprehensive unit, integration, and end-to-end tests using Jest, Supertest, and PyTest, reducing production issues by over 35%.",
+              "Enhanced application performance through profiling, caching strategies, and CDN optimization, reducing page load times and API response latency by 40%.",
+              "Collaborated with cross-functional teams including product, design, and data science to define API contracts, streamline data pipelines, and ensure cohesive integration of AI models and services.",
+              "Integrated external APIs and third-party services for analytics, notifications, and operational insights, enabling predictive decision-making.",
+              "Mentored junior developers, conducted code reviews, and contributed to CI/CD pipeline improvements, fostering best practices in version control, automated testing, and deployment workflows."
+          ]
+      }
+  ],
+  "education": [
+  ]
+}

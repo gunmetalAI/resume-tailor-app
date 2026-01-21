@@ -1,0 +1,99 @@
+{
+    "name": "Brandon Trumble",
+    "email": "brandontrumble8@gmail.com",
+    "phone": "+1 (737) 244-0919",
+    "location": "Nazareth, PA",
+    "postalCode": "18064",
+    "linkedin": "https://www.linkedin.com/in/brandon-trumble-710449a",
+    "github": "https://github.com/asaayo",
+    "summary": "Experienced Mobile Developer with 10+ years designing and delivering high-performance Android and iOS applications. Expert in native (Swift, Kotlin) and cross-platform (React Native, Flutter) development, with a strong foundation in web and backend technologies (JavaScript, TypeScript, Node.js). Proven track record building secure, scalable apps for finance, education, and enterprise domains, optimizing performance, CI/CD pipelines, and user experiences. Delivered apps with [insert metric if known, e.g., 1M+ downloads or 99% crash-free rate].",
+    "skills": [
+        {
+            "category": "Mobile & Cross-Platform",
+            "skills": ["Swift", "Kotlin", "Java", "Objective-C", "React Native", "Flutter", "Ionic", "Xamarin", "Material Design", "HIG", "Animations", "Accessibility", "PWA"]
+        },
+        {
+            "category": "Frontend & Web",
+            "skills": ["JavaScript", "TypeScript", "React.js", "Next.js", "Redux", "Vue.js", "Angular", "Responsive Design", "REST & GraphQL API integration"]
+        },
+        {
+            "category": "Backend & Databases",
+            "skills": ["Node.js", "Express.js", "FastAPI", "Django", "PostgreSQL", "MySQL", "MongoDB", "Firebase", "DynamoDB", "Authentication (JWT, OAuth2)", "Push Notifications", "Offline Sync"]
+        },
+        {
+            "category": "Testing & QA",
+            "skills": ["XCTest", "Espresso", "Jest", "Detox", "Appium", "Cypress", "Unit", "Integration", "End-to-End", "Performance Testing"]
+        },
+        {
+            "category": "CI/CD & DevOps",
+            "skills": ["Fastlane", "Bitrise", "GitHub Actions", "Jenkins", "App Store & Google Play deployment", "Crash Monitoring (Sentry, Firebase Crashlytics)"]
+        },
+        {
+            "category": "Collaboration",
+            "skills": ["Agile/Scrum", "Kanban", "Jira", "Git", "Remote Team Mentorship", "Code Reviews"]
+        }
+
+    ],
+    "experience": [
+        {
+            "company": "VC3",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Feb 2020",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and delivered complex cross-platform apps for Android and iOS using React Native and Flutter, integrating with existing web-based backend services.",
+                "Developed native mobile features with Swift (iOS) and Kotlin (Android), including offline data caching, background sync, push notifications, and biometric authentication.",
+                "Built robust API integrations with REST and GraphQL, supporting secure authentication and optimized data transfer.",
+                "Optimized mobile performance using profiling tools, memory management, and bundle size reduction, improving app responsiveness and load times.",
+                "Implemented unit, integration, and end-to-end tests to ensure app stability, maintainability, and smooth app store approvals.",
+                "Automated mobile CI/CD pipelines using Fastlane and GitHub Actions, enabling multi-environment builds and zero-downtime releases.",
+                "Mentored junior developers in mobile best practices, architecture patterns, and cross-platform development strategies."
+            ]
+        },
+        {
+            "company": "Innovative Control Systems, Inc",
+            "title": "Senior Engineer",
+            "location": "",
+            "start_date": "Mar 2019",
+            "end_date": "Feb 2020",
+            "bullets": [
+                "Built cross-platform mobile apps using React Native, connecting to enterprise backend services for data-intensive operations.",
+                "Developed native Android features using Kotlin and integrated Firebase services including Analytics, Crashlytics, and Cloud Messaging.",
+                "Designed responsive and adaptive mobile UI using Material Design and platform-specific guidelines.",
+                "Maintained web dashboards supporting mobile apps using React, Node.js, and PostgreSQL.",
+                "Conducted automated and manual testing to ensure app stability across multiple devices and OS versions."
+            ]
+        },
+        {
+            "company": "SunGard K-12",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jul 2015",
+            "end_date": "Mar 2019",
+            "bullets": [
+                "Developed and maintained enterprise-grade education management systems using C# .NET and VB.NET, applying solid OOP principles to improve code maintainability, reusability, and long-term scalability.",
+                "Built and optimized SQL Server databases and complex T-SQL queries, stored procedures, and indexes to support high-volume student, financial, and administrative data processing.",
+                "Contributed to mobile application development using Apache Cordova and Ionic, delivering cross-platform mobile solutions used by school administrators and educators.",
+                "Implemented dynamic, responsive user interfaces with Angular, HTML, CSS, improving usability and consistency across desktop and mobile platforms.",
+                "Participated in full SDLC activities, including requirements analysis, system design, development, testing, deployment, and post-release support in a regulated education environment.",
+                "Collaborated closely with product managers, QA engineers, and business analysts to translate district-level requirements into reliable technical solutions.",
+                "Diagnosed and resolved production issues, performance bottlenecks, and data inconsistencies, improving system stability and reducing support turnaround time."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Master’s degree in Computer Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2014",
+            "end_year": "2015"
+        },
+        {
+            "degree": "Bachelor’s degree in Computer and Information Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2011",
+            "end_year": "2014"
+        }
+    ]
+}

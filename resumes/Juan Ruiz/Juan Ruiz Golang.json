@@ -1,0 +1,67 @@
+{
+    "name": "Juan Ruiz",
+    "email": "juanruizcodes@gmail.com",
+    "phone": "+1 (512) 861-1468",
+    "location": "San Antonio, TX",
+    "postalCode": "78203",
+    "linkedin": "https://www.linkedin.com/in/juan-ruiz-8ab163158",
+    "github": "https://github.com/willywilly-coder",
+    "summary": "Senior Full Stack Developer with 7+ years of experience designing, developing, and deploying Golang-powered web applications and AI-integrated solutions in retail, insurance, logistics, and enterprise systems. Strong backend focus on Go (Golang), building high-performance microservices, REST/gRPC APIs, and event-driven systems, while working in polyglot stacks including Java (Spring Boot), Node.js, and Python/FastAPI for AI and automation pipelines. Experienced in developing modern frontend applications with React.js, Next.js, TypeScript, and Go server-side rendering frameworks (Gin templates, Fiber). Skilled in unit, integration, and contract testing, cloud deployments (AWS, Azure), CI/CD automation, and distributed system design. Adept at mentoring engineers and delivering scalable, maintainable, full stack solutions in Agile environments.",
+    "skills": ["JavaScript (ES6+)", "TypeScript", "Python", "Node.js", "Go (Golang)", "Gin", "Echo", "Fiber", "net/http", "gRPC", "REST APIs", "Java (Spring Boot)", "React.js", "Next.js", "Angular", "Express.js", "FastAPI", "Redux Toolkit", "Material UI", "Tailwind CSS", "RxJS", "React Hook Form", "PostgreSQL", "MongoDB", "Redis", "Firebase", "Database Design", "Query Optimization", "AWS", "Azure", "Docker", "Kubernetes", "Terraform", "CI/CD (Jenkins, GitLab, GitHub Actions)", "Test-Driven Development (TDD)", "Jest", "Supertest", "PyTest", "Jasmine/Karma", "Capybara", "xUnit", "NUnit", "Agile (Scrum, Kanban)", "Serverless Architecture", "Performance Optimization", "Version Control (Git)"],
+    "experience": [
+        {
+            "company": "H-E-B",
+            "title": "Senior Software Engineer",
+            "location": "San Antonio, TX",
+            "start_date": "May 2022",
+            "end_date": "Present",
+            "bullets": [
+                "Led development of scalable full stack applications with Golang, React.js, and Next.js, delivering high-performance, responsive interfaces for complex business workflows.",
+                "Architected backend services using Go (Gin, Echo, Fiber), integrating LLMs, NLP models, and AI pipelines for content personalization and predictive analytics.",
+                "Designed and optimized PostgreSQL and MongoDB schemas and queries for high-volume transactional and analytical workloads.",
+                "Developed REST and gRPC APIs in Go and Java (Spring Boot) for seamless integration across frontend and backend systems.",
+                "Implemented comprehensive unit, integration, and contract tests using Go testing, Jest, and PyTest, improving system reliability by 35%.",
+                "Enhanced application performance with caching strategies, concurrency optimization, and CDN integration, reducing latency by 40%.",
+                "Integrated external APIs and third-party services for analytics, notifications, and operational insights.",
+                "Mentored junior developers, conducted code reviews, and improved CI/CD pipelines for Go, Java, Node.js, and frontend applications."
+            ]
+        },
+        {
+            "company": "USAA",
+            "title": "Senior Engineer II",
+            "location": "San Antonio, TX",
+            "start_date": "Mar 2021",
+            "end_date": "May 2022",
+            "bullets": [
+                "Developed full stack solutions with Go, Node.js, and React.js/TypeScript, building responsive portals for insurance and financial services.",
+                "Built server-side rendered UIs using Go templates and Fiber, complementing React frontends.",
+                "Designed data models and optimized queries in MongoDB for claims, policies, and customer data.",
+                "Integrated asynchronous job queues and event-driven pipelines using Kafka and AWS SQS to support predictive analytics and automation.",
+                "Applied unit and integration tests using Go testing, Jest, and Supertest, reducing regressions during iterative releases."
+            ]
+        },
+        {
+            "company": "Accenture",
+            "title": "Software Developer",
+            "location": "San Antonio, TX",
+            "start_date": "Oct 2018",
+            "end_date": "Mar 2021",
+            "bullets": [
+                "Built responsive web applications with Golang, Node.js, React, and Angular, ensuring seamless UX across devices.",
+                "Designed and implemented REST APIs and microservices, supporting authentication, authorization, and business logic.",
+                "Developed interactive frontend components with React Hook Form, RxJS, and Angular Material, integrated with Go-based backend services.",
+                "Integrated third-party APIs for notifications, file uploads, and payment processing, enhancing system capabilities.",
+                "Wrote unit and integration tests using Go testing, Jest, and Supertest, improving reliability and maintainability.",
+                "Deployed applications in AWS ECS/EKS, containerized with Docker, and automated deployments with Kubernetes and CI/CD pipelines."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computer Science",
+            "school": "The University of Texas at San Antonio",
+            "start_year": "2014",
+            "end_year": "2018"
+        }
+    ]
+}

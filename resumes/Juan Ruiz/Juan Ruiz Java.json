@@ -1,0 +1,68 @@
+{
+    "name": "Juan Ruiz",
+    "email": "juanruizcodes@gmail.com",
+    "phone": "+1 (512) 861-1468",
+    "location": "San Antonio, TX",
+    "postalCode": "78203",
+    "linkedin": "https://www.linkedin.com/in/juan-ruiz-8ab163158",
+    "github": "https://github.com/willywilly-coder",
+    "summary": "Senior Full Stack Developer with 7+ years of experience designing, developing, and deploying Java/Kotlin-based web applications and AI-powered solutions in retail, insurance, logistics, and enterprise systems. Proficient in Java, Kotlin (Spring Boot, Spring MVC, Hibernate, JPA), Node.js, React.js, Next.js, Python/FastAPI, and integrating LLMs, NLP models, and AI pipelines for automation and predictive analytics. Skilled in RESTful and GraphQL API design, microservices architecture, database design (PostgreSQL, MongoDB, Oracle), and cloud deployments (AWS, Azure). Strong expertise in unit and integration testing (Jest, PyTest, Supertest), performance optimization, CI/CD, and DevOps practices. Experienced in Agile environments, collaborating with cross-functional teams to deliver scalable, maintainable, and high-performance applications.",
+    "skills": ["Java", "Kotlin (Spring Boot, Spring MVC, Hibernate, JPA)", "JavaScript (ES6+)", "TypeScript", "Python", "Node.js", "React.js", "Next.js", "Angular", "Express.js", "FastAPI", "RESTful APIs", "GraphQL", "Microservices", "LLMs", "NLP models", "AI pipelines", "Predictive Analytics", "Redux Toolkit", "Material UI", "Tailwind CSS", "RxJS", "React Hook Form", "PostgreSQL", "MongoDB", "Redis", "Firebase", "Database Design", "Query Optimization", "AWS", "Azure", "Docker", "Kubernetes", "Terraform", "CI/CD (Jenkins, GitLab)", "Test-Driven Development (TDD)", "Jest", "Supertest", "PyTest", "Jasmine/Karma", "Capybara", "xUnit", "NUnit", "Agile (Scrum, Kanban)", "Serverless Architecture", "Performance Optimization", "Version Control (Git)"],
+    "experience": [
+        {
+            "company": "H-E-B",
+            "title": "Senior Software Engineer",
+            "location": "San Antonio, TX",
+            "start_date": "May 2022",
+            "end_date": "Present",
+            "bullets": [
+                "Led development of scalable web applications using Java/Kotlin (Spring Boot) on the backend and React.js/Next.js on the frontend, delivering responsive, dynamic interfaces for complex business workflows and customer-facing platforms.",
+                "Architected and implemented backend services integrating AI-driven solutions, including LLMs and NLP models, to automate content personalization and enhance decision-making.",
+                "Designed and optimized database schemas and queries in PostgreSQL, MongoDB, and Oracle, ensuring efficient data retrieval for high-volume transactional and analytical workloads.",
+                "Implemented comprehensive unit, integration, and end-to-end tests using Jest, Supertest, and PyTest, improving reliability and reducing production issues by over 35%.",
+                "Enhanced application performance through profiling, caching strategies, and CDN optimization, reducing page load times and API response latency by 40% across multiple modules.",
+                "Collaborated with cross-functional teams including product, design, and data science to define API contracts, streamline data pipelines, and ensure cohesive integration of AI models and services.",
+                "Integrated external APIs and third-party services for analytics, notifications, and operational insights, improving platform capabilities and enabling predictive decision-making.",
+                "Mentored junior developers, conducted code reviews, and contributed to CI/CD pipeline improvements, fostering best practices in Java/Kotlin, Node.js, and cloud-native development."
+            ]
+        },
+        {
+            "company": "USAA",
+            "title": "Senior Engineer II",
+            "location": "San Antonio, TX",
+            "start_date": "Mar 2021",
+            "end_date": "May 2022",
+            "bullets": [
+                "Developed scalable full-stack solutions using Java Spring Boot for backend services and React.js with TypeScript for frontend applications in financial and insurance systems.",
+                "Designed and implemented data models and queries in MongoDB and Oracle, enabling fast storage and retrieval of dynamic policy, claims, and customer data.",
+                "Built interactive UI components with React Hook Form and Material UI, ensuring smooth real-time updates and improved usability for internal and customer-facing portals.",
+                "Integrated backend services with asynchronous job queues and pipelines, generating predictive insights on claims processing, resource allocation, and operational efficiency.",
+                "Wrote unit and integration tests across the stack using Jest and Supertest, increasing reliability and reducing regression issues during iterative releases.",
+                "Collaborated closely with cross-functional teams to align API design, business logic, and user experience, ensuring seamless interactions between financial services modules."
+            ]
+        },
+        {
+            "company": "Accenture",
+            "title": "Software Developer",
+            "location": "San Antonio, TX",
+            "start_date": "Oct 2018",
+            "end_date": "Mar 2021",
+            "bullets": [
+                "Developed responsive web applications using Java Spring Boot (backend) and React/Angular (frontend), delivering seamless user experiences across desktop and mobile devices.",
+                "Designed and implemented RESTful APIs to handle dynamic data operations, user authentication, and role-based access control.",
+                "Built interactive UI components using React and Angular, leveraging RxJS, React Hook Form, and Angular Material to enhance usability and real-time updates.",
+                "Integrated third-party services for email notifications, file uploads, and payment processing, expanding platform capabilities.",
+                "Wrote and executed unit and integration tests using Jest, Supertest, and Jasmine/Karma, improving test coverage and reducing production issues.",
+                "Participated in deployment and maintenance on Linux environments, managed version control with Git, and contributed to CI/CD pipeline automation."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computer Science",
+            "school": "The University of Texas at San Antonio",
+            "start_year": "2014",
+            "end_year": "2018"
+        }
+    ]
+}

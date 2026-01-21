@@ -1,0 +1,105 @@
+{
+    "name": "Brandon Trumble",
+    "email": "brandontrumble8@gmail.com",
+    "phone": "+1 (737) 244-0919",
+    "location": "Nazareth, PA",
+    "postalCode": "18064",
+    "linkedin": "https://www.linkedin.com/in/brandon-trumble-710449a",
+    "github": "https://github.com/asaayo",
+    "summary": "Senior Full Stack Engineer with 10+ years of experience delivering high-performance enterprise applications primarily using C#/.NET Core, ASP.NET Core, and Microsoft technologies. Experienced in building scalable backend services, Python and Node.js microservices, React/TypeScript frontends, and cloud-native deployments (Azure/AWS). Skilled in AI/LLM integration, CI/CD, database design (SQL Server, PostgreSQL), and secure, data-driven solutions, leading cross-functional teams to deliver maintainable, user-centric platforms.",
+    "skills": [
+        {
+            "category": "Frontend",
+            "skills": ["React.js", "TypeScript", "Angular", "Next.js", "Redux", "RxJS", "Component Architecture", "Responsive Design", "PWA", "Cross-Platform Mobile UI"]
+        },
+        {
+            "category": "Backend & Database",
+            "skills": ["C#", ".NET Core", "ASP.NET Core", "Web API", "Entity Framework Core", "LINQ", "RESTful APIs", "GraphQL", "SQL Server", "PostgreSQL", "MongoDB", "Redis", "Node.js", "Python (FastAPI, Django, Flask)", "Microservices"]
+        },
+        {
+            "category": "AI / Machine Learning / NLP",
+            "skills": ["OpenAI API", "LangChain", "TensorFlow", "PyTorch", "scikit-learn", "LLM Integration", "Data Preprocessing", "Model Fine-Tuning"]
+        },
+        {
+            "category": "Cloud & DevOps",
+            "skills": ["Azure App Services & Functions", "AWS (Lambda, ECS, S3, RDS)", "Docker", "Kubernetes (AKS/EKS)", "Terraform", "CI/CD (Azure DevOps, GitHub Actions)", "Monitoring & Logging"]
+        },
+        {
+            "category": "Testing & Automation",
+            "skills": ["xUnit", "NUnit", "MSTest", "PyTest", "Jest", "React Testing Library", "Cypress", "Selenium", "Postman/Newman", "TDD", "Integration & E2E Testing"]
+        },
+        {
+            "category": "Security & Optimization",
+            "skills": ["OAuth2", "JWT", "RBAC", "OWASP Standards", "HTTPS/TLS", "Input Sanitization", "API Rate Limiting", "Caching", "Performance Tuning"]
+        },
+        {
+            "category": "Agile & Collaboration",
+            "skills": ["Agile/Scrum", "Kanban", "Jira", "Confluence", "Git/GitHub/GitLab", "Code Reviews", "Sprint Planning", "Remote Team Collaboration"]
+        }
+    ],
+    "experience": [
+        {
+            "company": "VC3",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Feb 2020",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and delivered enterprise-grade backend systems using C#/.NET Core and ASP.NET Core, designing RESTful APIs, microservices, and background processing pipelines supporting production-scale workloads.",
+                "Developed modern frontend applications with React and TypeScript, applying clean component architectures, state management best practices, and seamless API integration.",
+                "Built and integrated Python-based microservices using FastAPI, Django, and Flask for data processing, AI workflows, and specialized services alongside .NET platforms.",
+                "Designed and optimized data access layers using Entity Framework Core and SQL Server, ensuring transactional consistency, efficient migrations, and high-performance queries; integrated PostgreSQL and MongoDB where appropriate.",
+                "Implemented secure authentication and authorization strategies using JWT, OAuth2, and role-based access control across distributed systems.",
+                "Led production AI and LLM initiatives, including model inference pipelines, prompt engineering, and secure API integration within both .NET and Python services.",
+                "Established automated testing and TDD practices across the stack using xUnit, NUnit, MSTest, PyTest, Jest, and Cypress to improve reliability and release confidence.",
+                "Deployed and operated cloud-native systems on Azure and AWS, leveraging App Services, Functions, ECS/EKS, managed databases, and observability pipelines.",
+                "Designed and maintained CI/CD pipelines with Azure DevOps and GitHub Actions, enabling multi-environment releases and zero-downtime deployments.",
+                "Drove performance and reliability improvements through caching strategies, backend profiling, and frontend bundle optimization under real-world production traffic."
+            ]
+        },
+        {
+            "company": "Innovative Control Systems, Inc",
+            "title": "Senior Engineer",
+            "location": "",
+            "start_date": "Mar 2019",
+            "end_date": "Feb 2020",
+            "bullets": [
+                "Built and enhanced full-stack applications using .NET Core, React, and Node.js, contributing to both backend services and modern, component-based frontend interfaces.",
+                "Designed and optimized relational and non-relational data models using PostgreSQL, T-SQL, and MongoDB, supporting transactional workflows and analytics use cases.",
+                "Developed and consumed RESTful APIs, integrating frontend and backend systems with a focus on performance, reliability, and maintainable architecture.",
+                "Implemented unit and integration testing across backend and frontend layers using appropriate testing frameworks, improving release confidence and reducing regression issues.",
+                "Assisted with data processing and automation tasks using Python, supporting internal tooling and lightweight backend workflows."
+            ]
+        },
+        {
+            "company": "SunGard K-12",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jul 2015",
+            "end_date": "Mar 2019",
+            "bullets": [
+                "Developed and maintained enterprise-grade education management systems using C# .NET and VB.NET, applying solid OOP principles to improve code maintainability, reusability, and long-term scalability.",
+                "Built and optimized SQL Server databases and complex T-SQL queries, stored procedures, and indexes to support high-volume student, financial, and administrative data processing.",
+                "Contributed to mobile application development using Apache Cordova and Ionic, delivering cross-platform mobile solutions used by school administrators and educators.",
+                "Implemented dynamic, responsive user interfaces with Angular, HTML, CSS, improving usability and consistency across desktop and mobile platforms.",
+                "Participated in full SDLC activities, including requirements analysis, system design, development, testing, deployment, and post-release support in a regulated education environment.",
+                "Collaborated closely with product managers, QA engineers, and business analysts to translate district-level requirements into reliable technical solutions.",
+                "Diagnosed and resolved production issues, performance bottlenecks, and data inconsistencies, improving system stability and reducing support turnaround time."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Master’s degree in Computer Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2014",
+            "end_year": "2015"
+        },
+        {
+            "degree": "Bachelor’s degree in Computer and Information Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2011",
+            "end_year": "2014"
+        }
+    ]
+}

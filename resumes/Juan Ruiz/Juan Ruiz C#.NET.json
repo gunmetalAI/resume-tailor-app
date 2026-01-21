@@ -1,0 +1,68 @@
+{
+    "name": "Juan Ruiz",
+    "email": "juanruizcodes@gmail.com",
+    "phone": "+1 (512) 861-1468",
+    "location": "San Antonio, TX",
+    "postalCode": "78203",
+    "linkedin": "https://www.linkedin.com/in/juan-ruiz-8ab163158",
+    "github": "https://github.com/willywilly-coder",
+    "summary": "Senior Full Stack Software Engineer with 7+ years of experience designing, developing, and deploying enterprise-grade web applications and AI-powered solutions in retail, insurance, logistics, and enterprise systems. Proficient in ASP.NET Core (C#), Node.js, React.js, Next.js, and Angular, with extensive experience integrating Python/FastAPI for LLMs, NLP models, and AI pipelines to enable automation and predictive analytics. Skilled in RESTful and GraphQL API design, microservices, event-driven architectures, database design (SQL Server, PostgreSQL, MongoDB), and cloud deployments (Azure, AWS). Strong expertise in unit and integration testing (xUnit, NUnit, Jest, PyTest), CI/CD automation, DevOps practices, performance optimization, and application security. Experienced in secure authentication, role-based access control, encryption, and compliance standards (OWASP, GDPR, PCI DSS). Adept at collaborating in Agile environments, mentoring teams, and delivering scalable, maintainable, high-performance applications.",
+    "skills": ["JavaScript (ES6+)", "TypeScript", "C#", "ASP.NET Core", "Web API", "Python", "Node.js", "React.js", "Next.js", "Angular", "Express.js", "FastAPI", "RESTful APIs", "GraphQL", "Microservices", "LLMs", "NLP models", "AI pipelines", "Predictive Analytics", "Redux Toolkit", "Material UI", "Tailwind CSS", "RxJS", "React Hook Form", "SQL Server", "PostgreSQL", "MongoDB", "Redis", "Firebase", "Database Design", "Query Optimization", "AWS", "Azure (App Service, AKS, Functions, SQL, Service Bus, Storage, Application Insights)", "Docker", "Kubernetes", "Terraform", "CI/CD (Jenkins, GitLab)", "Test-Driven Development (TDD)", "Jest", "Supertest", "PyTest", "Jasmine/Karma", "Capybara", "xUnit", "NUnit", "Agile (Scrum, Kanban)", "Serverless Architecture", "Application Security", "OWASP", "Role-Based Access Control", "Data Encryption", "Secure API Design", "Performance Optimization", "Version Control (Git)"],
+    "experience": [
+        {
+            "company": "H-E-B",
+            "title": "Senior Software Engineer",
+            "location": "San Antonio, TX",
+            "start_date": "May 2022",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and led development of scalable web applications using ASP.NET Core (C#), Node.js, React.js, and Next.js, delivering dynamic, responsive interfaces for complex business workflows and customer-facing platforms.",
+                "Integrated Python-based AI solutions including LLMs and NLP models into backend services for content personalization, predictive analytics, and workflow automation.",
+                "Designed and optimized database schemas and queries in SQL Server, PostgreSQL, and MongoDB, supporting high-volume transactional and analytical workloads with data integrity and security.",
+                "Implemented comprehensive unit, integration, and end-to-end tests using xUnit, NUnit, Jest, Supertest, and PyTest, improving reliability and reducing production issues by over 35%.",
+                "Enhanced application performance and security through profiling, caching strategies, CDN optimization, encryption at rest and in transit, and OWASP-based security practices, reducing page load times and API latency by 40%.",
+                "Led cloud-native deployments on Azure and AWS, including App Services, AKS, and serverless functions, using Docker, Terraform, and CI/CD pipelines for secure, repeatable releases.",
+                "Integrated external APIs and third-party services for analytics, notifications, and operational insights, enabling predictive and secure decision-making.",
+                "Mentored junior developers, conducted code reviews, and improved CI/CD workflows, fostering best practices in version control, automated testing, DevOps, and security compliance."
+            ]
+        },
+        {
+            "company": "USAA",
+            "title": "Senior Engineer II",
+            "location": "San Antonio, TX",
+            "start_date": "Mar 2021",
+            "end_date": "May 2022",
+            "bullets": [
+                "Developed full-stack solutions using ASP.NET Core (C#) and Node.js on the backend and React.js with TypeScript on the frontend for financial and insurance applications.",
+                "Designed and implemented secure data models and queries in SQL Server and MongoDB, including role-based access control and data encryption, enabling fast and secure storage and retrieval of policy, claims, and customer data.",
+                "Built interactive UI components with React Hook Form, Material UI, and Next.js, enhancing usability and secure handling of sensitive information for internal and customer-facing portals.",
+                "Integrated backend services with asynchronous job queues and Python-based AI pipelines, generating predictive insights while maintaining secure and compliant data processing.",
+                "Wrote unit and integration tests across the stack using xUnit, NUnit, Jest, and Supertest, reducing regression issues during iterative releases.",
+                "Collaborated with cross-functional teams to align API design, business logic, user experience, and security best practices, ensuring seamless and secure integration of financial services modules."
+            ]
+        },
+        {
+            "company": "Accenture",
+            "title": "Software Developer",
+            "location": "San Antonio, TX",
+            "start_date": "Oct 2018",
+            "end_date": "Mar 2021",
+            "bullets": [
+                "Developed responsive web applications using ASP.NET Core, Node.js, React.js, and Angular, ensuring seamless user experiences across desktop and mobile platforms.",
+                "Designed and implemented RESTful APIs and microservices for dynamic data operations, user authentication, role-based access control, and secure data handling.",
+                "Built modern UI components using React, Angular, RxJS, React Hook Form, and Angular Material, improving real-time updates, interactivity, and secure input validation.",
+                "Integrated third-party services for email notifications, file uploads, and payment processing, expanding platform capabilities with secure API integration.",
+                "Wrote and executed unit and integration tests using xUnit, NUnit, Jest, Supertest, and Jasmine/Karma, increasing test coverage and reducing production issues.",
+                "Contributed to CI/CD pipeline automation, version control with Git, and deployment/maintenance in Linux and Azure environments with security-first practices."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computer Science",
+            "school": "The University of Texas at San Antonio",
+            "start_year": "2014",
+            "end_year": "2018"
+        }
+    ]
+}

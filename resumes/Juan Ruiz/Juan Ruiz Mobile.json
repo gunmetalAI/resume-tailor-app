@@ -1,0 +1,69 @@
+{
+    "name": "Juan Ruiz",
+    "email": "juanruizcodes@gmail.com",
+    "phone": "+1 (512) 861-1468",
+    "location": "San Antonio, TX",
+    "postalCode": "78203",
+    "linkedin": "https://www.linkedin.com/in/juan-ruiz-8ab163158",
+    "github": "https://github.com/willywilly-coder",
+    "summary": "Senior Mobile Engineer with 7+ years of experience designing, developing, and deploying high-performance iOS and Android applications using React Native, Flutter, Swift, and Kotlin. Skilled in end-to-end mobile app lifecycle, including architecture, CI/CD, automated testing, deployment, and post-launch optimization. Experienced in building offline-first architectures, integrating AI/ML-powered features, and optimizing app performance for responsive, reliable, and user-friendly experiences. Adept at collaborating with UX/UI teams, mentoring junior engineers, and delivering cross-platform mobile solutions for retail, insurance, logistics, and enterprise domains. Strong expertise in API design, cloud integration, push notifications, and mobile observability tools.",
+    "skills": ["React Native", "Flutter", "Swift", "Kotlin", "Objective-C", "cross-platform mobile apps", "native module integration", "offline-first architectures", "responsive UI/UX", "push notifications", "RESTful APIs", "GraphQL", "real-time data sync", "Firebase", "Node.js backend support", "Python/FastAPI integration for AI features", "SQLite", "Realm", "Core Data", "MongoDB", "PostgreSQL", "caching strategies", "local persistence", "Unit testing", "Integration testing", "End-to-end testing", "Jest", "Detox", "Flutter tests", "Espresso", "XCTest", "test-driven development (TDD)", "GitHub Actions", "GitLab CI", "Fastlane", "App Store & Google Play deployment", "automated build/test/deploy pipelines", "release compliance", "version control (Git)", "Memory profiling", "UI performance tuning", "battery-efficient design", "network optimization", "offline-first performance improvements", "LLMs", "NLP models", "predictive analytics", "Python-based ML services", "anomaly detection", "personalized recommendations", "Mentoring", "cross-functional collaboration", "Agile (Scrum, Kanban)", "code review", "best practices", "translating UX/UI designs into mobile apps"],
+    "experience": [
+        {
+            "company": "H-E-B",
+            "title": "Senior Software Engineer",
+            "location": "San Antonio, TX",
+            "start_date": "May 2022",
+            "end_date": "Present",
+            "bullets": [
+                "Led development of cross-platform mobile applications using React Native and Flutter, delivering responsive and feature-rich iOS and Android apps with a focus on performance, reliability, and user experience.",
+                "Designed and implemented backend services in Node.js and Python (FastAPI) to support real-time data sync, push notifications, offline workflows, and AI-powered personalization features.",
+                "Architected and optimized local persistence and caching strategies to ensure seamless app behavior under variable network conditions, improving offline reliability and startup performance.",
+                "Integrated AI/ML models for predictive analytics, content personalization, and anomaly detection within mobile apps, maintaining low latency and smooth UI interactions.",
+                "Built and maintained CI/CD pipelines for mobile deployments using Jenkins, GitLab, and Fastlane, incorporating unit, integration, and end-to-end tests (Jest, Detox, XCTest, Espresso) to ensure app stability.",
+                "Applied advanced performance profiling and memory optimization, reducing app crashes and improving UI responsiveness across a range of devices.",
+                "Collaborated with UX/UI designers and product teams to translate wireframes into intuitive mobile interfaces, ensuring platform-consistent behavior.",
+                "Mentored junior mobile developers in cross-platform development patterns, native integration, testing best practices, and performance tuning."
+            ]
+        },
+        {
+            "company": "USAA",
+            "title": "Senior Engineer II",
+            "location": "San Antonio, TX",
+            "start_date": "Mar 2021",
+            "end_date": "May 2022",
+            "bullets": [
+                "Developed React Native and Swift-based mobile applications for financial and insurance services, delivering secure and user-friendly iOS and Android apps.",
+                "Designed mobile-focused APIs and data models in MongoDB for efficient storage and retrieval of dynamic policy, claims, and customer data.",
+                "Implemented offline-first workflows and caching mechanisms, ensuring app usability under low or intermittent network conditions.",
+                "Integrated asynchronous job queues and AI-powered predictive insights for claims processing, resource allocation, and operational efficiency.",
+                "Developed interactive UI components using React Hook Form and Material UI, providing real-time updates and seamless user experiences.",
+                "Conducted unit, integration, and E2E testing using Jest, Detox, and Espresso, improving reliability and reducing post-release issues.",
+                "Collaborated closely with cross-functional teams to align API design, business logic, and UX, ensuring seamless app functionality."
+            ]
+        },
+        {
+            "company": "Accenture",
+            "title": "Software Developer",
+            "location": "San Antonio, TX",
+            "start_date": "Oct 2018",
+            "end_date": "Mar 2021",
+            "bullets": [
+                "Developed native and cross-platform mobile applications using React Native, Angular, and Swift, delivering dynamic user experiences across iOS and Android devices.",
+                "Designed RESTful APIs for authentication, role-based access, and dynamic data operations to support mobile app requirements.",
+                "Built interactive mobile UI components leveraging RxJS, React Hook Form, and Angular Material, ensuring smooth real-time updates and accessibility compliance.",
+                "Integrated third-party services for push notifications, analytics, file uploads, and payment processing, extending app functionality.",
+                "Implemented automated testing strategies with Jest, Detox, and XCTest, improving test coverage and reducing production issues.",
+                "Supported deployment on mobile CI/CD pipelines and contributed to version control best practices using Git."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computer Science",
+            "school": "The University of Texas at San Antonio",
+            "start_year": "2014",
+            "end_year": "2018"
+        }
+    ]
+}

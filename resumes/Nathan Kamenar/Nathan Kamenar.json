@@ -1,0 +1,19 @@
+{
+  "name": "Nathan Kamenar",
+  "email": "nathankamenar158@gmail.com",
+  "phone": "+1 218-332-0680",
+  "location": "Greensburg, PA",
+  "postalCode": "15601",
+  "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a",
+  "github": "https://github.com/DebugMaster25",
+  "experience": [
+      {
+          "company": "KeyLogic",
+          "title": "Senior Software Engineer",
+          "location": "",
+          "start_date": "Aug 2016",
+          "end_date": "Present"
+      }
+  ],
+  "education": []
+}

@@ -1,0 +1,193 @@
+{
+    "name": "Brandon Trumble",
+    "email": "brandontrumble8@gmail.com",
+    "phone": "+1 (737) 244-0919",
+    "location": "Nazareth, PA",
+    "postalCode": "18064",
+    "linkedin": "https://www.linkedin.com/in/brandon-trumble-710449a",
+    "github": "https://github.com/asaayo",
+    "summary": "Senior Full Stack Engineer with 10+ years of experience designing and delivering scalable, high-performance web and mobile applications. Expert in React, TypeScript, Node.js, .NET Core, Python frameworks, and modern frontend and backend architectures. Skilled in cloud-native deployments (AWS/Azure), CI/CD, testing, performance optimization, and AI/LLM integration. Adept at building secure, data-driven solutions, leading cross-functional teams, and creating maintainable, user-focused platforms across finance, education, and enterprise domains.",
+    "skills": [
+        {
+            "category": "Frontend",
+            "skills": [
+                "React.js",
+                "React Native",
+                "TypeScript",
+                "Angular",
+                "Vue.js",
+                "Next.js",
+                "Redux",
+                "RxJS",
+                "Responsive Design",
+                "Component Architecture",
+                "Cross-Platform Mobile UI",
+                "Progressive Web Apps (PWA)",
+                "Accessibility (a11y)",
+                "Performance Optimization"
+            ]
+        },
+        {
+            "category": "Backend & Database",
+            "skills": [
+                "Node.js",
+                "Express.js",
+                "NestJS",
+                "FastAPI",
+                "Django",
+                "Flask",
+                "Python",
+                ".NET Core",
+                "C#",
+                "RESTful APIs",
+                "GraphQL",
+                "PostgreSQL",
+                "MySQL",
+                "MongoDB",
+                "DynamoDB",
+                "Redis",
+                "Microservices",
+                "API Optimization"
+            ]
+        },
+        {
+            "category": "AI / Machine Learning / NLP",
+            "skills": [
+                "TensorFlow",
+                "PyTorch",
+                "scikit-learn",
+                "OpenAI API",
+                "LangChain",
+                "Pandas",
+                "NumPy",
+                "spaCy",
+                "Transformers",
+                "LLM Integration",
+                "Model Fine-Tuning",
+                "Data Preprocessing",
+                "MLflow"
+            ]
+        },
+        {
+            "category": "Cloud & DevOps",
+            "skills": [
+                "AWS (Lambda, ECS, EC2, S3, CloudFront, RDS, API Gateway)",
+                "Azure Functions",
+                "Docker",
+                "Kubernetes (EKS/AKS)",
+                "Terraform",
+                "CloudFormation",
+                "CI/CD (GitHub Actions, Jenkins, GitLab)",
+                "Monitoring & Logging"
+            ]
+        },
+        {
+            "category": "Testing & Automation",
+            "skills": [
+                "Jest",
+                "React Testing Library",
+                "Cypress",
+                "Mocha/Chai",
+                "PyTest",
+                "xUnit/NUnit",
+                "Selenium",
+                "Postman/Newman",
+                "Load Testing (k6, Locust)",
+                "TDD",
+                "Integration & End-to-End Testing"
+            ]
+        },
+        {
+            "category": "Data & Workflow Automation",
+            "skills": [
+                "Apache Airflow",
+                "ETL Pipelines",
+                "Data Validation",
+                "JSON/YAML Schema",
+                "Cron Jobs",
+                "Batch & Real-Time Processing",
+                "API Integrations",
+                "Workflow Orchestration"
+            ]
+        },
+        {
+            "category": "Security & Optimization",
+            "skills": [
+                "OAuth 2.0",
+                "JWT",
+                "RBAC",
+                "OWASP Standards",
+                "HTTPS/TLS",
+                "Input Sanitization",
+                "CORS Policies",
+                "API Rate Limiting",
+                "Caching & Performance Tuning",
+                "Secure Payment Integration"
+            ]
+        }
+    ],
+    "experience": [
+        {
+            "company": "VC3",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Feb 2020",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and delivered complex full-stack systems using React, TypeScript, Node.js, and Express, applying modern patterns such as modular monorepos, shared type contracts, and scalable state management.",
+                "Built high-performance backend services using FastAPI, Django, Flask, and .NET Core, implementing RESTful APIs, background workers, and asynchronous processing pipelines.",
+                "Designed robust data access layers integrating PostgreSQL, SQL Server, and MongoDB, handling transactional consistency, migrations, indexing strategies, and query optimization.",
+                "Implemented secure authentication and authorization using JWT, OAuth2, role-based access control, and API gateway patterns across distributed services.",
+                "Integrated LLM-based AI capabilities into production systems, including prompt engineering, inference optimization, model tuning, and secure API consumption within backend services.",
+                "Established comprehensive testing practices using Jest, React Testing Library, Cypress, PyTest, xUnit/NUnit, ensuring coverage across frontend, backend, and integration layers.",
+                "Deployed and operated cloud-native workloads using AWS and Azure, leveraging services such as container orchestration, managed databases, object storage, secrets management, and monitoring.",
+                "Built and maintained CI/CD pipelines with automated builds, tests, and deployments, supporting multi-environment workflows and zero-downtime releases.",
+                "Drove continuous performance and reliability improvements, including frontend bundle optimization, backend profiling, caching strategies, and load testing under production traffic."
+            ]
+        },
+        {
+            "company": "Innovative Control Systems, Inc",
+            "title": "Senior Engineer",
+            "location": "",
+            "start_date": "Mar 2019",
+            "end_date": "Feb 2020",
+            "bullets": [
+                "Built and enhanced full-stack applications using .NET Core, React, and Node.js, contributing to both backend services and modern, component-based frontend interfaces.",
+                "Designed and optimized relational and non-relational data models using PostgreSQL, T-SQL, and MongoDB, supporting transactional workflows and analytics use cases.",
+                "Developed and consumed RESTful APIs, integrating frontend and backend systems with a focus on performance, reliability, and maintainable architecture.",
+                "Implemented unit and integration testing across backend and frontend layers using appropriate testing frameworks, improving release confidence and reducing regression issues.",
+                "Assisted with data processing and automation tasks using Python, supporting internal tooling and lightweight backend workflows."
+            ]
+        },
+        {
+            "company": "SunGard K-12",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jul 2015",
+            "end_date": "Mar 2019",
+            "bullets": [
+                "Developed and maintained enterprise-grade education management systems using C# .NET and VB.NET, applying solid OOP principles to improve code maintainability, reusability, and long-term scalability.",
+                "Built and optimized SQL Server databases and complex T-SQL queries, stored procedures, and indexes to support high-volume student, financial, and administrative data processing.",
+                "Contributed to mobile application development using Apache Cordova and Ionic, delivering cross-platform mobile solutions used by school administrators and educators.",
+                "Implemented dynamic, responsive user interfaces with Angular, HTML, CSS, improving usability and consistency across desktop and mobile platforms.",
+                "Participated in full SDLC activities, including requirements analysis, system design, development, testing, deployment, and post-release support in a regulated education environment.",
+                "Collaborated closely with product managers, QA engineers, and business analysts to translate district-level requirements into reliable technical solutions.",
+                "Diagnosed and resolved production issues, performance bottlenecks, and data inconsistencies, improving system stability and reducing support turnaround time."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Master’s degree in Computer Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2014",
+            "end_year": "2015"
+        },
+        {
+            "degree": "Bachelor’s degree in Computer and Information Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2011",
+            "end_year": "2014"
+        }
+    ]
+}

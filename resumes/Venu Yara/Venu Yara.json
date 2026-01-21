@@ -1,0 +1,115 @@
+{
+  "name": "Venugopal Yara",
+  "email": "venu.yara212@gmail.com",
+  "phone": "+1 510 458-8143",
+  "location": "Louisville, KY",
+  "postalCode": "40245",
+  "linkedin": "https://www.linkedin.com/in/venu-reddy-387358264/",
+  "github": "https://github.com/venu-yara",
+  "summary": "Results-driven Staff Full-Stack Software Engineer with over 12 years of experience designing, developing, and deploying high-impact enterprise and AI-driven applications. Expert in JavaScript, TypeScript, Python, C#, and Java, with strong proficiency in React, Node.js, Django, Flask, .NET Core, and AWS. Proven ability to lead end-to-end software delivery — from architecture and design to deployment and optimization — across web, mobile, and cloud ecosystems. Skilled in machine learning engineering, MLOps, and cloud-native architectures, delivering scalable, secure, and intelligent solutions for healthcare, logistics, and financial domains. Passionate about mentoring teams, driving technical innovation, and bridging the gap between AI models and production-grade systems to create measurable business value.",
+  "skills": {
+      "Programming Languages": ["JavaScript (ES6+)", "TypeScript", "Python", "C#", "Java", "SQL", "PL/SQL", "HTML5", "CSS3", "JSON", "YAML"],
+      "Frontend Frameworks": ["React.js", "Next.js", "Angular", "Redux Toolkit", "Zustand", "Material-UI", "Styled Components", "TailwindCSS"],
+      "Backend & APIs": ["Node.js", "Express.js", "NestJS", "Django", "Flask", "FastAPI", "ASP.NET Core", "REST", "GraphQL", "gRPC"],
+      "AI / ML / Data": ["TensorFlow", "PyTorch", "scikit-learn", "LangChain", "OpenAI API", "Pandas", "NumPy", "Hugging Face", "MLflow", "SageMaker"],
+      "Databases": ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "Redis", "Cassandra", "SQL Server", "Oracle"],
+      "Cloud Platforms": ["AWS (ECS, Lambda, S3, Cognito, SageMaker)", "Azure (Functions, AI Studio)", "Google Cloud (Vertex AI)"],
+      "DevOps & Infrastructure": ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Terraform", "Ansible", "CI/CD", "Nginx", "Linux/Ubuntu"],
+      "Testing & QA": ["Jest", "Mocha", "PyTest", "Cypress", "React Testing Library", "JUnit", "Postman", "Newman"],
+      "Analytics & Visualization": ["D3.js", "Chart.js", "ECharts", "Highcharts", "Tableau", "Power BI"],
+      "Mobile Development": ["React Native", "Flutter", "Ionic", "Capacitor"],
+      "Other Tools & Technologies": ["Kafka", "RabbitMQ", "WebRTC", "OAuth 2.0", "JWT", "Microservices", "Serverless Architecture", "Agile/Scrum"]
+  },
+  "experience": [
+      {
+          "company": "Humana",
+          "title": "Senior Full-Stack Engineer",
+          "location": "Louisville, KY",
+          "start_date": "Aug 2022",
+          "end_date": "Present",
+          "bullets": [
+              "Architected scalable React/Next.js frontends with TypeScript, Redux Toolkit, and SSR for performance and SEO.",
+              "Built AI-powered personalization and content-generation features using OpenAI, LangChain, and TensorFlow.",
+              "Developed and deployed Python microservices with FastAPI, Flask, and C#/.NET 8 for real-time data pipelines.",
+              "Created and deployed ML pipelines for prediction and classification using AWS SageMaker, PyTorch, and scikit-learn.",
+              "Integrated GraphQL and REST APIs for data synchronization and schema federation.",
+              "Led architecture modernization, reducing load times by 45% through dynamic imports and code splitting.",
+              "Implemented DevOps automation with Jenkins, GitHub Actions, Docker, and Kubernetes.",
+              "Managed infrastructure-as-code deployments via Terraform on AWS.",
+              "Oversee accessibility, localization, and internationalization for multiple markets.",
+              "Mentored 7+ engineers across React, Python, and cloud engineering disciplines."
+          ]
+      },
+      {
+          "company": "FMC",
+          "title": "Senior Software Engineer",
+          "location": "Louisville, KY",
+          "start_date": "Jun 2021",
+          "end_date": "Jun 2022",
+          "bullets": [
+              "Designed cloud-native full-stack apps with React, Redux-Saga, Node.js, and TypeScript.",
+              "Built backend services with Python (Django REST Framework) and GraphQL API layers for flexible integrations.",
+              "Engineered AI-based data insights and recommendation features using TensorFlow and pandas.",
+              "Integrated AWS Cognito, S3, Lambda, and SageMaker for authentication, storage, and ML deployments.",
+              "Orchestrated microservices with Docker, Kubernetes, and AWS EKS.",
+              "Implemented event streaming with Kafka and Socket.io for live dashboards.",
+              "Designed CI/CD pipelines with Jenkins and CodeBuild for automated testing and deployment.",
+              "Reduced latency 35% through advanced caching and API query optimization.",
+              "Coordinated Agile development with product, QA, and DevOps for enterprise release cycles.",
+              "Authored architectural diagrams, tech specs, and performance documentation for team onboarding."
+          ]
+      },
+      {
+          "company": "UPS",
+          "title": "Senior Software Engineer",
+          "location": "Louisville, KY",
+          "start_date": "Dec 2016",
+          "end_date": "Jun 2021",
+          "bullets": [
+              "Developed mission-critical web and mobile tools using React, Angular, and Node.js/NestJS.",
+              "Built RESTful APIs and backend systems in Node.js, Express, and C#/.NET for logistics operations.",
+              "Designed real-time data visualization dashboards using D3.js and Highcharts for delivery analytics.",
+              "Implemented microservice architecture, improving fault tolerance and modularity.",
+              "Managed WebRTC-based communication systems for internal audio/video collaboration tools.",
+              "Integrated JWT/OAuth 2.0 authentication and role-based access control.",
+              "Automated build, test, and deployment pipelines using Jenkins, Docker, and Nexus.",
+              "Optimized SQL and NoSQL database queries for high-volume data environments.",
+              "Designed cron-based background services and batch processing tasks.",
+              "Mentored junior developers, implemented code review standards, and ensured best practices."
+          ]
+      },
+      {
+          "company": "SVS Tech",
+          "title": "Full-Stack Engineer",
+          "location": "Louisville, KY",
+          "start_date": "Apr 2013",
+          "end_date": "May 2015",
+          "bullets": [
+              "Built cross-platform front-end applications using React, AngularJS, HTML5, and Bootstrap.",
+              "Implemented responsive UI/UX for mobile and web using CSS3, SASS, and modern layout techniques.",
+              "Designed RESTful APIs with Node.js and Express.js for data management and authentication.",
+              "Developed database schemas and queries in MySQL, PostgreSQL, and MongoDB.",
+              "Built hybrid mobile applications with React Native and Ionic.",
+              "Implemented JWT-based authentication and middleware authorization layers.",
+              "Integrated CI/CD pipelines with Jenkins for continuous integration and deployments.",
+              "Worked with designers to ensure pixel-perfect implementation of Figma prototypes.",
+              "Conducted performance optimization, debugging, and post-launch maintenance.",
+              "Documented REST endpoints and reusable component libraries for internal use."
+          ]
+      }
+  ],
+  "education": [
+      {
+          "degree": "Master’s degree in Computer Science",
+          "school": "Northwestern Polytechnic University",
+          "start_year": "2016",
+          "end_year": "2014"
+      },
+      {
+          "degree": "Bachelor’s degree in Computer Science",
+          "school": "JNTU Hyderabad",
+          "start_year": "2009",
+          "end_year": "2013"
+      }
+  ]
+}

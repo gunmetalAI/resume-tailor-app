@@ -1,0 +1,80 @@
+{
+    "name": "Nathan Kamenar",
+    "email": "nathankamenar158@gmail.com",
+    "phone": "+1 218-332-0680",
+    "location": "Greensburg, PA",
+    "postalCode": "15601",
+    "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a",
+    "github": "https://github.com/DebugMaster25",
+    "summary": "Strategic Senior Full Stack Engineer with 9+ years of experience designing, building, and operating end-to-end web applications, owning both backend services and frontend user interfaces in production environments. Strong backend focus on Golang, delivering high-performance microservices, REST and gRPC APIs, and event-driven systems, while working in polyglot stacks that include Java, Node.js (basic), and Python for AI-enabled services. Hands-on experience developing modern frontend applications using React, Next.js, and TypeScript, as well as Go templating frameworks (Gin templates, Fiber) for server-side rendering. Proven expertise in unit, integration, and contract testing in Go, cloud-native deployments on AWS, CI/CD automation, and distributed system design, with a strong track record of mentoring engineers and delivering scalable, maintainable full stack solutions.",
+    "skills": {
+        "Backend": ["Go (Golang) – Gin", "Echo", "net/http", "gRPC", "REST APIs", "Fiber", "Gin templates", "Java (Spring Boot)", "Node.js (basic, Express.js)", "Python (FastAPI)"],
+        "Frontend": ["React.js", "Next.js", "Angular", "Vue.js", "TypeScript", "Go templating (Gin templates, Fiber)"],
+        "AI / Machine Learning": ["FastAPI-based ML services", "TensorFlow", "scikit-learn", "Pandas", "NumPy"],
+        "Cloud & DevOps": ["AWS (ECS, EKS, Lambda, S3, RDS, DynamoDB, CloudFormation)", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Jenkins"],
+        "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB", "Elasticsearch"],
+        "Testing & Automation": ["Go testing (unit, integration, contract tests using testing and testify)", "JUnit", "Jest", "PyTest", "Postman", "Newman"],
+        "Tools & Methodologies": ["Git", "Agile/Scrum", "CI/CD", "REST", "gRPC", "GraphQL", "Microservices", "Event-Driven Architecture"],
+        "Monitoring & Observability": ["Prometheus", "Grafana", "ELK Stack", "Structured Logging (Zap, Logrus)"]
+    },
+    "experience": [
+        {
+            "company": "KeyLogic",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Aug 2016",
+            "end_date": "Present",
+            "bullets": [
+                "Designed and developed end-to-end full stack applications, owning both backend services and frontend user interfaces across multiple production systems.",
+                "Built high-performance backend services primarily using Go (Golang), developing scalable microservices with Gin, Echo, Fiber, and net/http, optimized for concurrency, low latency, and fault tolerance.",
+                "Implemented REST and gRPC APIs in Go, handling authentication, authorization, data validation, and business logic consumed directly by frontend applications.",
+                "Developed server-side rendered UIs in Go using Gin templates and Fiber, complementing React/Next.js frontends where appropriate.",
+                "Built and maintained frontend applications using React, Next.js, and TypeScript, creating reusable UI components, managing application state, and integrating real-time data via REST APIs and WebSockets.",
+                "Used Java (Spring Boot) alongside Go in a polyglot backend environment, supporting shared domains, messaging pipelines, and gradual service evolution.",
+                "Applied Node.js (basic) for lightweight backend-for-frontend (BFF) services and API gateways, simplifying frontend data access and request orchestration.",
+                "Built AI-enabled services using Python (FastAPI) to expose machine learning models for analytics and anomaly detection, integrating them into Go-based backend workflows.",
+                "Designed and implemented event-driven architectures using Kafka, RabbitMQ, and AWS SQS, with Go producers and consumers handling asynchronous processing and system decoupling.",
+                "Implemented comprehensive Go testing practices, including unit, integration, and contract tests with testing and testify, ensuring robust and maintainable backend services.",
+                "Deployed and operated full stack applications on AWS using ECS, EKS, Lambda, S3, RDS, and DynamoDB, ensuring scalability, security, and high availability.",
+                "Containerized applications with Docker and deployed via Kubernetes, managing rolling deployments, health checks, autoscaling, and graceful shutdowns.",
+                "Established CI/CD pipelines with GitHub Actions and Jenkins, automating builds, tests, and deployments for Go, Java, Node.js, and frontend applications.",
+                "Implemented monitoring and observability using Prometheus, Grafana, and structured logging, enabling proactive alerting and faster production issue resolution.",
+                "Led architectural decisions, conducted code reviews, and mentored engineers across both backend and frontend, maintaining consistent engineering standards and long-term maintainability."
+            ]
+        },
+        {
+            "company": "KeyLogic Systems",
+            "title": "SharePoint Engineer",
+            "location": "",
+            "start_date": "Jan 2016",
+            "end_date": "Jul 2016",
+            "bullets": [
+                "Designed and customized SharePoint 2013 and SharePoint Online sites for document management, team collaboration, and workflow automation.",
+                "Built custom workflows using SharePoint Designer and Power Automate, reducing manual approval and reporting effort.",
+                "Extended SharePoint functionality using JavaScript, REST APIs, and SPFx-style custom components.",
+                "Managed permissions, content types, and site structures to support secure and scalable enterprise usage."
+            ]
+        },
+        {
+            "company": "ShahPoint",
+            "title": "SharePoint Engineer",
+            "location": "",
+            "start_date": "Mar 2013",
+            "end_date": "Dec 2015",
+            "bullets": [
+                "Developed and maintained SharePoint 2010/2013 sites for internal collaboration, knowledge management, and reporting.",
+                "Customized SharePoint UI using master pages, JavaScript, jQuery, and CSS to align with business branding and usability requirements.",
+                "Implemented automated workflows for document approvals and notifications using SharePoint Designer.",
+                "Supported SharePoint integrations and data migrations while assisting with performance tuning and issue resolution."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computer Science",
+            "school": "Edinboro University of Pennsylvania",
+            "start_year": "2007",
+            "end_year": "2013"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Brandon Trumble",
+  "email": "brandontrumble8@gmail.com",
+  "phone": "+1 (737) 244-0919",
+  "location": "Nazareth, PA",
+  "postalCode": "18064",
+  "linkedin": "https://www.linkedin.com/in/brandon-trumble-710449a",
+  "github": "https://github.com/asaayo",
+  "summary": "Senior Full Stack Engineer with 10+ years of experience building scalable, high-performance web and data-driven applications. Python-focused backend developer skilled in Django, Flask, FastAPI, and asynchronous architectures, with strong expertise in React and TypeScript for frontend. Experienced in cloud-native deployments (AWS/Azure), CI/CD, automated testing, and AI/LLM integration. Adept at designing secure, maintainable systems, optimizing performance, and leading cross-functional teams across finance, education, and enterprise domains.",
+  "skills": [
+      {
+          "category": "Frontend",
+          "skills": ["React.js", "TypeScript", "Angular", "Vue.js", "Next.js", "Redux", "Responsive Design", "Component Architecture", "Cross-Platform UI", "Progressive Web Apps (PWA)", "Accessibility (a11y)", "Performance Optimization"]
+      },
+      {
+          "category": "Backend & Database",
+          "skills": ["Python", "Django", "Flask", "FastAPI", "Node.js", ".NET Core", "RESTful APIs", "GraphQL", "PostgreSQL", "MySQL", "MongoDB", "Redis", "Microservices", "API Optimization", "Async Processing"]
+      },
+      {
+          "category": "AI / Machine Learning / NLP",
+          "skills": ["TensorFlow", "PyTorch", "scikit-learn", "Pandas", "NumPy", "OpenAI API", "LangChain", "Transformers", "spaCy", "Model Fine-Tuning", "Data Preprocessing", "MLflow"]
+      },
+      {
+          "category": "Cloud & DevOps",
+          "skills": ["AWS (Lambda, ECS, EC2, S3, CloudFront, RDS, API Gateway)", "Azure Functions", "Docker", "Kubernetes (EKS/AKS)", "Terraform", "CloudFormation", "CI/CD (GitHub Actions, Jenkins, GitLab)", "Monitoring & Logging"]
+      },
+      {
+          "category": "Testing & Automation",
+          "skills": ["PyTest", "unittest", "Jest", "React Testing Library", "Cypress", "xUnit/NUnit", "Selenium", "Postman/Newman", "Load Testing (k6, Locust)", "TDD", "Integration & End-to-End Testing"]
+      },
+      {
+          "category": "Data & Workflow Automation",
+          "skills": ["Apache Airflow", "ETL Pipelines", "JSON/YAML Schema", "Cron Jobs", "Batch & Real-Time Processing", "API Integrations", "Workflow Orchestration"]
+      },
+      {
+          "category": "Security & Optimization",
+          "skills": ["OAuth2.0", "JWT", "RBAC", "Security Best Practices", "Performance Profiling", "Code Optimization", "SOLID Principles", "Design Patterns", "API Security", "Data Protection", "Security Audits", "Security Scanning"]
+      },
+      {
+          "category": "Agile & Collaboration",
+          "skills": ["Agile/Scrum", "Kanban", "Jira", "Confluence", "Git/GitHub/GitLab", "Slack", "Code Reviews", "Sprint Planning", "Documentation", "Remote Team Collaboration", "MVP Delivery"]
+      }
+  ],
+  "experience": [
+      {
+          "company": "VC3",
+          "title": "Senior Software Engineer",
+          "location": "",
+          "start_date": "Feb 2020",
+          "end_date": "Present"
+      }
+  ],
+  "education": [
+  ]
+}

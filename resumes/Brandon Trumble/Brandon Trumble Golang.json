@@ -1,0 +1,108 @@
+{
+    "name": "Brandon Trumble",
+    "email": "brandontrumble8@gmail.com",
+    "phone": "+1 (737) 244-0919",
+    "location": "Nazareth, PA",
+    "postalCode": "18064",
+    "linkedin": "https://www.linkedin.com/in/brandon-trumble-710449a",
+    "github": "https://github.com/asaayo",
+    "summary": "Senior Full Stack Engineer with 10+ years of experience building scalable, high-performance web and cloud-native applications. Expert in Golang, React, TypeScript, and Node.js, with additional experience in Java, Python, and .NET Core. Skilled in designing microservices, REST/GraphQL APIs, real-time systems, CI/CD pipelines, and cloud deployments (AWS/Azure). Experienced in AI/LLM integration, data-driven solutions, and leading cross-functional teams to deliver maintainable, secure, and high-performance platforms.",
+    "skills": [
+        {
+            "category": "Frontend",
+            "skills": ["React.js", "TypeScript", "Angular", "Vue.js", "Next.js", "Redux", "RxJS", "Responsive & Component-Based Design", "Cross-Platform UI", "Progressive Web Apps", "Accessibility", "Performance Optimization"]
+        },
+        {
+            "category": "Backend & Database",
+            "skills": ["Golang (Gin, Fiber)", "Java (Spring Boot)", "Node.js", "Express.js", "FastAPI", "Django", "Flask", ".NET Core", "REST/GraphQL APIs", "PostgreSQL", "MySQL", "MongoDB", "Redis", "Microservices", "API Optimization"]
+        },
+        {
+            "category": "AI / ML / NLP",
+            "skills": ["OpenAI API", "LangChain", "Pandas", "NumPy", "Transformers", "LLM Integration", "Model Fine-Tuning", "Python ML Frameworks (TensorFlow, PyTorch, scikit-learn)"]
+        },
+        {
+            "category": "Cloud & DevOps",
+            "skills": ["AWS (Lambda, ECS, EC2, S3, CloudFront, RDS)", "Azure Functions", "Docker", "Kubernetes (EKS/AKS)", "Terraform", "CI/CD pipelines (GitHub Actions, Jenkins)", "Monitoring & Logging"]
+        },
+        {
+            "category": "Testing & Automation",
+            "skills": ["Go testing (built-in testing)", "JUnit (Java)", "PyTest", "xUnit/NUnit", "Jest", "React Testing Library", "Cypress", "Postman/Newman", "Load Testing", "TDD", "Integration & E2E Testing"]
+        },
+        {
+            "category": "Data & Workflow Automation",
+            "skills": ["ETL Pipelines", "Cron Jobs", "Batch & Real-Time Processing", "API Integrations", "Workflow Orchestration", "Data Validation"]
+        },
+        {
+            "category": "Security & Optimization",
+            "skills": ["OAuth 2.0", "JWT", "RBAC", "HTTPS/TLS", "Input Sanitization", "CORS", "Caching", "Performance Tuning", "Secure Payment Integration"]
+        },
+        {
+            "category": "Agile & Collaboration",
+            "skills": ["Agile/Scrum", "Kanban", "Jira", "Confluence", "Git/GitHub/GitLab", "Code Reviews", "Sprint Planning", "Remote Team"]
+        }
+
+    ],
+    "experience": [
+        {
+            "company": "VC3",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Feb 2020",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and delivered end-to-end full-stack systems, with Go-based backend services (Gin, Fiber) and React/TypeScript frontends, applying modular service boundaries, clear API contracts, and scalable deployment patterns.",
+                "Designed and maintained polyglot microservice architectures, using Go for latency-sensitive and cloud-native services, and Java (Spring Boot) to integrate legacy platforms and support high-throughput, transaction-heavy workloads.",
+                "Built high-performance backend APIs (REST and GraphQL) backed by PostgreSQL, MongoDB, and Redis, including schema design, indexing strategies, query optimization, and cache-layer tuning.",
+                "Implemented secure, standardized authentication and authorization across distributed Go, Java, and Node.js services using JWT, OAuth2, and RBAC, with consistent identity propagation and service-to-service access controls.",
+                "Integrated LLM and AI capabilities into production pipelines, leveraging Go and Python for prompt orchestration, inference workflows, and secure consumption of external AI APIs, with attention to latency, cost, and data handling.",
+                "Established automated CI/CD pipelines and cloud infrastructure, using Docker, Kubernetes, and AWS (ECS, Lambda, RDS) to enable multi-environment deployments, blue-green and rolling releases, and zero-downtime updates.",
+                "Led performance and reliability initiatives, including backend profiling, caching strategies, frontend bundle and render optimization, and load testing to sustain high availability under production traffic.",
+                "Built comprehensive testing strategies across the stack, covering Go unit tests, JUnit (Java), PyTest, Jest, Cypress, and full integration tests to ensure correctness, regression safety, and deployment confidence."
+            ]
+        },
+        {
+            "company": "Innovative Control Systems, Inc",
+            "title": "Senior Engineer",
+            "location": "",
+            "start_date": "Mar 2019",
+            "end_date": "Feb 2020",
+            "bullets": [
+                "Built and enhanced full-stack applications using .NET Core, React, and Node.js, contributing to both backend services and modern, component-based frontend interfaces.",
+                "Designed and optimized relational and non-relational data models using PostgreSQL, T-SQL, and MongoDB, supporting transactional workflows and analytics use cases.",
+                "Developed and consumed RESTful APIs, integrating frontend and backend systems with a focus on performance, reliability, and maintainable architecture.",
+                "Implemented unit and integration testing across backend and frontend layers using appropriate testing frameworks, improving release confidence and reducing regression issues.",
+                "Assisted with data processing and automation tasks using Python, supporting internal tooling and lightweight backend workflows."
+            ]
+        },
+        {
+            "company": "SunGard K-12",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jul 2015",
+            "end_date": "Mar 2019",
+            "bullets": [
+                "Developed and maintained enterprise-grade education management systems using C# .NET and VB.NET, applying solid OOP principles to improve code maintainability, reusability, and long-term scalability.",
+                "Built and optimized SQL Server databases and complex T-SQL queries, stored procedures, and indexes to support high-volume student, financial, and administrative data processing.",
+                "Contributed to mobile application development using Apache Cordova and Ionic, delivering cross-platform mobile solutions used by school administrators and educators.",
+                "Implemented dynamic, responsive user interfaces with Angular, HTML, CSS, improving usability and consistency across desktop and mobile platforms.",
+                "Participated in full SDLC activities, including requirements analysis, system design, development, testing, deployment, and post-release support in a regulated education environment.",
+                "Collaborated closely with product managers, QA engineers, and business analysts to translate district-level requirements into reliable technical solutions.",
+                "Diagnosed and resolved production issues, performance bottlenecks, and data inconsistencies, improving system stability and reducing support turnaround time."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Master’s degree in Computer Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2014",
+            "end_year": "2015"
+        },
+        {
+            "degree": "Bachelor’s degree in Computer and Information Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2011",
+            "end_year": "2014"
+        }
+    ]
+}
