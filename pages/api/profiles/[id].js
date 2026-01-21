@@ -12,9 +12,21 @@ export default function handler(req, res) {
       return res.status(400).json({ error: "Profile ID required" });
     }
 
-    const profilePath = path.join(process.cwd(), "resumes", `${id}.json`);
+    // Try multiple possible paths: root level and subdirectory
+    const possibleProfilePaths = [
+      path.join(process.cwd(), "resumes", `${id}.json`),
+      path.join(process.cwd(), "resumes", id, `${id}.json`)
+    ];
+    
+    let profilePath = null;
+    for (const testPath of possibleProfilePaths) {
+      if (fs.existsSync(testPath)) {
+        profilePath = testPath;
+        break;
+      }
+    }
 
-    if (!fs.existsSync(profilePath)) {
+    if (!profilePath) {
       return res.status(404).json({ error: "Profile not found" });
     }
 

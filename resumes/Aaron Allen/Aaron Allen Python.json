@@ -1,0 +1,69 @@
+{
+    "name": "Aaron Allen",
+    "email": "aaronallendev@gmail.com",
+    "phone": "+1 (713) 913-4730",
+    "location": "Yulee, FL",
+    "postalCode": "32097",
+    "linkedin": "https://www.linkedin.com/in/aaron-allen-8a90308a",
+    "github": "https://github.com/gunmetalAI",
+    "summary": "Full Stack Software Engineer with 9+ years of experience building scalable, high-performance web and backend systems. Python-focused developer skilled in FastAPI, Django, Flask, and asynchronous architectures, with strong expertise in React, Angular, and React Native for frontend applications. Experienced in AI/ML integration using TensorFlow, PyTorch, and Python-based data pipelines. Adept at designing secure, maintainable systems, optimizing performance, implementing CI/CD automation, and mentoring teams to deliver enterprise-grade solutions in fast-paced environments.",
+    "skills": "React.js | React Native | Angular | Next.js | TypeScript | Python | FastAPI | Django | Flask | Node.js | Express.js | RESTful APIs | GraphQL | PostgreSQL | MongoDB | Redis | Snowflake | C++ | API Optimization | Query Optimization | ETL Pipelines | PowerShell Automation | TensorFlow | PyTorch | scikit-learn | NumPy | Pandas | AI-powered search | Predictive Analytics | LLM & LangChain Integration | PyTest | unittest | Jest | React Testing Library | Cypress | xUnit | Integration & End-to-End Testing | TDD | Azure | AWS | Docker | Kubernetes | CI/CD Pipelines | GitHub Actions | Azure DevOps | Cloud Deployment Automation | JWT | OAuth2 | RBAC | HTTPS/TLS | Input Sanitization | CORS Policies | Caching Strategies | Application Profiling | Jira | Confluence | Git (GitHub, GitLab, Bitbucket) | Team Mentoring | Cross-functional Collaboration",
+    "experience": [
+        {
+            "company": "SS&C Advent",
+            "title": "Sr. Software Engineer",
+            "location": "Jacksonville, FL",
+            "start_date": "Jan 2019",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and maintained Python-first backend systems using FastAPI and Django, delivering secure, high-performance APIs and asynchronous task processing pipelines.",
+                "Developed full-stack web and mobile applications using React, Angular, and React Native, integrating with Python backend services for real-time data workflows.",
+                "Managed PostgreSQL, MongoDB, and Snowflake databases, implementing query optimization, indexing strategies, and high-volume transactional operations.",
+                "Built and deployed AI/ML features using Python, FastAPI, TensorFlow, and PyTorch, including intelligent search, predictive analytics, and recommendation engines.",
+                "Designed and operated RESTful and GraphQL APIs, optimizing for throughput, maintainability, and long-term scalability.",
+                "Implemented unit, integration, and end-to-end testing with PyTest, Jest, React Testing Library, Cypress, and xUnit, improving code reliability and deployment confidence.",
+                "Automated system tasks and deployments using PowerShell, Docker, and CI/CD pipelines, improving operational efficiency.",
+                "Optimized application performance through caching, asynchronous processing, and profiling, reducing latency and improving responsiveness.",
+                "Contributed to C++ modules for legacy system integration and high-performance computation tasks.",
+                "Participated in architecture and code reviews, mentoring junior engineers, and promoting Python best practices, clean code, and maintainable system design."
+            ]
+        },
+        {
+            "company": "Deliver Media",
+            "title": "Senior Developer",
+            "location": "Tampa, FL",
+            "start_date": "Jul 2017",
+            "end_date": "Jan 2019",
+            "bullets": [
+                "Built full-stack applications with React.js frontend and Python (Flask, FastAPI) and Node.js backend services, delivering customer dashboards and internal tools.",
+                "Designed and optimized PostgreSQL and MongoDB schemas for transactional and analytical workloads.",
+                "Developed RESTful APIs with robust authentication and authorization mechanisms (JWT, OAuth2).",
+                "Implemented backend automation scripts and lightweight ML workflows in Python and PowerShell for internal tooling.",
+                "Integrated frontend with backend services using React and TypeScript, applying modular architecture and state management patterns.",
+                "Maintained CI/CD workflows and Dockerized environments for development, testing, and production deployments."
+            ]
+        },
+        {
+            "company": "Genesys",
+            "title": "Associate Software Engineer",
+            "location": "Jacksonville, FL",
+            "start_date": "May 2016",
+            "end_date": "Jun 2017",
+            "bullets": [
+                "Contributed to backend development using Python, Node.js, and C++, supporting REST APIs and server-side business logic.",
+                "Assisted in building frontend interfaces with AngularJS and jQuery, implementing dynamic forms and data-binding components.",
+                "Performed data modeling and query optimization with MySQL, MongoDB, and Snowflake to support CRUD operations and analytics workflows.",
+                "Participated in debugging, maintenance, and QA activities, improving application stability and reducing production defects.",
+                "Collaborated in Agile/Scrum teams, following code reviews, sprint planning, and development standards."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computing & Information Systems",
+            "school": "University of North Florida",
+            "start_year": "2013",
+            "end_year": "2017"
+        }
+    ]
+}

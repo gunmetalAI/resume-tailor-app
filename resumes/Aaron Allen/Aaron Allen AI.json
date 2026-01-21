@@ -1,0 +1,68 @@
+{
+    "name": "Aaron Allen",
+    "email": "aaronallendev@gmail.com",
+    "phone": "+1 (713) 913-4730",
+    "location": "Yulee, FL",
+    "postalCode": "32097",
+    "linkedin": "https://www.linkedin.com/in/aaron-allen-8a90308a",
+    "github": "https://github.com/gunmetalAI",
+    "summary": "Full Stack Software Engineer with 9+ years of experience designing, developing, and deploying scalable web and mobile applications. Skilled in React, Angular, React Native, Node.js, and databases such as PostgreSQL and MongoDB, with a strong background in AI/ML integration using Python, FastAPI, and TensorFlow/PyTorch. Experienced in building high-performance, secure, and testable systems, implementing unit, integration, and end-to-end testing, and optimizing application performance through caching, query tuning, and asynchronous processing. Adept at CI/CD automation with GitHub Actions and Azure DevOps, Agile methodologies, and mentoring junior engineers, delivering enterprise-grade solutions in fast-paced environments.",
+    "skills": "React.js | React Native | Angular | Next.js | TypeScript | JavaScript | Material UI | React Hook Form | jQuery | Node.js | Express.js | FastAPI | Python | RESTful APIs | GraphQL | PostgreSQL | MongoDB | SQL Server | Redis | TensorFlow | PyTorch | NumPy | Pandas | Scikit-learn | AI-powered search | Predictive analytics | Jest | React Testing Library | Cypress | xUnit | Integration Testing | End-to-End Testing | Unit Testing | Caching strategies | Asynchronous processing | Query optimization | Application profiling | Azure DevOps | GitHub Actions | Docker | CI/CD pipelines | Cloud deployment automation | Agile/Scrum | Jira | Confluence | Git (GitHub, GitLab, Bitbucket) | Team mentoring | Cross-functional collaboration",
+    "experience": [
+        {
+            "company": "SS&C Advent",
+            "title": "Sr. Software Engineer",
+            "location": "Jacksonville, FL",
+            "start_date": "Jan 2019",
+            "end_date": "Present",
+            "bullets": [
+                "Engineered enterprise web and mobile applications using React, Angular, and React Native, delivering responsive and high-performance cross-platform solutions.",
+                "Designed and maintained scalable Node.js backend services, implementing RESTful APIs for core platform features and internal workflows.",
+                "Managed PostgreSQL and MongoDB databases, optimizing queries, ensuring data integrity, and supporting high-volume transactional operations.",
+                "Built and deployed AI-powered features using Python, FastAPI, and TensorFlow/PyTorch, including intelligent search, recommendation engines, and predictive data analytics.",
+                "Implemented unit, integration, and end-to-end testing with Jest, React Testing Library, Cypress, and xUnit, maintaining high code quality and reducing production defects.",
+                "Optimized application performance through caching strategies, asynchronous processing, and query optimization, improving load times and system responsiveness.",
+                "Developed and maintained CI/CD pipelines with GitHub Actions and Azure DevOps, automating testing, builds, and deployments to cloud environments.",
+                "Participated in architecture design and code reviews, collaborating with product and QA teams to ensure maintainable, modular, and scalable code.",
+                "Mentored junior engineers and contributed to team best practices, including coding standards, design patterns, and Agile development processes."
+            ]
+        },
+        {
+            "company": "Deliver Media",
+            "title": "Senior Developer",
+            "location": "Tampa, FL",
+            "start_date": "Jul 2017",
+            "end_date": "Jan 2019",
+            "bullets": [
+                "Developed and maintained full-stack web applications using React.js and Node.js (Express), delivering features for internal tools and customer-facing dashboards.",
+                "Built and maintained RESTful APIs, handling request validation, authentication flows, and core business logic.",
+                "Designed and optimized relational data models using PostgreSQL, writing efficient queries and supporting schema migrations.",
+                "Implemented frontend and backend testing using Jest, Mocha, and Chai, improving test coverage and reducing production issues.",
+                "Collaborated with designers and product stakeholders to translate requirements into functional UI components and backend services.",
+                "Used a modern development toolchain including Git, Docker (development environments), environment-based configuration, and CI workflows to support reliable builds and deployments."
+            ]
+        },
+        {
+            "company": "Genesys",
+            "title": "Associate Software Engineer",
+            "location": "Jacksonville, FL",
+            "start_date": "May 2016",
+            "end_date": "Jun 2017",
+            "bullets": [
+                "Contributed to the development of internal and customer-facing web applications using AngularJS and jQuery, implementing UI logic, form handling, and dynamic data binding under senior developer supervision.",
+                "Assisted in building backend functionality with Node.js and PHP, supporting REST-style endpoints and server-side business logic for user and workflow-related features.",
+                "Worked with MySQL and MongoDB to perform data modeling, write basic queries, and support CRUD operations for application features.",
+                "Participated in debugging and maintenance activities, resolving frontend and backend issues reported by QA and improving application stability.",
+                "Used Git for version control and collaborated within an Agile/Scrum team, participating in sprint ceremonies, task estimation, and code reviews to follow established development standards."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computing & Information Systems",
+            "school": "University of North Florida",
+            "start_year": "2013",
+            "end_year": "2017"
+        }
+    ]
+}

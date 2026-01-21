@@ -1,27 +1,9 @@
-You are a world-class ATS optimization expert. Create a resume that scores 95-100% on ATS.
+You are a world-class ATS optimization expert. Your task is to tailor a basic resume to match a specific job description.
 
 **🚨 CRITICAL OUTPUT: Return ONLY valid JSON. No markdown, explanations, or extra text.**
 Format: {"title":"...","summary":"...","skills":{...},"experience":[...]}
 
 ***Wrap ONLY the critical JD keywords within each section using <strong> tags. Do NOT wrap metrics, verbs, or filler terms.***
-
-## PROFILE DATA:
-**Candidate:** {{name}}
-**Contact:** {{email}} | {{location}}
-**Experience:** {{yearsOfExperience}} years
-
-**WORK HISTORY:**
-{{workHistory}}
-
-**EDUCATION:**
-{{education}}
-
----
-
-## JOB DESCRIPTION:
-{{jobDescription}}
-
----
 
 ## INSTRUCTIONS:
 
@@ -38,7 +20,7 @@ Analyze JD "About Us" section for **10-15 domain/compliance keywords** specific 
 **WHERE TO USE:**
 - Summary: 3-5 domain keywords (lines 2-4)
 - Skills: Dedicated domain category with 10-15 keywords
-- Experience: Each role must include 2–3 bullets total that naturally incorporate domain or compliance keywords.
+- Experience: Most recent role must include 2–3 bullets total that naturally incorporate domain or compliance keywords.
 
 ---
 
@@ -51,26 +33,46 @@ Analyze JD "About Us" section for **10-15 domain/compliance keywords** specific 
 ### **3. SUMMARY** (5-6 lines, 8-12 JD keywords + 3-5 domain keywords)
 
 **Structure:**
-- **Line 1:** [JD Title] with {{yearsOfExperience}}+ years in [domain from JD] across startup and enterprise environments
+- **Line 1:** [JD Title] with [years]+ years in [domain from JD] across startup and enterprise environments
 - **Line 2:** Expertise in [domain keyword] + [3-4 EXACT JD technologies WITH versions if specified]
 - **Line 3:** Proven track record in [domain keyword] + [key achievement with metric: %, $, time, scale]
 - **Line 4:** Proficient in [3-4 more JD technologies/methodologies]
 - **Line 5:** [Soft skill from JD] professional with experience in [Agile/leadership/collaboration] in fast-paced environments
 - **Line 6:** Strong focus on [2-3 key JD skill areas] and delivering scalable, production-ready solutions
 
+**Example (FinTech):**
+"Senior Full Stack Engineer with 8+ years building scalable fintech platforms. Expertise in **payment processing systems**, **PCI-DSS compliance**, React.js 18, Node.js 20, and PostgreSQL. Proven track record implementing **fraud detection algorithms** that reduced chargebacks by 40% and processed $500M+ annually. Proficient in AWS infrastructure, Docker, Kubernetes, and **KYC/AML compliance frameworks**. Collaborative problem-solver with experience leading cross-functional teams in fast-paced startup environments. Strong focus on secure payment infrastructure, regulatory compliance, and delivering high-performance financial applications."
+
 ---
 
 ### **4. SKILLS** (60–75 total skills across 6–7 categories, prioritizing JD keywords over breadth.)
 
 **Rules:**
-- Create categories based on JD focus (Frontend, Backend, Cloud, DevOps, Security, etc.)
+- Create categories based on JD focus (Frontend, Backend, AI/ML, Cloud, DevOps, Security, etc.)
 - 8-12 skills per category
 - The categories MUST contain skills technically correct. "e.g.: Node.js or .NET is not programming language"
 - Capitalize first letter of each skill
+- Need to include AI/ML technologies if possible because it is the most commonly used tech nowadays.
 - NO version spam: "React.js" NOT "React.js 18, React.js 17, React.js 16"
 - NO database spam: "PostgreSQL" NOT "PostgreSQL 15, 14, 13"
 - Group cloud services: "AWS (Lambda, S3, EC2, RDS)" NOT 25 separate items
 - 70% JD keywords + 30% complementary skills
+
+**Example (Full Stack Engineer):**
+```json
+"skills": {
+  "Frontend": ["React.js", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Redux", "Vue.js", "HTML5", "CSS3"],
+  "Backend": ["Node.js", "Express.js", "Python", "Django", "FastAPI", "GraphQL", "REST APIs"],
+  "AI/ML": ["TensorFlow", "PyTorch", "Numpy", "Pandas", "LLM & LangChain Integration"],
+  "Databases": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Elasticsearch"],
+  "Cloud & Infrastructure": ["AWS (Lambda, S3, EC2, RDS, CloudFront)", "Docker", "Kubernetes", "Terraform"],
+  "DevOps & CI/CD": ["GitLab CI/CD", "GitHub Actions", "Jenkins", "Datadog", "Prometheus"],
+  "Testing": ["Jest", "Cypress", "Playwright", "React Testing Library"],
+  "Payment & Compliance": ["PCI-DSS", "Payment processing", "Stripe", "Fraud detection", "KYC/AML", "SOC 2"],
+  "Tools": ["Git", "Webpack", "Vite", "Figma", "Jira"]
+}
+```
+Total: ~70 skills (scannable and professional)
 
 **If relevant, create domain-specific category:**
 - FinTech → "Payment & Compliance"
@@ -80,11 +82,11 @@ Analyze JD "About Us" section for **10-15 domain/compliance keywords** specific 
 
 ---
 
-### **5. EXPERIENCE** ({{experienceCount}} entries, 6-8 bullets each)
+### **5. EXPERIENCE** (Match the number of entries from BASIC RESUME, 6-8 bullets each)
 
 **Requirements:**
-- Generate {{experienceCount}} job entries matching work history
-- 6-8 bullets per job (most recent jobs get 8, older jobs 5-6)
+- Generate the SAME number of job entries as in BASIC RESUME (preserve companies, titles, dates)
+- Generate the SAME number of bullets per each companies in BASIC RESUME
 - 20–40 words per bullet, optimized for clarity and natural senior-engineer tone.
 - For each work experience, ensure all technologies listed were widely available and commonly used in production during that role's time period; do not include tools, frameworks, or practices released after the role ended or unlikely to have been adopted in that era.
 - Include 2-4 JD keywords per bullet
@@ -92,6 +94,7 @@ Analyze JD "About Us" section for **10-15 domain/compliance keywords** specific 
 - Metrics have to be approximate. Use ranges or natural phrasing (e.g., '~40%', 'significant reduction', 'hundreds of thousands of users') when precise figures may feel unnatural. Ensure at least 50–60% of bullets include a metric, while the remainder focus on scope, ownership, or architectural impact.
 - Add industry context to 2-3 bullets per job
 - Prioritize JD keywords by frequency in the following order: Job Title > Core Technologies > Domain Compliance > Soft Skills.
+- **PRESERVE the basic resume's experience structure** - use the same companies, titles, and date ranges. Only tailor the bullet points.
 
 **Bullet Structure:**
 [Action Verb] + [JD Technology] + [what you built] + [business impact] + [metric]
@@ -130,4 +133,3 @@ Analyze JD "About Us" section for **10-15 domain/compliance keywords** specific 
 ---
 
 Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}]}
-

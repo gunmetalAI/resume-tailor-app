@@ -1,0 +1,68 @@
+{
+    "name": "Aaron Allen",
+    "email": "aaronallendev@gmail.com",
+    "phone": "+1 (713) 913-4730",
+    "location": "Yulee, FL",
+    "postalCode": "32097",
+    "linkedin": "https://www.linkedin.com/in/aaron-allen-8a90308a",
+    "github": "https://github.com/gunmetalAI",
+    "summary": "Full Stack .NET Developer with 9+ years of experience designing, developing, and deploying scalable web and enterprise applications. Skilled in C#, .NET Core, ASP.NET Core, Entity Framework, React, Angular, and React Native. Experienced in AI/ML integration using Python, FastAPI, and TensorFlow/PyTorch. Adept at building secure, high-performance, and testable systems, implementing unit, integration, and end-to-end testing, and optimizing application performance through caching, query tuning, and asynchronous processing. Proficient in CI/CD automation with Azure DevOps and GitHub Actions, Agile methodologies, and mentoring junior engineers, delivering enterprise-grade solutions in fast-paced environments.",
+    "skills": "C# | .NET Core | ASP.NET Core | Web API | Entity Framework Core | LINQ | React.js | React Native | Angular | Next.js | TypeScript | JavaScript | Material UI | React Hook Form | jQuery | Node.js | Express.js | FastAPI | Python | RESTful APIs | GraphQL | SQL Server | PostgreSQL | MongoDB | Redis | TensorFlow | PyTorch | NumPy | Pandas | Scikit-learn | AI-powered search | Predictive analytics | xUnit | NUnit | MSTest | Jest | React Testing Library | Cypress | Integration Testing | End-to-End Testing | Unit Testing | Caching strategies | Asynchronous processing | Query optimization | Application profiling | Azure DevOps | GitHub Actions | Docker | CI/CD pipelines | Cloud deployment automation | Agile/Scrum | Jira | Confluence | Git (GitHub, GitLab, Bitbucket) | Team mentoring | Cross-functional collaboration",
+    "experience": [
+        {
+            "company": "SS&C Advent",
+            "title": "Sr. Software Engineer",
+            "location": "Jacksonville, FL",
+            "start_date": "Jan 2019",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and delivered enterprise-grade backend systems using C#/.NET Core and ASP.NET Core, designing RESTful APIs, microservices, and background processing pipelines supporting high-volume, business-critical workflows.",
+                "Led development of modern frontend applications using React, Angular, and React Native, improving usability and reducing feature delivery time through reusable component architectures and clean API integrations.",
+                "Designed and optimized SQL Server and PostgreSQL data models using Entity Framework Core, improving query performance and reducing database-related incidents through indexing, query tuning, and controlled migrations.",
+                "Integrated Python-based AI/ML services into .NET platforms using FastAPI and TensorFlow/PyTorch, enabling intelligent search, recommendation features, and predictive analytics used by internal teams and customer-facing applications.",
+                "Implemented comprehensive unit, integration, and end-to-end testing (xUnit, NUnit, Jest, React Testing Library, Cypress), increasing test coverage and significantly reducing production defects and regression issues.",
+                "Improved application performance and scalability by implementing Redis caching, asynchronous processing, and optimized data access patterns, reducing API response times and improving system stability under peak load.",
+                "Designed and maintained CI/CD pipelines using Azure DevOps and GitHub Actions, automating builds, tests, and deployments and reducing release cycles from days to hours.",
+                "Participated in architecture reviews and technical decision-making, ensuring solutions met security, maintainability, and scalability requirements for enterprise environments.",
+                "Mentored junior engineers through code reviews, pair programming, and technical guidance, improving team productivity and promoting best practices in design patterns, testing, and Agile development."
+            ]
+        },
+        {
+            "company": "Deliver Media",
+            "title": "Senior Developer",
+            "location": "Tampa, FL",
+            "start_date": "Jul 2017",
+            "end_date": "Jan 2019",
+            "bullets": [
+                "Developed full-stack applications using .NET Core, React.js, and Node.js, delivering internal tools and customer-facing dashboards used by operations and business stakeholders.",
+                "Designed and implemented RESTful APIs, handling authentication, validation, and business logic, improving system reliability and simplifying frontend-backend integration.",
+                "Built and optimized SQL Server and MongoDB data models to support transactional workflows and analytics use cases, improving data consistency and query performance.",
+                "Implemented backend and frontend testing using xUnit, Jest, Mocha, and Chai, reducing production issues and improving confidence in frequent releases.",
+                "Collaborated closely with designers, product owners, and stakeholders to translate requirements into scalable technical solutions, consistently delivering features on schedule.",
+                "Used Docker, Git, and CI workflows to standardize development environments and improve deployment reliability across environments."
+            ]
+        },
+        {
+            "company": "Genesys",
+            "title": "Associate Software Engineer",
+            "location": "Jacksonville, FL",
+            "start_date": "May 2016",
+            "end_date": "Jun 2017",
+            "bullets": [
+                "Contributed to internal and customer-facing web applications using AngularJS, jQuery, and ASP.NET Web API, implementing dynamic UI features and server-side workflows.",
+                "Assisted in building backend services using C# .NET and Node.js, supporting REST-style endpoints for user management and internal operational tools.",
+                "Worked with SQL Server and MongoDB to design schemas, write queries, and support CRUD operations for production systems.",
+                "Diagnosed and resolved frontend and backend issues reported by QA and users, improving application stability and reducing recurring defects.",
+                "Participated in Agile/Scrum ceremonies, including sprint planning, estimation, and retrospectives, gaining experience in collaborative, iterative development."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computing & Information Systems",
+            "school": "University of North Florida",
+            "start_year": "2013",
+            "end_year": "2017"
+        }
+    ]
+}

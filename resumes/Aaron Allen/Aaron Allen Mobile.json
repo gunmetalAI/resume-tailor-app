@@ -1,0 +1,67 @@
+{
+    "name": "Aaron Allen",
+    "email": "aaronallendev@gmail.com",
+    "phone": "+1 (713) 913-4730",
+    "location": "Yulee, FL",
+    "postalCode": "32097",
+    "linkedin": "https://www.linkedin.com/in/aaron-allen-8a90308a",
+    "github": "https://github.com/gunmetalAI",
+    "summary": "Senior Mobile Software Engineer with 9+ years of experience designing, developing, and deploying high-performance iOS and Android applications. Strong expertise in React Native and native mobile development concepts, with hands-on experience integrating mobile apps with scalable backend services using Node.js, FastAPI, and modern APIs. Proven ability to deliver secure, responsive, and reliable mobile solutions with a focus on performance optimization, offline-first architectures, and robust testing strategies. Experienced in CI/CD automation for mobile pipelines, Agile development, and mentoring engineers to deliver production-grade mobile applications in fast-paced environments.",
+    "skills": "iOS | Android | React Native | JavaScript | TypeScript | Swift (working knowledge) | Kotlin (working knowledge) | React.js | Angular | Node.js | Express.js | FastAPI | RESTful APIs | GraphQL | Mobile UI/UX principles | Material Design | Platform-specific guidelines (iOS HIG, Android) | Offline caching | Push notifications | Background sync | PostgreSQL | MongoDB | SQLite | Redis | Jest | React Testing Library | Cypress | Mobile integration testing | Unit Testing | Performance profiling | Application optimization | CI/CD pipelines | GitHub Actions | Azure DevOps | Docker | Mobile build automation | Agile/Scrum | Jira | Git (GitHub, GitLab)",
+    "experience": [
+        {
+            "company": "SS&C Advent",
+            "title": "Sr. Software Engineer",
+            "location": "Jacksonville, FL",
+            "start_date": "Jan 2019",
+            "end_date": "Present",
+            "bullets": [
+                "Engineered cross-platform mobile applications using React Native, delivering consistent user experiences across iOS and Android devices.",
+                "Developed and integrated mobile features such as offline data storage, background synchronization, and secure authentication flows, improving usability in low-connectivity environments.",
+                "Designed and consumed RESTful and GraphQL APIs from mobile clients, collaborating closely with backend teams to ensure efficient data transfer and scalability.",
+                "Optimized mobile application performance through asynchronous processing, state management optimization, and API response tuning, resulting in faster load times and smoother UI interactions.",
+                "Implemented unit, integration, and end-to-end testing for mobile flows using Jest, React Testing Library, and Cypress, reducing production regressions.",
+                "Automated mobile CI/CD pipelines with GitHub Actions and Azure DevOps, streamlining build, test, and release workflows for multi-environment deployments.",
+                "Collaborated in architecture design reviews, ensuring mobile-first considerations such as battery usage, network efficiency, and platform-specific behavior.",
+                "Mentored junior engineers on mobile best practices, component architecture, and performance-aware development."
+            ]
+        },
+        {
+            "company": "Deliver Media",
+            "title": "Senior Developer",
+            "location": "Tampa, FL",
+            "start_date": "Jul 2017",
+            "end_date": "Jan 2019",
+            "bullets": [
+                "Built and maintained mobile-first applications using React Native, supporting both iOS and Android platforms from a shared codebase.",
+                "Implemented mobile UI components aligned with Material Design and platform-specific interaction patterns to enhance usability and accessibility.",
+                "Integrated mobile applications with Node.js (Express) backend services, handling authentication, data synchronization, and error handling.",
+                "Designed and optimized PostgreSQL-backed APIs to support mobile data consumption with minimal latency.",
+                "Added automated testing for mobile-related business logic and UI interactions, improving stability across device types.",
+                "Worked closely with product and design teams to translate requirements into mobile-ready features and iterative releases."
+            ]
+        },
+        {
+            "company": "Genesys",
+            "title": "Associate Software Engineer",
+            "location": "Jacksonville, FL",
+            "start_date": "May 2016",
+            "end_date": "Jun 2017",
+            "bullets": [
+                "Contributed to mobile-friendly web and hybrid applications, supporting early-stage mobile initiatives using AngularJS, jQuery, and responsive design techniques.",
+                "Assisted in developing mobile-integrated backend services using Node.js and PHP, supporting REST-style endpoints consumed by mobile clients.",
+                "Worked with MySQL and MongoDB to support data persistence for mobile and web features.",
+                "Participated in debugging and performance tuning efforts that improved application stability on mobile devices.",
+                "Collaborated within an Agile/Scrum team, gaining hands-on experience with sprint planning, code reviews, and incremental mobile feature delivery."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computing & Information Systems",
+            "school": "University of North Florida",
+            "start_year": "2013",
+            "end_year": "2017"
+        }
+    ]
+}
