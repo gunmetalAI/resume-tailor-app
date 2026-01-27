@@ -5,6 +5,7 @@
     "address": "215 Fredonia St",
     "location": "San Antonio, TX",
     "postalCode": "78203",
+    "university": "The University of Texas at San Antonio",
     "linkedin": "https://www.linkedin.com/in/juan-ruiz-8ab163158",
     "github": "https://github.com/willywilly-coder",
     "summary": "Senior Full Stack Developer with 7+ years of experience designing, developing, and deploying Golang-powered web applications and AI-integrated solutions in retail, insurance, logistics, and enterprise systems. Strong backend focus on Go (Golang), building high-performance microservices, REST/gRPC APIs, and event-driven systems, while working in polyglot stacks including Java (Spring Boot), Node.js, and Python/FastAPI for AI and automation pipelines. Experienced in developing modern frontend applications with React.js, Next.js, TypeScript, and Go server-side rendering frameworks (Gin templates, Fiber). Skilled in unit, integration, and contract testing, cloud deployments (AWS, Azure), CI/CD automation, and distributed system design. Adept at mentoring engineers and delivering scalable, maintainable, full stack solutions in Agile environments.",

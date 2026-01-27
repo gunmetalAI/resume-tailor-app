@@ -5,6 +5,7 @@
     "address": "425 Arch Ave",
     "location": "Greensburg, PA",
     "postalCode": "15601",
+    "university": "Edinboro University of Pennsylvania",
     "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a8",
     "github": "https://github.com/DebugMaster25",
     "summary": "Strategic Senior Full Stack Engineer with 9+ years of experience building scalable, production-grade web platforms with a primary focus on Java-based backend systems. Deep expertise in Spring Boot, Spring MVC, Hibernate, and JPA, designing modular microservices, REST/GraphQL APIs, and event-driven architectures. Experienced in integrating legacy enterprise systems and Oracle databases, while also leveraging Node.js and Python (FastAPI) for lightweight services and AI/ML pipelines. Proven ability to deliver high-performance, cloud-native applications on AWS, lead Agile teams, optimize distributed systems, and bridge backend intelligence with intuitive frontend experiences using React, Next.js, Angular, and TypeScript.",

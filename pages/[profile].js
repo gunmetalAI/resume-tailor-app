@@ -295,6 +295,7 @@ export default function ProfilePage() {
     { key: 'postalCode', label: 'Postal Code', value: selectedProfileData.postalCode, icon: '✉️' },
     { key: 'lastCompany', label: 'Last Company', value: getLastCompany(), icon: '🏢' },
     { key: 'lastRole', label: 'Last Role', value: getLastRole(), icon: '💼' },
+    { key: 'university', label: 'University', value: selectedProfileData.university, icon: '🎓' },
     { key: 'linkedin', label: 'LinkedIn', value: selectedProfileData.linkedin, icon: '💼' },
     { key: 'github', label: 'GitHub', value: selectedProfileData.github, icon: '💻' },
   ].filter(field => field.value); // Only show fields with values

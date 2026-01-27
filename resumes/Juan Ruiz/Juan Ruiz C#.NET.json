@@ -5,6 +5,7 @@
     "address": "215 Fredonia St",
     "location": "San Antonio, TX",
     "postalCode": "78203",
+    "university": "The University of Texas at San Antonio",
     "linkedin": "https://www.linkedin.com/in/juan-ruiz-8ab163158",
     "github": "https://github.com/willywilly-coder",
     "summary": "Senior Full Stack Software Engineer with 7+ years of experience designing, developing, and deploying enterprise-grade web applications and AI-powered solutions in retail, insurance, logistics, and enterprise systems. Proficient in ASP.NET Core (C#), Node.js, React.js, Next.js, and Angular, with extensive experience integrating Python/FastAPI for LLMs, NLP models, and AI pipelines to enable automation and predictive analytics. Skilled in RESTful and GraphQL API design, microservices, event-driven architectures, database design (SQL Server, PostgreSQL, MongoDB), and cloud deployments (Azure, AWS). Strong expertise in unit and integration testing (xUnit, NUnit, Jest, PyTest), CI/CD automation, DevOps practices, performance optimization, and application security. Experienced in secure authentication, role-based access control, encryption, and compliance standards (OWASP, GDPR, PCI DSS). Adept at collaborating in Agile environments, mentoring teams, and delivering scalable, maintainable, high-performance applications.",

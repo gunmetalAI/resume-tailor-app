@@ -5,6 +5,7 @@
     "address": "135 S Elm St",
     "location": "Nazareth, PA",
     "postalCode": "18064",
+    "university": "Kutztown University of Pennsylvania",
     "linkedin": "https://www.linkedin.com/in/brandon-trumble-710449a3",
     "github": "https://github.com/asaayo",
     "summary": "Senior Full Stack Engineer with 10+ years of experience building scalable, high-performance web and cloud-native applications. Expert in Golang, React, TypeScript, and Node.js, with additional experience in Java, Python, and .NET Core. Skilled in designing microservices, REST/GraphQL APIs, real-time systems, CI/CD pipelines, and cloud deployments (AWS/Azure). Experienced in AI/LLM integration, data-driven solutions, and leading cross-functional teams to deliver maintainable, secure, and high-performance platforms.",

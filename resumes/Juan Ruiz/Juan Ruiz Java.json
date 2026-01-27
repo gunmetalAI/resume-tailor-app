@@ -5,6 +5,7 @@
     "address": "215 Fredonia St",
     "location": "San Antonio, TX",
     "postalCode": "78203",
+    "university": "The University of Texas at San Antonio",
     "linkedin": "https://www.linkedin.com/in/juan-ruiz-8ab163158",
     "github": "https://github.com/willywilly-coder",
     "summary": "Senior Full Stack Developer with 7+ years of experience designing, developing, and deploying Java/Kotlin-based web applications and AI-powered solutions in retail, insurance, logistics, and enterprise systems. Proficient in Java, Kotlin (Spring Boot, Spring MVC, Hibernate, JPA), Node.js, React.js, Next.js, Python/FastAPI, and integrating LLMs, NLP models, and AI pipelines for automation and predictive analytics. Skilled in RESTful and GraphQL API design, microservices architecture, database design (PostgreSQL, MongoDB, Oracle), and cloud deployments (AWS, Azure). Strong expertise in unit and integration testing (Jest, PyTest, Supertest), performance optimization, CI/CD, and DevOps practices. Experienced in Agile environments, collaborating with cross-functional teams to deliver scalable, maintainable, and high-performance applications.",

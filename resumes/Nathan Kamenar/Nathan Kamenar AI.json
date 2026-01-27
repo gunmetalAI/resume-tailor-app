@@ -5,6 +5,7 @@
     "address": "425 Arch Ave",
     "location": "Greensburg, PA",
     "postalCode": "15601",
+    "university": "Edinboro University of Pennsylvania",
     "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a8",
     "github": "https://github.com/DebugMaster25",
     "summary": "Strategic Senior Full Stack Engineer with 9+ years of experience building scalable, production-grade web platforms with Python at the core and modern JavaScript frameworks for the frontend. Expert in FastAPI, Django, and Flask for backend development, integrating AI/ML pipelines using TensorFlow, PyTorch, scikit-learn, Pandas, and NumPy, and designing event-driven microservices for high-performance systems. Skilled in cloud-native deployments on AWS (Lambda, ECS, S3, RDS, CloudFormation) and CI/CD automation using Docker, GitHub Actions, and Terraform. Proven ability to bridge backend intelligence with responsive frontend experiences using React, Next.js, Angular, and TypeScript, while mentoring teams and driving Agile best practices for maintainable, scalable solutions.",

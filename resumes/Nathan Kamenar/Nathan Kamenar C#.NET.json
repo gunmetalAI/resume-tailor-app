@@ -5,6 +5,7 @@
     "address": "425 Arch Ave",
     "location": "Greensburg, PA",
     "postalCode": "15601",
+    "university": "Edinboro University of Pennsylvania",
     "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a8",
     "github": "https://github.com/DebugMaster25",
     "summary": "Senior Full Stack Software Engineer with 9+ years of experience designing and delivering scalable, production-grade web platforms using ASP.NET Core (C#) and Node.js. Strong expertise in building cloud-native applications on Microsoft Azure, combining microservice and event-driven architectures with modern frontend frameworks. Proven experience integrating Python-based AI/ML services (FastAPI) into enterprise systems, implementing robust CI/CD automation, and optimizing distributed systems for performance and reliability. Adept at leading Agile teams, making architectural decisions, and bridging intelligent backend services with intuitive user experiences using React and Next.js.",

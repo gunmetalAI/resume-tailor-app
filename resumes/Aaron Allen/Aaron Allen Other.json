@@ -5,6 +5,7 @@
     "address": "86554 Lazy Lake Cir",
     "location": "Yulee, FL",
     "postalCode": "32097",
+    "university": "University of North Florida",
     "linkedin": "https://www.linkedin.com/in/aaron-allen-8a90308a",
     "github": "https://github.com/gunmetalAI",
     "summary": "Full Stack Software Engineer with 9+ years of experience designing, developing, and deploying scalable web and mobile applications. Skilled in React, Angular, React Native, Node.js, and databases such as PostgreSQL and MongoDB, with a strong background in AI/ML integration using Python, FastAPI, and TensorFlow/PyTorch. Experienced in building high-performance, secure, and testable systems, implementing unit, integration, and end-to-end testing, and optimizing application performance through caching, query tuning, and asynchronous processing. Adept at CI/CD automation with GitHub Actions and Azure DevOps, Agile methodologies, and mentoring junior engineers, delivering enterprise-grade solutions in fast-paced environments.",
