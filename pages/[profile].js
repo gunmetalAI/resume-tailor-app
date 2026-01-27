@@ -290,7 +290,8 @@ export default function ProfilePage() {
   const quickCopyFields = [
     { key: 'email', label: 'Email', value: selectedProfileData.email, icon: '📧' },
     { key: 'phone', label: 'Phone', value: selectedProfileData.phone, icon: '📞' },
-    { key: 'location', label: 'Address', value: selectedProfileData.location, icon: '📍' },
+    { key: 'address', label: 'Address', value: selectedProfileData.address, icon: '🏠' },
+    { key: 'location', label: 'Location', value: selectedProfileData.location, icon: '📍' },
     { key: 'postalCode', label: 'Postal Code', value: selectedProfileData.postalCode, icon: '✉️' },
     { key: 'lastCompany', label: 'Last Company', value: getLastCompany(), icon: '🏢' },
     { key: 'lastRole', label: 'Last Role', value: getLastRole(), icon: '💼' },
