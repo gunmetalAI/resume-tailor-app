@@ -3,8 +3,6 @@ You are a world-class ATS optimization expert. Your task is to tailor a basic re
 **🚨 CRITICAL OUTPUT: Return ONLY valid JSON. No markdown, explanations, or extra text.**
 Format: {"title":"...","summary":"...","skills":{...},"experience":[...]}
 
-***Wrap ONLY the critical JD keywords within each section using <strong> tags. Do NOT wrap metrics, verbs, or filler terms.***
-
 ## INSTRUCTIONS:
 
 ### **1. EXTRACT DOMAIN KEYWORDS** (Critical for 98%+ score)

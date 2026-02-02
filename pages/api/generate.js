@@ -11,7 +11,8 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).send("Method not allowed");
 
   try {
-    const { profile: profileSlug, jd, template, provider = "claude", model = null, companyName = null } = req.body;
+    const { profile: profileSlug, jd, template, provider = "openai", model = null, companyName = null } = req.body;
+    //const { profile: profileSlug, jd, template, provider = "claude", model = null, companyName = null } = req.body;
 
     if (!profileSlug) return res.status(400).send("Profile slug required");
     if (!jd) return res.status(400).send("Job description required");
