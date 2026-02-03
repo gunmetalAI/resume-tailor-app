@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import { renderToStream } from "@react-pdf/renderer";
 import { getTemplate } from "../../lib/pdf-templates";
-import { callAI } from "../../lib/ai-service";
+import { callAI, getDefaultModel } from "../../lib/ai-service";
 import { getTemplateForProfile, slugToProfileName, getProfileBySlug } from "../../lib/profile-template-mapping";
 import { loadTailoringGuide } from "../../lib/prompt-loader";
 
@@ -55,6 +55,21 @@ export default async function handler(req, res) {
     }
 
     const profileData = JSON.parse(fs.readFileSync(profilePath, "utf-8"));
+
+    // Determine which model will be used (matching the logic in callOpenAI/callClaude)
+    let actualModel = model;
+    if (!actualModel) {
+      actualModel = getDefaultModel(provider);
+    }
+    if (!actualModel) {
+      // Fallback to environment variable or default
+      if (provider === "openai") {
+        actualModel = process.env.OPENAI_MODEL || "gpt-4o-mini";
+      } else if (provider === "claude") {
+        actualModel = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5-20250929";
+      }
+    }
+    console.log(`Using ${provider.toUpperCase()} model: ${actualModel}`);
 
     // STEP 1: Analyze job description to extract technology category and tech stacks
     console.log("Step 1: Analyzing job description for technology requirements...");
