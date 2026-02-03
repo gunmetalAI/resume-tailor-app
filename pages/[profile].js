@@ -39,6 +39,9 @@ export default function ProfilePage() {
   const [profileName, setProfileName] = useState("");
   const [loading, setLoading] = useState(true);
   const [copiedField, setCopiedField] = useState(null);
+  const [preparedPrompt, setPreparedPrompt] = useState(null);
+  const [gptResponse, setGptResponse] = useState("");
+  const [preparingPrompt, setPreparingPrompt] = useState(false);
   const timerIntervalRef = useRef(null);
   const startTimeRef = useRef(null);
 
@@ -123,7 +126,51 @@ export default function ProfilePage() {
     return selectedProfileData?.experience?.[0]?.title || null;
   };
 
-  // Generate PDF
+  // Prepare prompt for GPT
+  const handlePreparePrompt = async () => {
+    if (!jd.trim()) {
+      alert("Please enter a job description");
+      return;
+    }
+
+    if (!selectedProfileData || !profileSlug) {
+      alert("Profile data not loaded");
+      return;
+    }
+
+    setPreparingPrompt(true);
+    try {
+      const response = await fetch("/api/prepare-prompt", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          profile: profileSlug,
+          jd: jd
+        })
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(errorText || "Failed to prepare prompt");
+      }
+
+      const data = await response.json();
+      setPreparedPrompt(data.prompt);
+    } catch (error) {
+      console.error("Prompt preparation error:", error);
+      alert("Failed to prepare prompt: " + error.message);
+    } finally {
+      setPreparingPrompt(false);
+    }
+  };
+
+  // Copy prompt to clipboard
+  const handleCopyPrompt = async () => {
+    if (!preparedPrompt) return;
+    await copyToClipboard(preparedPrompt, "prompt");
+  };
+
+  // Generate PDF (with optional manual AI response)
   const handleGenerate = async () => {
     if (!jd.trim()) {
       alert("Please enter a job description");
@@ -132,6 +179,12 @@ export default function ProfilePage() {
 
     if (!selectedProfileData || !profileSlug) {
       alert("Profile data not loaded");
+      return;
+    }
+
+    // If using manual response, check if it's provided
+    if (!gptResponse.trim()) {
+      alert("Please paste the GPT response in the text area below");
       return;
     }
 
@@ -153,7 +206,8 @@ export default function ProfilePage() {
         body: JSON.stringify({
           profile: profileSlug,
           jd: jd,
-          companyName: companyName.trim() || null
+          companyName: companyName.trim() || null,
+          aiResponse: gptResponse.trim() // Pass manual AI response
         })
       });
 
@@ -529,33 +583,165 @@ export default function ProfilePage() {
               />
             </div>
 
-            {/* Generate Button */}
+            {/* Prepare Prompt and Copy Buttons */}
+            <div style={{ display: "flex", gap: "8px", marginBottom: "12px" }}>
+              <button
+                onClick={handlePreparePrompt}
+                disabled={preparingPrompt || !jd.trim()}
+                style={{
+                  flex: 1,
+                  padding: "10px 16px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  color: colors.buttonText,
+                  background: preparingPrompt || !jd.trim() ? colors.buttonDisabled : colors.buttonBg,
+                  border: "none",
+                  borderRadius: "6px",
+                  cursor: preparingPrompt || !jd.trim() ? "not-allowed" : "pointer",
+                  transition: "all 0.2s ease",
+                  boxShadow: preparingPrompt || !jd.trim() ? "none" : theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)"
+                }}
+                onMouseEnter={(e) => {
+                  if (!preparingPrompt && jd.trim()) {
+                    e.currentTarget.style.background = colors.buttonHover;
+                    e.currentTarget.style.transform = "translateY(-1px)";
+                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.4)" : "0 2px 8px rgba(59, 130, 246, 0.3)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (!preparingPrompt && jd.trim()) {
+                    e.currentTarget.style.background = colors.buttonBg;
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)";
+                  }
+                }}
+              >
+                {preparingPrompt ? "Preparing..." : "Prepare Prompt for GPT"}
+              </button>
+              <button
+                onClick={handleCopyPrompt}
+                disabled={!preparedPrompt}
+                style={{
+                  padding: "10px 16px",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  color: colors.buttonText,
+                  background: !preparedPrompt ? colors.buttonDisabled : colors.buttonBg,
+                  border: "none",
+                  borderRadius: "6px",
+                  cursor: !preparedPrompt ? "not-allowed" : "pointer",
+                  transition: "all 0.2s ease",
+                  whiteSpace: "nowrap",
+                  boxShadow: !preparedPrompt ? "none" : theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)"
+                }}
+                onMouseEnter={(e) => {
+                  if (preparedPrompt) {
+                    e.currentTarget.style.background = colors.buttonHover;
+                    e.currentTarget.style.transform = "translateY(-1px)";
+                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.4)" : "0 2px 8px rgba(59, 130, 246, 0.3)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (preparedPrompt) {
+                    e.currentTarget.style.background = colors.buttonBg;
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)";
+                  }
+                }}
+              >
+                {copiedField === "prompt" ? "Copied!" : "Copy the Prompt"}
+              </button>
+            </div>
+
+            {/* Prompt Ready Indicator */}
+            {preparedPrompt && (
+              <div style={{
+                padding: "8px 12px",
+                background: colors.successBg,
+                border: `1px solid ${colors.successText}`,
+                borderRadius: "6px",
+                color: colors.successText,
+                fontSize: "12px",
+                textAlign: "center",
+                fontWeight: "500",
+                marginBottom: "12px"
+              }}>
+                ✓ Prompt ready! Click "Copy the Prompt" to copy it.
+              </div>
+            )}
+
+            {/* GPT Response Textarea */}
+            <div style={{ marginBottom: "12px" }}>
+              <label style={{
+                display: "block",
+                fontSize: "11px",
+                fontWeight: "600",
+                color: colors.textSecondary,
+                marginBottom: "6px",
+                textTransform: "uppercase",
+                letterSpacing: "0.3px"
+              }}>
+                GPT Response
+              </label>
+              <textarea
+                value={gptResponse}
+                onChange={(e) => setGptResponse(e.target.value)}
+                placeholder="Paste the GPT response here after copying the prompt and getting the answer from GPT..."
+                rows="8"
+                style={{
+                  width: "100%",
+                  padding: "10px 12px",
+                  fontSize: "13px",
+                  fontFamily: "inherit",
+                  color: colors.text,
+                  background: colors.textareaBg,
+                  border: `1px solid ${colors.inputBorder}`,
+                  borderRadius: "6px",
+                  outline: "none",
+                  resize: "vertical",
+                  minHeight: "120px",
+                  lineHeight: "1.5",
+                  transition: "all 0.2s ease",
+                  boxSizing: "border-box"
+                }}
+                onFocus={(e) => {
+                  e.currentTarget.style.borderColor = colors.inputFocus;
+                  e.currentTarget.style.boxShadow = `0 0 0 2px ${colors.infoBg}`;
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.borderColor = colors.inputBorder;
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+              />
+            </div>
+
+            {/* Generate PDF Button */}
             <button
               onClick={handleGenerate}
-              disabled={disable || !jd.trim()}
+              disabled={disable || !jd.trim() || !gptResponse.trim()}
               style={{
                 width: "100%",
                 padding: "10px 16px",
                 fontSize: "14px",
                 fontWeight: "600",
                 color: colors.buttonText,
-                background: disable || !jd.trim() ? colors.buttonDisabled : colors.buttonBg,
+                background: disable || !jd.trim() || !gptResponse.trim() ? colors.buttonDisabled : colors.buttonBg,
                 border: "none",
                 borderRadius: "6px",
-                cursor: disable || !jd.trim() ? "not-allowed" : "pointer",
+                cursor: disable || !jd.trim() || !gptResponse.trim() ? "not-allowed" : "pointer",
                 transition: "all 0.2s ease",
                 marginBottom: "12px",
-                boxShadow: disable || !jd.trim() ? "none" : theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)"
+                boxShadow: disable || !jd.trim() || !gptResponse.trim() ? "none" : theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)"
               }}
               onMouseEnter={(e) => {
-                if (!disable && jd.trim()) {
+                if (!disable && jd.trim() && gptResponse.trim()) {
                   e.currentTarget.style.background = colors.buttonHover;
                   e.currentTarget.style.transform = "translateY(-1px)";
                   e.currentTarget.style.boxShadow = theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.4)" : "0 2px 8px rgba(59, 130, 246, 0.3)";
                 }
               }}
               onMouseLeave={(e) => {
-                if (!disable && jd.trim()) {
+                if (!disable && jd.trim() && gptResponse.trim()) {
                   e.currentTarget.style.background = colors.buttonBg;
                   e.currentTarget.style.transform = "translateY(0)";
                   e.currentTarget.style.boxShadow = theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)";
@@ -566,7 +752,7 @@ export default function ProfilePage() {
             </button>
 
             {/* Status Messages */}
-            {lastGenerationTime && (
+            {lastGenerationTime !== null && lastGenerationTime > 0 && (
               <div style={{
                 padding: "10px 12px",
                 background: colors.successBg,

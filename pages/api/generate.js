@@ -11,7 +11,7 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).send("Method not allowed");
 
   try {
-    const { profile: profileSlug, jd, template, provider = "openai", model = null, companyName = null } = req.body;
+    const { profile: profileSlug, jd, template, provider = "openai", model = null, companyName = null, aiResponse: manualAiResponse = null } = req.body;
     //const { profile: profileSlug, jd, template, provider = "claude", model = null, companyName = null } = req.body;
 
     if (!profileSlug) return res.status(400).send("Profile slug required");
@@ -55,6 +55,319 @@ export default async function handler(req, res) {
     }
 
     const profileData = JSON.parse(fs.readFileSync(profilePath, "utf-8"));
+
+    // If manual AI response is provided, skip Steps 1-3 and go directly to JSON parsing
+    if (manualAiResponse) {
+      console.log("Using manual AI response - skipping Steps 1-3, going directly to PDF generation");
+      console.log("Manual response length:", manualAiResponse.length);
+      console.log("Manual response preview (first 200):", manualAiResponse.substring(0, 200));
+      console.log("Manual response preview (last 200):", manualAiResponse.substring(Math.max(0, manualAiResponse.length - 200)));
+      
+      // We still need basic resume data for PDF template, so use the main profile
+      const basicResumeData = profileData;
+      
+      // Parse the manual AI response directly
+      let content = manualAiResponse.trim();
+      
+      // Enhanced JSON extraction - handle various formats
+      content = content.replace(/```json\s*/gi, "");
+      content = content.replace(/```javascript\s*/gi, "");
+      content = content.replace(/```\s*/g, "");
+      content = content.replace(/^(here is|here's|this is|the json is):?\s*/gi, "");
+      // Remove markdown separators that might appear after JSON
+      content = content.replace(/\n---\n.*$/s, "");
+      content = content.replace(/\n---.*$/s, "");
+      content = content.trim();
+
+      // First, try to parse the content directly (it might already be valid JSON)
+      let resumeContent = null;
+      try {
+        resumeContent = JSON.parse(content);
+        console.log("✅ Content is valid JSON - parsed directly");
+      } catch (directParseError) {
+        // If direct parse fails, try to extract JSON from the content
+        console.log("Direct parse failed, attempting JSON extraction...");
+        
+        // Find the first opening brace
+        const firstBrace = content.indexOf('{');
+        if (firstBrace === -1) {
+          console.error("No JSON object found in response");
+          console.error("Content preview:", content.substring(0, 200));
+          throw new Error("AI did not return valid JSON format. Please try again.");
+        }
+
+        // Find the matching closing brace by counting braces (ignoring braces inside strings)
+        let braceCount = 0;
+        let lastBrace = -1;
+        let inString = false;
+        let escapeNext = false;
+        
+        for (let i = firstBrace; i < content.length; i++) {
+          const char = content[i];
+          
+          if (escapeNext) {
+            escapeNext = false;
+            continue;
+          }
+          
+          if (char === '\\') {
+            escapeNext = true;
+            continue;
+          }
+          
+          if (char === '"' && !escapeNext) {
+            inString = !inString;
+            continue;
+          }
+          
+          // Only count braces when not inside a string
+          if (!inString) {
+            if (char === '{') {
+              braceCount++;
+            }
+            if (char === '}') {
+              braceCount--;
+              if (braceCount === 0) {
+                lastBrace = i;
+                break;
+              }
+            }
+          }
+        }
+        
+        console.log(`Brace counting result: firstBrace=${firstBrace}, lastBrace=${lastBrace}, braceCount=${braceCount}, contentLength=${content.length}`);
+
+        if (lastBrace === -1 || lastBrace <= firstBrace) {
+          // Fallback: try to find valid JSON by testing different end positions
+          console.warn("Brace counting failed, trying fallback extraction");
+          let fallbackContent = content.substring(firstBrace);
+          
+          // First, try to parse the entire fallback content (might have trailing whitespace)
+          let found = false;
+          try {
+            const trimmed = fallbackContent.trim();
+            resumeContent = JSON.parse(trimmed);
+            content = trimmed;
+            console.log("✅ Fallback: Direct parse of trimmed content succeeded");
+            found = true;
+          } catch (e) {
+            console.log("Direct parse of trimmed content failed, trying extraction...");
+          }
+          
+          // If that didn't work, try to find JSON by looking for the last } that makes valid JSON
+          // Start from the end and work backwards, testing each potential closing brace
+          if (!found) {
+            for (let i = fallbackContent.length - 1; i >= 0; i--) {
+              if (fallbackContent[i] === '}') {
+                try {
+                  const testContent = fallbackContent.substring(0, i + 1);
+                  // Try to parse it
+                  resumeContent = JSON.parse(testContent);
+                  // If parsing succeeds, use this content
+                  content = testContent;
+                  console.log(`✅ Fallback extraction succeeded at position ${i}`);
+                  found = true;
+                  break;
+                } catch (e) {
+                  // Continue searching - this wasn't a valid JSON end
+                }
+              }
+            }
+          }
+          
+          // If still no valid JSON found, try one more approach: find all } positions and test them
+          if (!found) {
+            console.warn("First fallback failed, trying alternative approach");
+            // Collect all } positions
+            const closingBraces = [];
+            for (let i = 0; i < fallbackContent.length; i++) {
+              if (fallbackContent[i] === '}') {
+                closingBraces.push(i);
+              }
+            }
+            
+            console.log(`Found ${closingBraces.length} closing braces to test`);
+            
+            // Test from the last } backwards
+            for (let i = closingBraces.length - 1; i >= 0; i--) {
+              const bracePos = closingBraces[i];
+              try {
+                const testContent = fallbackContent.substring(0, bracePos + 1);
+                resumeContent = JSON.parse(testContent);
+                content = testContent;
+                console.log(`✅ Alternative fallback extraction succeeded at position ${bracePos}`);
+                found = true;
+                break;
+              } catch (e) {
+                // Continue
+              }
+            }
+          }
+          
+          // Last resort: try to find JSON by progressively trimming from the end
+          if (!found) {
+            console.warn("All fallbacks failed, trying progressive trimming");
+            // Remove any trailing whitespace, newlines, or markdown separators
+            let trimmed = fallbackContent.trim();
+            // Remove trailing --- or other separators
+            trimmed = trimmed.replace(/\s*---.*$/s, '').trim();
+            
+            // Try parsing progressively shorter versions
+            for (let trimAmount = 0; trimAmount < Math.min(100, trimmed.length); trimAmount += 5) {
+              try {
+                const testContent = trimmed.substring(0, trimmed.length - trimAmount);
+                resumeContent = JSON.parse(testContent);
+                content = testContent;
+                console.log(`✅ Progressive trimming succeeded (trimmed ${trimAmount} chars)`);
+                found = true;
+                break;
+              } catch (e) {
+                // Continue
+              }
+            }
+          }
+          
+          // If still no valid JSON found, throw error
+          if (!found || !resumeContent) {
+            console.error("No complete JSON object found in response");
+            console.error("First brace at:", firstBrace);
+            console.error("Last brace at:", lastBrace);
+            console.error("Brace count:", braceCount);
+            console.error("Content length:", content.length);
+            console.error("Fallback content length:", fallbackContent.length);
+            console.error("Content preview (first 500):", content.substring(0, 500));
+            console.error("Content preview (last 500):", content.substring(Math.max(0, content.length - 500)));
+            console.error("Fallback content (last 100):", fallbackContent.substring(Math.max(0, fallbackContent.length - 100)));
+            throw new Error("AI did not return valid JSON format. Please try again.");
+          }
+        } else {
+          // Extract only the JSON part
+          content = content.substring(firstBrace, lastBrace + 1).trim();
+          try {
+            resumeContent = JSON.parse(content);
+            console.log("✅ JSON extracted and parsed successfully");
+          } catch (extractParseError) {
+            console.error("Failed to parse extracted JSON:", extractParseError.message);
+            throw new Error(`AI returned invalid JSON: ${extractParseError.message}. Please try again.`);
+          }
+        }
+      }
+
+      // resumeContent is already parsed above, so we can proceed to validation
+
+      // Validate required fields
+      if (!resumeContent.title || !resumeContent.summary || !resumeContent.skills || !resumeContent.experience) {
+        console.error("Missing required fields in AI response:", Object.keys(resumeContent));
+        throw new Error("AI response missing required fields (title, summary, skills, or experience)");
+      }
+
+      console.log("✅ AI content parsed successfully");
+      console.log("Skills categories:", Object.keys(resumeContent.skills).length);
+      console.log("Experience entries:", resumeContent.experience.length);
+
+      // Get React PDF template component
+      const TemplateComponent = getTemplate(templateName);
+
+      if (!TemplateComponent) {
+        console.error(`Template not found: ${templateName}`);
+        return res.status(404).send(`Template "${templateName}" not found`);
+      }
+
+      console.log(`Using template: ${templateName}`);
+
+      // Parse experience entries from GPT response
+      // Format: "Senior Software Engineer | VC3 | Feb 2020 - Present"
+      const parseExperienceEntry = (expEntry) => {
+        const titleStr = expEntry.title || "";
+        const parts = titleStr.split("|").map(p => p.trim()).filter(p => p.length > 0);
+        
+        let jobTitle = "Engineer";
+        let company = "";
+        let startDate = "";
+        let endDate = "";
+        
+        if (parts.length >= 1) {
+          jobTitle = parts[0];
+        }
+        if (parts.length >= 2) {
+          company = parts[1];
+        }
+        if (parts.length >= 3) {
+          // Parse date range: "Feb 2020 - Present" or "Feb 2020 - Mar 2023"
+          const dateRange = parts[2];
+          const dateMatch = dateRange.match(/(.+?)\s*-\s*(.+)/);
+          if (dateMatch) {
+            startDate = dateMatch[1].trim();
+            endDate = dateMatch[2].trim();
+          } else {
+            // If no dash, assume it's just a start date
+            startDate = dateRange.trim();
+            endDate = "Present";
+          }
+        }
+        
+        return {
+          title: jobTitle,
+          company: company,
+          location: null, // GPT response doesn't include location in this format
+          start_date: startDate,
+          end_date: endDate,
+          details: expEntry.details || []
+        };
+      };
+
+      // Use all experience entries from GPT response, not limited by basicResumeData
+      const parsedExperience = resumeContent.experience.map(parseExperienceEntry);
+
+      // Prepare data for template (using basic resume data)
+      const templateData = {
+        name: basicResumeData.name,
+        title: resumeContent.title || "Senior Software Engineer",
+        email: basicResumeData.email,
+        phone: basicResumeData.phone || null,
+        location: basicResumeData.location,
+        linkedin: null,
+        website: null,
+        summary: resumeContent.summary,
+        skills: resumeContent.skills,
+        experience: parsedExperience,
+        education: basicResumeData.education
+      };
+
+      // Render PDF with React PDF
+      const pdfDocument = React.createElement(TemplateComponent, { data: templateData });
+      const pdfStream = await renderToStream(pdfDocument);
+
+      // Convert stream to buffer
+      const chunks = [];
+      for await (const chunk of pdfStream) {
+        chunks.push(chunk);
+      }
+      const pdfBuffer = Buffer.concat(chunks);
+
+      console.log("PDF generated successfully!");
+
+      // Generate filename from resume name + company name (if provided)
+      const nameParts = resumeName ? resumeName.trim().split(/\s+/) : [];
+      let baseName;
+      if (!nameParts || nameParts.length === 0) baseName = 'resume';
+      else if (nameParts.length === 1) baseName = nameParts[0];
+      else baseName = `${nameParts[0]}_${nameParts[nameParts.length - 1]}`;
+      baseName = baseName.replace(/\s+/g, "_").replace(/[^A-Za-z0-9_-]/g, "");
+
+      // Append company name if provided
+      if (companyName && companyName.trim()) {
+        const sanitizedCompanyName = companyName.trim().replace(/\s+/g, "_").replace(/[^A-Za-z0-9_-]/g, "");
+        baseName = `${baseName}_${sanitizedCompanyName}`;
+      }
+
+      const fileName = `${baseName}.pdf`;
+
+      res.setHeader("Content-Type", "application/pdf");
+      res.setHeader("Content-Disposition", `attachment; filename="${fileName}"`);
+      res.end(pdfBuffer);
+      return; // Exit early - PDF generated
+    }
 
     // Determine which model will be used (matching the logic in callOpenAI/callClaude)
     let actualModel = model;
@@ -386,37 +699,44 @@ ${tailoringGuide}
 
 Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}]}`;
 
-    const aiResponse = await callAI(tailoringPrompt, provider, model);
-
-    // Log token usage to debug if we're hitting limits
-    console.log(`${provider.toUpperCase()} API Response Metadata:`);
-    console.log("- Provider:", aiResponse.provider);
-    console.log("- Model:", aiResponse.model);
-    console.log("- Stop reason:", aiResponse.stop_reason);
-    console.log("- Input tokens:", aiResponse.usage?.input_tokens);
-    console.log("- Output tokens:", aiResponse.usage?.output_tokens);
-
     let content;
-    if (aiResponse.stop_reason === 'max_tokens' || aiResponse.stop_reason === 'length') {
-      console.error(`⚠️ WARNING: ${provider.toUpperCase()} hit max_tokens limit! Response was truncated.`);
-      console.log("🔄 Retrying with reduced requirements to fit in token limit...");
-
-      // Retry with a more concise prompt
-      const concisePrompt = prompt
-        .replace(/TOTAL: 60-80 skills maximum/g, 'TOTAL: 50-60 skills maximum')
-        .replace(/Per category: 8-12 skills/g, 'Per category: 6-10 skills')
-        .replace(/6 bullets each/g, '5 bullets each')
-        .replace(/5-6 bullets per job/g, '4-5 bullets per job');
-
-      const retryResponse = await callAI(concisePrompt, provider, model);
-      console.log("Retry Response Metadata:");
-      console.log("- Stop reason:", retryResponse.stop_reason);
-      console.log("- Output tokens:", retryResponse.usage?.output_tokens);
-
-      content = retryResponse.content[0].text.trim();
+    // If manual AI response is provided, use it directly; otherwise call AI
+    if (manualAiResponse) {
+      console.log("Using manual AI response (skipping AI call)");
+      content = manualAiResponse.trim();
     } else {
-      content = aiResponse.content[0].text.trim();
+      const aiResponse = await callAI(tailoringPrompt, provider, model);
+
+      // Log token usage to debug if we're hitting limits
+      console.log(`${provider.toUpperCase()} API Response Metadata:`);
+      console.log("- Provider:", aiResponse.provider);
+      console.log("- Model:", aiResponse.model);
+      console.log("- Stop reason:", aiResponse.stop_reason);
+      console.log("- Input tokens:", aiResponse.usage?.input_tokens);
+      console.log("- Output tokens:", aiResponse.usage?.output_tokens);
+
+      if (aiResponse.stop_reason === 'max_tokens' || aiResponse.stop_reason === 'length') {
+        console.error(`⚠️ WARNING: ${provider.toUpperCase()} hit max_tokens limit! Response was truncated.`);
+        console.log("🔄 Retrying with reduced requirements to fit in token limit...");
+
+        // Retry with a more concise prompt
+        const concisePrompt = tailoringPrompt
+          .replace(/TOTAL: 60-80 skills maximum/g, 'TOTAL: 50-60 skills maximum')
+          .replace(/Per category: 8-12 skills/g, 'Per category: 6-10 skills')
+          .replace(/6 bullets each/g, '5 bullets each')
+          .replace(/5-6 bullets per job/g, '4-5 bullets per job');
+
+        const retryResponse = await callAI(concisePrompt, provider, model);
+        console.log("Retry Response Metadata:");
+        console.log("- Stop reason:", retryResponse.stop_reason);
+        console.log("- Output tokens:", retryResponse.usage?.output_tokens);
+
+        content = retryResponse.content[0].text.trim();
+      } else {
+        content = aiResponse.content[0].text.trim();
+      }
     }
+
 
     // Check if AI is apologizing instead of returning JSON
     if (content.toLowerCase().startsWith("i'm sorry") ||
@@ -447,32 +767,7 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
       throw new Error("AI did not return valid JSON format. Please try again.");
     }
 
-    content = content.trim();
-
-    // Parse JSON with better error handling
-    let resumeContent;
-    try {
-      resumeContent = JSON.parse(content);
-    } catch (parseError) {
-      console.error("=== JSON PARSE ERROR ===");
-      console.error("Parse error:", parseError.message);
-      console.error("Content length:", content.length);
-      console.error("First 1000 chars:", content.substring(0, 1000));
-      console.error("Last 500 chars:", content.substring(Math.max(0, content.length - 500)));
-
-      // Try to fix common JSON issues
-      try {
-        // Remove trailing commas
-        let fixedContent = content.replace(/,(\s*[}\]])/g, '$1');
-        // Fix unescaped quotes in strings (basic attempt)
-        fixedContent = fixedContent.replace(/([^\\])"([^",:}\]]*)":/g, '$1\\"$2":');
-        resumeContent = JSON.parse(fixedContent);
-        console.log("✅ Successfully parsed after fixing common issues");
-      } catch (secondError) {
-        console.error("Failed to parse even after fixes");
-        throw new Error(`AI returned invalid JSON: ${parseError.message}. Please try again.`);
-      }
-    }
+      // resumeContent is already parsed above, so we can skip parsing here
 
     // Validate required fields
     if (!resumeContent.title || !resumeContent.summary || !resumeContent.skills || !resumeContent.experience) {
