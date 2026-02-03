@@ -84,7 +84,7 @@ Total: ~70 skills (scannable and professional)
 
 **Requirements:**
 - Generate the SAME number of job entries as in BASIC RESUME (preserve companies, titles, dates)
-- Generate the SAME number of bullets per each companies in BASIC RESUME
+- Generate the SAME number of bullets per each companies as in BASIC RESUME
 - 20–40 words per bullet, optimized for clarity and natural senior-engineer tone.
 - For each work experience, ensure all technologies listed were widely available and commonly used in production during that role's time period; do not include tools, frameworks, or practices released after the role ended or unlikely to have been adopted in that era.
 - Include 2-4 JD keywords per bullet
