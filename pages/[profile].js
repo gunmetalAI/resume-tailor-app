@@ -366,7 +366,7 @@ export default function ProfilePage() {
         background: colors.bg,
         color: colors.text,
         fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif",
-        padding: "16px",
+        padding: "24px 16px",
         transition: "background 0.3s ease, color 0.3s ease"
       }}>
         <div style={{
@@ -376,32 +376,37 @@ export default function ProfilePage() {
           {/* Header Card */}
           <div style={{
             background: colors.cardBg,
-            borderRadius: "8px",
+            borderRadius: "16px",
             border: `1px solid ${colors.cardBorder}`,
-            padding: "16px",
-            marginBottom: "12px",
-            boxShadow: theme === 'dark' ? '0 2px 4px rgba(0, 0, 0, 0.2)' : '0 1px 2px rgba(0, 0, 0, 0.05)'
+            padding: "24px",
+            marginBottom: "20px",
+            boxShadow: theme === 'dark' 
+              ? '0 10px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05)' 
+              : '0 4px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04)',
+            transition: "all 0.3s ease"
           }}>
             <div style={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              marginBottom: "12px"
+              marginBottom: "20px"
             }}>
               <div>
                 <h1 style={{
-                  fontSize: "18px",
-                  fontWeight: "600",
+                  fontSize: "24px",
+                  fontWeight: "700",
                   color: colors.text,
-                  margin: "0 0 2px 0"
+                  margin: "0 0 6px 0",
+                  letterSpacing: "-0.3px"
                 }}>
                   {profileName}
                 </h1>
                 {selectedProfileData.title && (
                   <p style={{
-                    fontSize: "12px",
+                    fontSize: "14px",
                     color: colors.textSecondary,
-                    margin: 0
+                    margin: 0,
+                    fontWeight: "400"
                   }}>
                     {selectedProfileData.title}
                   </p>
@@ -410,24 +415,30 @@ export default function ProfilePage() {
               <button
                 onClick={toggleTheme}
                 style={{
-                  padding: "6px 12px",
-                  fontSize: "12px",
+                  padding: "10px 16px",
+                  fontSize: "13px",
                   fontWeight: "500",
                   background: colors.inputBg,
                   border: `1px solid ${colors.inputBorder}`,
-                  borderRadius: "6px",
+                  borderRadius: "10px",
                   color: colors.text,
                   cursor: "pointer",
-                  transition: "all 0.2s ease"
+                  transition: "all 0.2s ease",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "6px"
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = theme === 'dark' ? '#334155' : '#f8fafc';
+                  e.currentTarget.style.borderColor = colors.inputFocus;
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = colors.inputBg;
+                  e.currentTarget.style.borderColor = colors.inputBorder;
                 }}
               >
-                {theme === "dark" ? "☀️" : "🌙"}
+                <span>{theme === "dark" ? "☀️" : "🌙"}</span>
+                <span>{theme === "dark" ? "Light" : "Dark"}</span>
               </button>
             </div>
 
@@ -435,9 +446,9 @@ export default function ProfilePage() {
             {quickCopyFields.length > 0 && (
               <div style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fill, minmax(90px, 1fr))",
-                gap: "8px",
-                paddingTop: "12px",
+                gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))",
+                gap: "10px",
+                paddingTop: "20px",
                 borderTop: `1px solid ${colors.cardBorder}`
               }}>
                 {quickCopyFields.map(({ key, label, value, icon }) => (
@@ -445,18 +456,18 @@ export default function ProfilePage() {
                     key={key}
                     onClick={() => copyToClipboard(value, key)}
                     style={{
-                      padding: "8px 6px",
+                      padding: "12px 8px",
                       background: copiedField === key ? colors.copyBg : colors.inputBg,
                       border: `1px solid ${copiedField === key ? colors.infoText : colors.inputBorder}`,
-                      borderRadius: "6px",
+                      borderRadius: "10px",
                       cursor: "pointer",
                       transition: "all 0.2s ease",
                       textAlign: "center",
                       display: "flex",
                       flexDirection: "column",
                       alignItems: "center",
-                      gap: "4px",
-                      minHeight: "60px",
+                      gap: "6px",
+                      minHeight: "70px",
                       justifyContent: "center"
                     }}
                     onMouseEnter={(e) => {
@@ -491,21 +502,24 @@ export default function ProfilePage() {
           {/* Form Card */}
           <div style={{
             background: colors.cardBg,
-            borderRadius: "8px",
+            borderRadius: "16px",
             border: `1px solid ${colors.cardBorder}`,
-            padding: "16px",
-            boxShadow: theme === 'dark' ? '0 2px 4px rgba(0, 0, 0, 0.2)' : '0 1px 2px rgba(0, 0, 0, 0.05)'
+            padding: "28px",
+            boxShadow: theme === 'dark' 
+              ? '0 10px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05)' 
+              : '0 4px 20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04)',
+            transition: "all 0.3s ease"
           }}>
             {/* Job Description */}
-            <div style={{ marginBottom: "16px" }}>
+            <div style={{ marginBottom: "20px" }}>
               <label style={{
                 display: "block",
-                fontSize: "11px",
+                fontSize: "12px",
                 fontWeight: "600",
                 color: colors.textSecondary,
-                marginBottom: "6px",
+                marginBottom: "10px",
                 textTransform: "uppercase",
-                letterSpacing: "0.3px"
+                letterSpacing: "0.5px"
               }}>
                 Job Description
               </label>
@@ -516,23 +530,23 @@ export default function ProfilePage() {
                 rows="10"
                 style={{
                   width: "100%",
-                  padding: "10px 12px",
-                  fontSize: "13px",
+                  padding: "14px 18px",
+                  fontSize: "14px",
                   fontFamily: "inherit",
                   color: colors.text,
                   background: colors.textareaBg,
                   border: `1px solid ${colors.inputBorder}`,
-                  borderRadius: "6px",
+                  borderRadius: "10px",
                   outline: "none",
                   resize: "vertical",
-                  minHeight: "180px",
-                  lineHeight: "1.5",
+                  minHeight: "200px",
+                  lineHeight: "1.6",
                   transition: "all 0.2s ease",
                   boxSizing: "border-box"
                 }}
                 onFocus={(e) => {
                   e.currentTarget.style.borderColor = colors.inputFocus;
-                  e.currentTarget.style.boxShadow = `0 0 0 2px ${colors.infoBg}`;
+                  e.currentTarget.style.boxShadow = `0 0 0 3px ${theme === 'dark' ? 'rgba(59, 130, 246, 0.1)' : 'rgba(59, 130, 246, 0.15)'}`;
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = colors.inputBorder;
@@ -542,15 +556,15 @@ export default function ProfilePage() {
             </div>
 
             {/* Company Name */}
-            <div style={{ marginBottom: "16px" }}>
+            <div style={{ marginBottom: "20px" }}>
               <label style={{
                 display: "block",
-                fontSize: "11px",
+                fontSize: "12px",
                 fontWeight: "600",
                 color: colors.textSecondary,
-                marginBottom: "6px",
+                marginBottom: "10px",
                 textTransform: "uppercase",
-                letterSpacing: "0.3px"
+                letterSpacing: "0.5px"
               }}>
                 Company Name <span style={{ fontWeight: "400", textTransform: "none" }}>(Optional)</span>
               </label>
@@ -561,20 +575,20 @@ export default function ProfilePage() {
                 placeholder="Enter company name for filename..."
                 style={{
                   width: "100%",
-                  padding: "8px 12px",
-                  fontSize: "13px",
+                  padding: "12px 18px",
+                  fontSize: "14px",
                   fontFamily: "inherit",
                   color: colors.text,
                   background: colors.inputBg,
                   border: `1px solid ${colors.inputBorder}`,
-                  borderRadius: "6px",
+                  borderRadius: "10px",
                   outline: "none",
                   transition: "all 0.2s ease",
                   boxSizing: "border-box"
                 }}
                 onFocus={(e) => {
                   e.currentTarget.style.borderColor = colors.inputFocus;
-                  e.currentTarget.style.boxShadow = `0 0 0 2px ${colors.infoBg}`;
+                  e.currentTarget.style.boxShadow = `0 0 0 3px ${theme === 'dark' ? 'rgba(59, 130, 246, 0.1)' : 'rgba(59, 130, 246, 0.15)'}`;
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = colors.inputBorder;
@@ -584,35 +598,35 @@ export default function ProfilePage() {
             </div>
 
             {/* Prepare Prompt and Copy Buttons */}
-            <div style={{ display: "flex", gap: "8px", marginBottom: "12px" }}>
+            <div style={{ display: "flex", gap: "12px", marginBottom: "16px" }}>
               <button
                 onClick={handlePreparePrompt}
                 disabled={preparingPrompt || !jd.trim()}
                 style={{
                   flex: 1,
-                  padding: "10px 16px",
-                  fontSize: "14px",
+                  padding: "14px 20px",
+                  fontSize: "15px",
                   fontWeight: "600",
                   color: colors.buttonText,
                   background: preparingPrompt || !jd.trim() ? colors.buttonDisabled : colors.buttonBg,
                   border: "none",
-                  borderRadius: "6px",
+                  borderRadius: "10px",
                   cursor: preparingPrompt || !jd.trim() ? "not-allowed" : "pointer",
                   transition: "all 0.2s ease",
-                  boxShadow: preparingPrompt || !jd.trim() ? "none" : theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)"
+                  boxShadow: preparingPrompt || !jd.trim() ? "none" : theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.3)" : "0 2px 8px rgba(59, 130, 246, 0.2)"
                 }}
                 onMouseEnter={(e) => {
                   if (!preparingPrompt && jd.trim()) {
                     e.currentTarget.style.background = colors.buttonHover;
-                    e.currentTarget.style.transform = "translateY(-1px)";
-                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.4)" : "0 2px 8px rgba(59, 130, 246, 0.3)";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 6px 16px rgba(59, 130, 246, 0.4)" : "0 4px 12px rgba(59, 130, 246, 0.3)";
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (!preparingPrompt && jd.trim()) {
                     e.currentTarget.style.background = colors.buttonBg;
                     e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)";
+                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.3)" : "0 2px 8px rgba(59, 130, 246, 0.2)";
                   }
                 }}
               >
@@ -622,30 +636,30 @@ export default function ProfilePage() {
                 onClick={handleCopyPrompt}
                 disabled={!preparedPrompt}
                 style={{
-                  padding: "10px 16px",
-                  fontSize: "14px",
+                  padding: "14px 20px",
+                  fontSize: "15px",
                   fontWeight: "600",
                   color: colors.buttonText,
                   background: !preparedPrompt ? colors.buttonDisabled : colors.buttonBg,
                   border: "none",
-                  borderRadius: "6px",
+                  borderRadius: "10px",
                   cursor: !preparedPrompt ? "not-allowed" : "pointer",
                   transition: "all 0.2s ease",
                   whiteSpace: "nowrap",
-                  boxShadow: !preparedPrompt ? "none" : theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)"
+                  boxShadow: !preparedPrompt ? "none" : theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.3)" : "0 2px 8px rgba(59, 130, 246, 0.2)"
                 }}
                 onMouseEnter={(e) => {
                   if (preparedPrompt) {
                     e.currentTarget.style.background = colors.buttonHover;
-                    e.currentTarget.style.transform = "translateY(-1px)";
-                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.4)" : "0 2px 8px rgba(59, 130, 246, 0.3)";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 6px 16px rgba(59, 130, 246, 0.4)" : "0 4px 12px rgba(59, 130, 246, 0.3)";
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (preparedPrompt) {
                     e.currentTarget.style.background = colors.buttonBg;
                     e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)";
+                    e.currentTarget.style.boxShadow = theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.3)" : "0 2px 8px rgba(59, 130, 246, 0.2)";
                   }
                 }}
               >
@@ -656,30 +670,30 @@ export default function ProfilePage() {
             {/* Prompt Ready Indicator */}
             {preparedPrompt && (
               <div style={{
-                padding: "8px 12px",
+                padding: "12px 16px",
                 background: colors.successBg,
                 border: `1px solid ${colors.successText}`,
-                borderRadius: "6px",
+                borderRadius: "10px",
                 color: colors.successText,
-                fontSize: "12px",
+                fontSize: "13px",
                 textAlign: "center",
                 fontWeight: "500",
-                marginBottom: "12px"
+                marginBottom: "16px"
               }}>
                 ✓ Prompt ready! Click "Copy the Prompt" to copy it.
               </div>
             )}
 
             {/* GPT Response Textarea */}
-            <div style={{ marginBottom: "12px" }}>
+            <div style={{ marginBottom: "20px" }}>
               <label style={{
                 display: "block",
-                fontSize: "11px",
+                fontSize: "12px",
                 fontWeight: "600",
                 color: colors.textSecondary,
-                marginBottom: "6px",
+                marginBottom: "10px",
                 textTransform: "uppercase",
-                letterSpacing: "0.3px"
+                letterSpacing: "0.5px"
               }}>
                 GPT Response
               </label>
@@ -690,23 +704,23 @@ export default function ProfilePage() {
                 rows="8"
                 style={{
                   width: "100%",
-                  padding: "10px 12px",
-                  fontSize: "13px",
+                  padding: "14px 18px",
+                  fontSize: "14px",
                   fontFamily: "inherit",
                   color: colors.text,
                   background: colors.textareaBg,
                   border: `1px solid ${colors.inputBorder}`,
-                  borderRadius: "6px",
+                  borderRadius: "10px",
                   outline: "none",
                   resize: "vertical",
-                  minHeight: "120px",
-                  lineHeight: "1.5",
+                  minHeight: "140px",
+                  lineHeight: "1.6",
                   transition: "all 0.2s ease",
                   boxSizing: "border-box"
                 }}
                 onFocus={(e) => {
                   e.currentTarget.style.borderColor = colors.inputFocus;
-                  e.currentTarget.style.boxShadow = `0 0 0 2px ${colors.infoBg}`;
+                  e.currentTarget.style.boxShadow = `0 0 0 3px ${theme === 'dark' ? 'rgba(59, 130, 246, 0.1)' : 'rgba(59, 130, 246, 0.15)'}`;
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = colors.inputBorder;
@@ -721,30 +735,30 @@ export default function ProfilePage() {
               disabled={disable || !jd.trim() || !gptResponse.trim()}
               style={{
                 width: "100%",
-                padding: "10px 16px",
-                fontSize: "14px",
+                padding: "16px 24px",
+                fontSize: "16px",
                 fontWeight: "600",
                 color: colors.buttonText,
                 background: disable || !jd.trim() || !gptResponse.trim() ? colors.buttonDisabled : colors.buttonBg,
                 border: "none",
-                borderRadius: "6px",
+                borderRadius: "10px",
                 cursor: disable || !jd.trim() || !gptResponse.trim() ? "not-allowed" : "pointer",
                 transition: "all 0.2s ease",
-                marginBottom: "12px",
-                boxShadow: disable || !jd.trim() || !gptResponse.trim() ? "none" : theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)"
+                marginBottom: "16px",
+                boxShadow: disable || !jd.trim() || !gptResponse.trim() ? "none" : theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.3)" : "0 2px 8px rgba(59, 130, 246, 0.2)"
               }}
               onMouseEnter={(e) => {
                 if (!disable && jd.trim() && gptResponse.trim()) {
                   e.currentTarget.style.background = colors.buttonHover;
-                  e.currentTarget.style.transform = "translateY(-1px)";
-                  e.currentTarget.style.boxShadow = theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.4)" : "0 2px 8px rgba(59, 130, 246, 0.3)";
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                  e.currentTarget.style.boxShadow = theme === 'dark' ? "0 6px 16px rgba(59, 130, 246, 0.4)" : "0 4px 12px rgba(59, 130, 246, 0.3)";
                 }
               }}
               onMouseLeave={(e) => {
                 if (!disable && jd.trim() && gptResponse.trim()) {
                   e.currentTarget.style.background = colors.buttonBg;
                   e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = theme === 'dark' ? "0 2px 8px rgba(59, 130, 246, 0.3)" : "0 1px 4px rgba(59, 130, 246, 0.2)";
+                  e.currentTarget.style.boxShadow = theme === 'dark' ? "0 4px 12px rgba(59, 130, 246, 0.3)" : "0 2px 8px rgba(59, 130, 246, 0.2)";
                 }
               }}
             >
@@ -754,12 +768,12 @@ export default function ProfilePage() {
             {/* Status Messages */}
             {lastGenerationTime !== null && lastGenerationTime > 0 && (
               <div style={{
-                padding: "10px 12px",
+                padding: "12px 16px",
                 background: colors.successBg,
                 border: `1px solid ${colors.successText}`,
-                borderRadius: "6px",
+                borderRadius: "10px",
                 color: colors.successText,
-                fontSize: "12px",
+                fontSize: "13px",
                 textAlign: "center",
                 fontWeight: "500"
               }}>
