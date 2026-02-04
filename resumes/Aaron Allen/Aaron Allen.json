@@ -14,11 +14,21 @@
       "title": "Sr. Software Engineer",
       "location": "",
       "start_date": "Jan 2019",
-      "end_date": "Present",
-      "bullets": [
-        "Engineered enterprise web and mobile applications using React, Angular, and React Native, delivering responsive and high-performance cross-platform solutions.",
-        "Designed and maintained scalable Node.js backend services, implementing RESTful APIs for core platform features and internal workflows."
-      ]
+      "end_date": "Present"
+    },
+    {
+        "company": "Deliver Media",
+        "title": "Senior Developer",
+        "location": "",
+        "start_date": "Jul 2017",
+        "end_date": "Jan 2019"
+    },
+    {
+        "company": "Genesys",
+        "title": "Associate Software Engineer",
+        "location": "",
+        "start_date": "May 2016",
+        "end_date": "Jun 2017"
     }
   ],
   "education": []
