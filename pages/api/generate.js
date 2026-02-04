@@ -264,6 +264,7 @@ export default async function handler(req, res) {
       console.log("✅ AI content parsed successfully");
       console.log("Skills categories:", Object.keys(resumeContent.skills).length);
       console.log("Experience entries:", resumeContent.experience.length);
+      console.log("Basic resume experience entries:", basicResumeData.experience?.length || 0);
 
       // Get React PDF template component
       const TemplateComponent = getTemplate(templateName);
@@ -275,49 +276,69 @@ export default async function handler(req, res) {
 
       console.log(`Using template: ${templateName}`);
 
-      // Parse experience entries from GPT response
+      // Helper function to normalize company names for matching
+      const normalizeCompanyName = (name) => {
+        if (!name) return "";
+        return name.toLowerCase()
+          .replace(/[.,]/g, "")
+          .replace(/\s+/g, " ")
+          .trim();
+      };
+
+      // Parse GPT experience title to extract company for matching
       // Format: "Senior Software Engineer | VC3 | Feb 2020 - Present"
-      const parseExperienceEntry = (expEntry) => {
-        const titleStr = expEntry.title || "";
+      const extractCompanyFromGPTTitle = (titleStr) => {
+        if (!titleStr) return "";
         const parts = titleStr.split("|").map(p => p.trim()).filter(p => p.length > 0);
-        
-        let jobTitle = "Engineer";
-        let company = "";
-        let startDate = "";
-        let endDate = "";
-        
-        if (parts.length >= 1) {
-          jobTitle = parts[0];
-        }
         if (parts.length >= 2) {
-          company = parts[1];
+          return parts[1]; // Company is the second part
         }
-        if (parts.length >= 3) {
-          // Parse date range: "Feb 2020 - Present" or "Feb 2020 - Mar 2023"
-          const dateRange = parts[2];
-          const dateMatch = dateRange.match(/(.+?)\s*-\s*(.+)/);
-          if (dateMatch) {
-            startDate = dateMatch[1].trim();
-            endDate = dateMatch[2].trim();
-          } else {
-            // If no dash, assume it's just a start date
-            startDate = dateRange.trim();
-            endDate = "Present";
+        return "";
+      };
+
+      // Match GPT experiences to basic resume experiences
+      // Use basic resume metadata (company, title, location, dates) but GPT's tailored details
+      const matchedExperience = basicResumeData.experience.map((basicExp, idx) => {
+        const basicCompany = normalizeCompanyName(basicExp.company || "");
+        
+        // Try to find matching GPT experience by company name
+        let matchedGPTExp = null;
+        for (const gptExp of resumeContent.experience) {
+          const gptCompany = normalizeCompanyName(extractCompanyFromGPTTitle(gptExp.title || ""));
+          
+          // Exact match or contains match
+          if (gptCompany === basicCompany || 
+              gptCompany.includes(basicCompany) || 
+              basicCompany.includes(gptCompany)) {
+            matchedGPTExp = gptExp;
+            console.log(`✅ Matched basic resume experience "${basicExp.company}" with GPT experience`);
+            break;
           }
         }
         
+        // If no match found by company, try by index as fallback (for same order)
+        if (!matchedGPTExp && idx < resumeContent.experience.length) {
+          matchedGPTExp = resumeContent.experience[idx];
+          console.log(`⚠️ No company match found, using index-based matching for experience ${idx + 1}`);
+        }
+        
+        // Use basic resume metadata, but GPT's tailored details if available
+        // Template expects 'details', but basic resume may use 'bullets'
+        const gptDetails = matchedGPTExp?.details || [];
+        const basicDetails = basicExp.details || basicExp.bullets || [];
+        
         return {
-          title: jobTitle,
-          company: company,
-          location: null, // GPT response doesn't include location in this format
-          start_date: startDate,
-          end_date: endDate,
-          details: expEntry.details || []
+          title: basicExp.title || "Engineer",
+          company: basicExp.company || "",
+          location: basicExp.location || null,
+          start_date: basicExp.start_date || "",
+          end_date: basicExp.end_date || "",
+          // Use GPT's tailored details if matched, otherwise fall back to basic resume
+          details: gptDetails.length > 0 ? gptDetails : basicDetails
         };
-      };
+      });
 
-      // Use all experience entries from GPT response, not limited by basicResumeData
-      const parsedExperience = resumeContent.experience.map(parseExperienceEntry);
+      console.log(`✅ Matched ${matchedExperience.length} experience entries (using basic resume metadata with GPT details)`);
 
       // Prepare data for template (using basic resume data)
       const templateData = {
@@ -330,7 +351,7 @@ export default async function handler(req, res) {
         website: null,
         summary: resumeContent.summary,
         skills: resumeContent.skills,
-        experience: parsedExperience,
+        experience: matchedExperience,
         education: basicResumeData.education
       };
 
