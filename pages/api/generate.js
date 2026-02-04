@@ -340,16 +340,55 @@ export default async function handler(req, res) {
 
       console.log(`✅ Matched ${matchedExperience.length} experience entries (using basic resume metadata with GPT details)`);
 
+      // Helper function to clean resume title by removing parenthetical info and everything after role keywords
+      const cleanResumeTitle = (title) => {
+        if (!title) return title;
+        
+        const roleKeywords = ["Engineer", "Developer", "Specialist", "Architect", "Scientist", "Analyst", "Consultant", "Programmer", "Tester"];
+        
+        // Find the last occurrence of any role keyword
+        let lastKeywordIndex = -1;
+        let matchedKeyword = "";
+        
+        for (const keyword of roleKeywords) {
+          const index = title.lastIndexOf(keyword);
+          if (index > lastKeywordIndex) {
+            lastKeywordIndex = index;
+            matchedKeyword = keyword;
+          }
+        }
+        
+        if (lastKeywordIndex !== -1) {
+          // Extract up to and including the keyword
+          const cleaned = title.substring(0, lastKeywordIndex + matchedKeyword.length).trim();
+          return cleaned;
+        }
+        
+        // If no keyword found, return original title
+        return title;
+      };
+
+      // Clean the title
+      const cleanedTitle = cleanResumeTitle(resumeContent.title || "Senior Software Engineer");
+      
+      // Clean the summary by replacing any full title references with cleaned title
+      let cleanedSummary = resumeContent.summary || "";
+      if (resumeContent.title && resumeContent.title !== cleanedTitle) {
+        // Replace the full title with cleaned title in summary
+        const fullTitleRegex = new RegExp(resumeContent.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+        cleanedSummary = cleanedSummary.replace(fullTitleRegex, cleanedTitle);
+      }
+
       // Prepare data for template (using basic resume data)
       const templateData = {
         name: basicResumeData.name,
-        title: resumeContent.title || "Senior Software Engineer",
+        title: cleanedTitle,
         email: basicResumeData.email,
         phone: basicResumeData.phone || null,
         location: basicResumeData.location,
         linkedin: null,
         website: null,
-        summary: resumeContent.summary,
+        summary: cleanedSummary,
         skills: resumeContent.skills,
         experience: matchedExperience,
         education: basicResumeData.education
@@ -788,7 +827,15 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
       throw new Error("AI did not return valid JSON format. Please try again.");
     }
 
-      // resumeContent is already parsed above, so we can skip parsing here
+    // Parse the JSON content
+    let resumeContent;
+    try {
+      resumeContent = JSON.parse(content);
+      console.log("✅ Content parsed successfully");
+    } catch (parseError) {
+      console.error("Failed to parse JSON:", parseError.message);
+      throw new Error(`AI returned invalid JSON: ${parseError.message}. Please try again.`);
+    }
 
     // Validate required fields
     if (!resumeContent.title || !resumeContent.summary || !resumeContent.skills || !resumeContent.experience) {
@@ -818,16 +865,55 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
 
     console.log(`Using template: ${templateName}`);
 
+    // Helper function to clean resume title by removing parenthetical info and everything after role keywords
+    const cleanResumeTitle = (title) => {
+      if (!title) return title;
+      
+      const roleKeywords = ["Engineer", "Developer", "Specialist", "Architect", "Scientist", "Analyst", "Consultant", "Programmer", "Tester"];
+      
+      // Find the last occurrence of any role keyword
+      let lastKeywordIndex = -1;
+      let matchedKeyword = "";
+      
+      for (const keyword of roleKeywords) {
+        const index = title.lastIndexOf(keyword);
+        if (index > lastKeywordIndex) {
+          lastKeywordIndex = index;
+          matchedKeyword = keyword;
+        }
+      }
+      
+      if (lastKeywordIndex !== -1) {
+        // Extract up to and including the keyword
+        const cleaned = title.substring(0, lastKeywordIndex + matchedKeyword.length).trim();
+        return cleaned;
+      }
+      
+      // If no keyword found, return original title
+      return title;
+    };
+
+    // Clean the title
+    const cleanedTitle = cleanResumeTitle(resumeContent.title || "Senior Software Engineer");
+    
+    // Clean the summary by replacing any full title references with cleaned title
+    let cleanedSummary = resumeContent.summary || "";
+    if (resumeContent.title && resumeContent.title !== cleanedTitle) {
+      // Replace the full title with cleaned title in summary
+      const fullTitleRegex = new RegExp(resumeContent.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      cleanedSummary = cleanedSummary.replace(fullTitleRegex, cleanedTitle);
+    }
+
     // Prepare data for template (using basic resume data)
     const templateData = {
       name: basicResumeData.name,
-      title: resumeContent.title || "Senior Software Engineer",
+      title: cleanedTitle,
       email: basicResumeData.email,
       phone: basicResumeData.phone || null,
       location: basicResumeData.location,
       linkedin: null, // Excluded from resume
       website: null, // Excluded from resume
-      summary: resumeContent.summary,
+      summary: cleanedSummary,
       skills: resumeContent.skills,
       experience: basicResumeData.experience.map((job, idx) => ({
         title: job.title || resumeContent.experience[idx]?.title || "Engineer",
