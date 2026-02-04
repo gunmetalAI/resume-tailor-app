@@ -130,4 +130,4 @@ Total: ~70 skills (scannable and professional)
 
 ---
 
-Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","company":"...","period":"...","details":["bullet1","bullet2"]}]}
+Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}]}

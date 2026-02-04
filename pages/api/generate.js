@@ -697,7 +697,7 @@ ${tailoringGuide}
 5. Ensure all experience entries match the BASIC RESUME work history (same companies, titles, and date ranges).
 6. Enhance and customize the experience bullets to align with JD requirements while staying truthful to the candidate's background.
 
-Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","company":"...","period":"...","details":["bullet1","bullet2"]}]}`;
+Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}]}`;
 
     let content;
     // If manual AI response is provided, use it directly; otherwise call AI
