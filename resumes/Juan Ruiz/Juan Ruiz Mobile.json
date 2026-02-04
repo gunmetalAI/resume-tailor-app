@@ -14,7 +14,7 @@
         {
             "company": "H-E-B",
             "title": "Senior Software Engineer",
-            "location": "San Antonio, TX",
+            "location": "",
             "start_date": "May 2022",
             "end_date": "Present",
             "bullets": [
@@ -31,7 +31,7 @@
         {
             "company": "USAA",
             "title": "Senior Engineer II",
-            "location": "San Antonio, TX",
+            "location": "",
             "start_date": "Mar 2021",
             "end_date": "May 2022",
             "bullets": [
@@ -47,7 +47,7 @@
         {
             "company": "Accenture",
             "title": "Software Developer",
-            "location": "San Antonio, TX",
+            "location": "",
             "start_date": "Oct 2018",
             "end_date": "Mar 2021",
             "bullets": [
