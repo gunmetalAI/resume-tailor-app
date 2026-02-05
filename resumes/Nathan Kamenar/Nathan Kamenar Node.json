@@ -7,7 +7,7 @@
     "postalCode": "15601",
     "university": "Edinboro University of Pennsylvania",
     "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a8",
-    "github": "https://github.com/DebugMaster25",
+    "github": "https://github.com/debugmaster",
     "summary": "Strategic Senior Full Stack Engineer with 9+ years of experience building scalable, production-grade web platforms using JavaScript-based frameworks and Python for AI-driven services. Deep expertise in Node.js, NestJS, and modern frontend frameworks for delivering high-performance, cloud-native applications. Proven experience integrating AI/ML pipelines via Python (FastAPI), designing event-driven microservices, and implementing CI/CD automation on AWS. Strong background in leading Agile teams, optimizing distributed systems, and bridging backend intelligence with intuitive frontend experiences using React and Next.js.",
     "skills": {
         "Backend": ["Node.js", "NestJS", "Express.js", "Python (FastAPI, Django, Flask)"],
