@@ -379,6 +379,47 @@ export default async function handler(req, res) {
         cleanedSummary = cleanedSummary.replace(fullTitleRegex, cleanedTitle);
       }
 
+      // Helper function to transform a single education object to template format.
+      // We now REQUIRE the AI to return start_year and end_year explicitly.
+      const transformSingleEducation = (eduObj) => {
+        if (!eduObj || typeof eduObj !== "object") return {};
+
+        const edu = {
+          degree: eduObj.degree || "",
+          school: eduObj.institution || eduObj.school || "",
+          start_year: eduObj.start_year || eduObj.startYear || "",
+          end_year: eduObj.end_year || eduObj.endYear || "",
+        };
+        
+        // Include grade if present
+        if (eduObj.grade) edu.grade = eduObj.grade;
+        
+        return edu;
+      };
+
+      // Helper function to transform AI education format to template format
+      const transformEducation = (aiEducation) => {
+        if (!aiEducation) return null;
+        
+        // If it's already an array (from AI response or basic resume)
+        if (Array.isArray(aiEducation)) {
+          // Transform each education entry in the array
+          return aiEducation.map(transformSingleEducation);
+        }
+        
+        // If it's an object (backward compatibility for single education), transform and wrap in array
+        if (typeof aiEducation === 'object') {
+          return [transformSingleEducation(aiEducation)];
+        }
+        
+        return null;
+      };
+
+      // Use AI education if available, otherwise fall back to basic resume education
+      const educationData = resumeContent.education 
+        ? transformEducation(resumeContent.education) 
+        : (basicResumeData.education || []);
+
       // Prepare data for template (using basic resume data)
       const templateData = {
         name: basicResumeData.name,
@@ -391,7 +432,7 @@ export default async function handler(req, res) {
         summary: cleanedSummary,
         skills: resumeContent.skills,
         experience: matchedExperience,
-        education: basicResumeData.education
+        education: educationData
       };
 
       // Render PDF with React PDF
@@ -527,8 +568,12 @@ Return ONLY the category on line 1 and tech stacks on line 2. No prefixes, no ex
         if (techAnalysisAttempts <= maxTechAnalysisRetries) {
           console.log(`Tech analysis error: ${error.message}. Retrying... (Attempt ${techAnalysisAttempts + 1}/${maxTechAnalysisRetries + 1})`);
         } else {
+          // If AI continues to fail (e.g., network issues), fall back to sensible defaults
           console.error(`Tech analysis failed after ${maxTechAnalysisRetries + 1} attempts:`, error);
-          throw new Error(`Failed to analyze job description technology requirements: ${error.message}`);
+          console.warn('Falling back to default technology analysis: Category="Web", Stack="Node". Continuing with basic resume selection.');
+          techCategory = "Web";
+          techStacks = "";
+          break; // Exit retry loop and continue with default Web/Node path
         }
       }
     }
@@ -757,7 +802,7 @@ ${tailoringGuide}
 5. Ensure all experience entries match the BASIC RESUME work history (same companies, titles, and date ranges).
 6. Enhance and customize the experience bullets to align with JD requirements while staying truthful to the candidate's background.
 
-Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}], "education":{...}}`;
+Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}], "education":[{degree: "...", school: "...", start_year: "...", end_year: "..."}, {...}]}`;
 
     let content;
     // If manual AI response is provided, use it directly; otherwise call AI
@@ -904,6 +949,47 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
       cleanedSummary = cleanedSummary.replace(fullTitleRegex, cleanedTitle);
     }
 
+    // Helper function to transform a single education object to template format.
+    // We now REQUIRE the AI to return start_year and end_year explicitly.
+    const transformSingleEducation = (eduObj) => {
+      if (!eduObj || typeof eduObj !== "object") return {};
+
+      const edu = {
+        degree: eduObj.degree || "",
+        school: eduObj.institution || eduObj.school || "",
+        start_year: eduObj.start_year || eduObj.startYear || "",
+        end_year: eduObj.end_year || eduObj.endYear || "",
+      };
+      
+      // Include grade if present
+      if (eduObj.grade) edu.grade = eduObj.grade;
+      
+      return edu;
+    };
+
+    // Helper function to transform AI education format to template format
+    const transformEducation = (aiEducation) => {
+      if (!aiEducation) return null;
+      
+      // If it's already an array (from AI response or basic resume)
+      if (Array.isArray(aiEducation)) {
+        // Transform each education entry in the array
+        return aiEducation.map(transformSingleEducation);
+      }
+      
+      // If it's an object (backward compatibility for single education), transform and wrap in array
+      if (typeof aiEducation === 'object') {
+        return [transformSingleEducation(aiEducation)];
+      }
+      
+      return null;
+    };
+
+    // Use AI education if available, otherwise fall back to basic resume education
+    const educationData = resumeContent.education 
+      ? transformEducation(resumeContent.education) 
+      : (basicResumeData.education || []);
+
     // Prepare data for template (using basic resume data)
     const templateData = {
       name: basicResumeData.name,
@@ -923,7 +1009,7 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
         end_date: job.end_date,
         details: resumeContent.experience[idx]?.details || []
       })),
-      education: basicResumeData.education
+      education: educationData
     };
 
     // Render PDF with React PDF
