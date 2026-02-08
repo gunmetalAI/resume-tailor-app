@@ -344,7 +344,7 @@ export default async function handler(req, res) {
       const cleanResumeTitle = (title) => {
         if (!title) return title;
         
-        const roleKeywords = ["Engineer", "Developer", "Specialist", "Architect", "Scientist", "Analyst", "Consultant", "Programmer", "Tester"];
+        const roleKeywords = ["Engineer", "Developer", "Specialist", "Architect", "Scientist", "Analyst", "Consultant", "Programmer", "Tester", "Lead", "SDET"];
         
         // Find the last occurrence of any role keyword
         let lastKeywordIndex = -1;
@@ -916,7 +916,7 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
     const cleanResumeTitle = (title) => {
       if (!title) return title;
       
-      const roleKeywords = ["Engineer", "Developer", "Specialist", "Architect", "Scientist", "Analyst", "Consultant", "Programmer", "Tester"];
+      const roleKeywords = ["Engineer", "Developer", "Specialist", "Architect", "Scientist", "Analyst", "Consultant", "Programmer", "Tester", "Lead", "SDET"];
       
       // Find the last occurrence of any role keyword
       let lastKeywordIndex = -1;
