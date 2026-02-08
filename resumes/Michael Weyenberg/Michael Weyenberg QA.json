@@ -1,0 +1,49 @@
+{
+    "name": "Michael Weyenberg",
+    "email": "michael.weyenberg@outlook.com",
+    "phone": "+1 (737) 244-0274",
+    "address": "1311 Prairie Grass",
+    "location": "San Antonio, TX",
+    "postalCode": "78245",
+    "university": "Penn State University",
+    "linkedin": "https://www.linkedin.com/in/michael-weyenberg-76968951/",
+    "github": "https://github.com/gunmetalAI",
+    "summary": "Senior QA Automation Lead / SDET with 10+ years of expertise in designing automated test frameworks and executing comprehensive testing strategies for digital finance platforms. Expert in Selenium, Cypress, Playwright, and API testing, with extensive knowledge of integrating test automation into CI/CD pipelines using Jenkins, GitLab, and Docker. Proven success at Warner Bros. Discovery, CNN, and Cox Automotive, enhancing test quality and speed with a focus on security and compliance. Dedicated to continuous improvement, shift-left testing, and driving product quality in high-stakes environments.",
+    "skills": {
+        "Frontend": ["React.js", "Angular", "TypeScript", "Redux", "Responsive UI Design", "React Native", "AngularJS", "WebSockets", "HTML5", "CSS3", "JavaScript", "SASS", "LESS"],
+        "Backend": ["Python (Flask, Pytest)", "Java (Spring Boot)", "Node.js (Express, NestJS)", "ASP.NET Core (C#)", "PHP(Laravel)", "C++", "GraphQL", "REST APIs", "JSON/XML Validation"],
+        "Database": ["PostgreSQL", "MySQL", "MongoDB", "SQL", "SQL Queries for Test Data", "Oracle", "Redis"],
+        "Cloud & DevOps": ["AWS", "Azure", "GCP", "Jenkins", "GitLab CI/CD", "Azure DevOps", "Docker", "Kubernetes", "Terraform", "SonarQube", "ELK Stack"],
+        "Testing & Automation": ["Selenium", "Cypress", "Playwright", "Appium", "Postman", "Pytest", "Robot Framework", "TestNG", "JUnit", "Jest", "Mocha", "LoadRunner", "BrowserStack"],
+        "Other Tools": ["Jira", "Zephyr", "QTest", "Power BI", "Excel", "ISO 9001", "HIPAA", "PCI DSS", "GDPR", "FDA 21 CFR Part 11"]
+    },
+    "experience": [
+        {
+            "company": "CACI International Inc",
+            "title": "Senior QA Automation Lead / SDET",
+            "location": "",
+            "start_date": "Feb 2016",
+            "end_date": "Present",
+            "bullets": [
+                "Led end-to-end QA automation strategy for large-scale digital platforms handling high-traffic media and financial data, covering web, mobile, and API layers.",
+                "Designed and maintained scalable automation frameworks using Selenium, Cypress, Playwright, and Python, increasing overall automated test coverage to over 80%.",
+                "Implemented robust API and microservices testing for REST and GraphQL services, significantly improving data integrity and system reliability.",
+                "Integrated automated testing into CI/CD pipelines using Jenkins, GitLab CI, Docker, and Kubernetes, reducing manual testing effort by more than 60%.",
+                "Built and executed performance and load testing suites using k6 and Grafana, improving application response times and stability during peak usage.",
+                "Established security and compliance-focused testing practices aligned with PCI DSS, HIPAA, GDPR, and SOC standards for data-sensitive systems.",
+                "Collaborated closely with frontend and backend teams using React, Angular, Node.js, Java, and Python to support shift-left testing and TDD practices.",
+                "Implemented cross-browser and cross-device testing strategies using BrowserStack, ensuring consistent behavior across 25+ environments.",
+                "Created QA dashboards and reporting metrics to track test coverage, defect trends, and release readiness, enabling data-driven quality decisions.",
+                "Mentored and led QA engineers, setting best practices for automation, test design, and continuous improvement across distributed teams."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Master’s degree in Systems Engineering",
+            "school": "Penn State University",
+            "start_year": "2013",
+            "end_year": "2015"
+        }
+    ]
+}

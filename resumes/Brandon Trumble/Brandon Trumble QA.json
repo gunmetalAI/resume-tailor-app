@@ -1,0 +1,110 @@
+{
+    "name": "Brandon Trumble",
+    "email": "brandontrumble124@outlook.com",
+    "phone": "+1 (737) 244-0919",
+    "address": "135 S Elm St",
+    "location": "Nazareth, PA",
+    "postalCode": "18064",
+    "university": "Kutztown University of Pennsylvania",
+    "linkedin": "https://www.linkedin.com/in/brandon-trumble-710449a3",
+    "github": "https://github.com/asaayo",
+    "summary": "Senior Full Stack Engineer with 10+ years of experience building scalable, high-performance web and data-driven applications. Python-focused backend developer skilled in Django, Flask, FastAPI, and asynchronous architectures, with strong expertise in React and TypeScript for frontend. Experienced in cloud-native deployments (AWS/Azure), CI/CD, automated testing, and AI/LLM integration. Adept at designing secure, maintainable systems, optimizing performance, and leading cross-functional teams across finance, education, and enterprise domains.",
+    "skills": [
+        {
+            "category": "Frontend",
+            "skills": ["React.js", "TypeScript", "Angular", "Vue.js", "Next.js", "Redux", "Responsive Design", "Component Architecture", "Cross-Platform UI", "Progressive Web Apps (PWA)", "Accessibility (a11y)", "Performance Optimization"]
+        },
+        {
+            "category": "Backend & Database",
+            "skills": ["Python", "Django", "Flask", "FastAPI", "Node.js", ".NET Core", "RESTful APIs", "GraphQL", "PostgreSQL", "MySQL", "MongoDB", "Redis", "Microservices", "API Optimization", "Async Processing"]
+        },
+        {
+            "category": "AI / Machine Learning / NLP",
+            "skills": ["TensorFlow", "PyTorch", "scikit-learn", "Pandas", "NumPy", "OpenAI API", "LangChain", "Transformers", "spaCy", "Model Fine-Tuning", "Data Preprocessing", "MLflow"]
+        },
+        {
+            "category": "Cloud & DevOps",
+            "skills": ["AWS (Lambda, ECS, EC2, S3, CloudFront, RDS, API Gateway)", "Azure Functions", "Docker", "Kubernetes (EKS/AKS)", "Terraform", "CloudFormation", "CI/CD (GitHub Actions, Jenkins, GitLab)", "Monitoring & Logging"]
+        },
+        {
+            "category": "Testing & Automation",
+            "skills": ["PyTest", "unittest", "Jest", "React Testing Library", "Cypress", "xUnit/NUnit", "Selenium", "Postman/Newman", "Load Testing (k6, Locust)", "TDD", "Integration & End-to-End Testing"]
+        },
+        {
+            "category": "Data & Workflow Automation",
+            "skills": ["Apache Airflow", "ETL Pipelines", "JSON/YAML Schema", "Cron Jobs", "Batch & Real-Time Processing", "API Integrations", "Workflow Orchestration"]
+        },
+        {
+            "category": "Security & Optimization",
+            "skills": ["OAuth2.0", "JWT", "RBAC", "Security Best Practices", "Performance Profiling", "Code Optimization", "SOLID Principles", "Design Patterns", "API Security", "Data Protection", "Security Audits", "Security Scanning"]
+        },
+        {
+            "category": "Agile & Collaboration",
+            "skills": ["Agile/Scrum", "Kanban", "Jira", "Confluence", "Git/GitHub/GitLab", "Slack", "Code Reviews", "Sprint Planning", "Documentation", "Remote Team Collaboration", "MVP Delivery"]
+        }
+    ],
+    "experience": [
+        {
+            "company": "VC3",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Feb 2020",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and delivered end-to-end full-stack systems with a Python-first approach, using Django, Flask, and FastAPI to build high-performance APIs and asynchronous processing pipelines in production environments.",
+                "Designed and owned scalable, secure data layers using PostgreSQL, MongoDB, and Redis, including schema design, migrations, indexing strategies, and query optimization under real-world load.",
+                "Built and operated RESTful and GraphQL APIs supporting complex business workflows, optimizing for throughput, latency, and long-term maintainability.",
+                "Integrated LLM-powered features into production systems using OpenAI APIs and LangChain, designing prompt strategies, inference pipelines, and backend orchestration with reliability and cost awareness.",
+                "Led frontend development using React and TypeScript, applying modular architecture, state management patterns, and PWA principles to deliver responsive, maintainable user interfaces.",
+                "Implemented robust authentication and authorization mechanisms including JWT, OAuth2, and RBAC, securing distributed services and microservice-based architectures.",
+                "Established automated testing and quality practices across the stack using PyTest, Jest, React Testing Library, and Cypress, improving deployment confidence and regression safety.",
+                "Deployed and operated cloud-native workloads on AWS and Azure, leveraging serverless services, containers, managed databases, and CI/CD pipelines to support zero-downtime releases.",
+                "Drove performance optimization across backend and frontend systems, applying caching strategies, async task processing, bundle optimization, and production profiling."
+            ]
+        },
+        {
+            "company": "Innovative Control Systems, Inc",
+            "title": "Senior Engineer",
+            "location": "",
+            "start_date": "Mar 2019",
+            "end_date": "Feb 2020",
+            "bullets": [
+                "Built and enhanced full-stack applications using .NET Core, React, and Node.js, contributing to both backend services and modern, component-based frontend interfaces.",
+                "Designed and optimized relational and non-relational data models using PostgreSQL, T-SQL, and MongoDB, supporting transactional workflows and analytics use cases.",
+                "Developed and consumed RESTful APIs, integrating frontend and backend systems with a focus on performance, reliability, and maintainable architecture.",
+                "Implemented unit and integration testing across backend and frontend layers using appropriate testing frameworks, improving release confidence and reducing regression issues.",
+                "Assisted with data processing and automation tasks using Python, supporting internal tooling and lightweight backend workflows."
+            ]
+        },
+        {
+            "company": "SunGard K-12",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jul 2015",
+            "end_date": "Mar 2019",
+            "bullets": [
+                "Developed and maintained enterprise-grade education management systems using C# .NET and VB.NET, applying solid OOP principles to improve code maintainability, reusability, and long-term scalability.",
+                "Built and optimized SQL Server databases and complex T-SQL queries, stored procedures, and indexes to support high-volume student, financial, and administrative data processing.",
+                "Contributed to mobile application development using Apache Cordova and Ionic, delivering cross-platform mobile solutions used by school administrators and educators.",
+                "Implemented dynamic, responsive user interfaces with Angular, HTML, CSS, improving usability and consistency across desktop and mobile platforms.",
+                "Participated in full SDLC activities, including requirements analysis, system design, development, testing, deployment, and post-release support in a regulated education environment.",
+                "Collaborated closely with product managers, QA engineers, and business analysts to translate district-level requirements into reliable technical solutions.",
+                "Diagnosed and resolved production issues, performance bottlenecks, and data inconsistencies, improving system stability and reducing support turnaround time."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Master’s degree in Computer Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2014",
+            "end_year": "2015"
+        },
+        {
+            "degree": "Bachelor’s degree in Computer and Information Science",
+            "school": "Kutztown University of Pennsylvania",
+            "start_year": "2011",
+            "end_year": "2014"
+        }
+    ]
+}

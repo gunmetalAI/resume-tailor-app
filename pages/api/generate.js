@@ -487,7 +487,7 @@ export default async function handler(req, res) {
 
     // STEP 1: Analyze job description to extract technology category and tech stacks
     console.log("Step 1: Analyzing job description for technology requirements...");
-    const validCategories = ["AI/ML/Data", "Web", "Mobile"];
+    const validCategories = ["AI/ML/Data", "Web", "Mobile", "QA/Automation/Testing"];
 
     let techCategory = "Web";
     let techStacks = "";
@@ -505,14 +505,14 @@ ${jd}`;
         ? `${basePrompt}
 
 Return your response in EXACTLY 2 lines:
-Line 1: Category - one of these exact values: "AI/ML/Data", "Web", or "Mobile"
+Line 1: Category - one of these exact values: "AI/ML/Data", "Web", "Mobile", or "QA/Automation/Testing"
 Line 2: Tech stacks - comma-separated list of technologies (e.g., React, Python, Golang, AWS)
 
 Do not include any other text, explanations, or formatting.`
         : `${basePrompt}
 
 CRITICAL: Return ONLY 2 lines, nothing else:
-Line 1 must be EXACTLY one of: "AI/ML/Data" or "Web" or "Mobile"
+Line 1 must be EXACTLY one of: "AI/ML/Data" or "Web" or "Mobile" or "QA/Automation/Testing"
 Line 2 must be a comma-separated list of technologies only (e.g., React, Python, Golang, AWS)
 
 Example format:
@@ -587,6 +587,8 @@ Return ONLY the category on line 1 and tech stacks on line 2. No prefixes, no ex
       selectedResumeStack = "Mobile";
     } else if (techCategory === "AI/ML/Data") {
       selectedResumeStack = "AI";
+    } else if (techCategory === "QA/Automation/Testing") {
+      selectedResumeStack = "QA";
     } else if (techCategory === "Web") {
       // Check tech stacks for Web category
       // Use word boundaries to avoid false matches (e.g., "java" in "javascript")

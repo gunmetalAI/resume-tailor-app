@@ -101,7 +101,7 @@ Each experience entry must include:
 
 1. **Step 1**: AI analyzes the job description to determine technology category and required tech stacks
 2. **Step 2**: System selects the appropriate stack-based resume file based on:
-   - Category: "Mobile" → `Mobile.json`, "AI/ML/Data" → `AI.json`, "Other" → `Other.json`
+   - Category: "Mobile" → `Mobile.json`, "AI/ML/Data" → `AI.json`, "QA/Automation/Testing" → `QA.json`, "Other" → `Other.json`
    - For "Web" category: Checks tech stacks for Go/Java/C#/Python/Node
 3. **Step 3**: The selected basic resume is sent to AI along with the job description for tailoring
 
