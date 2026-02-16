@@ -992,6 +992,111 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
       ? transformEducation(resumeContent.education) 
       : (basicResumeData.education || []);
 
+    // Helper function to normalize company names for matching
+    const normalizeCompanyName = (name) => {
+      if (!name) return "";
+      return name.toLowerCase()
+        .replace(/[.,]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+    };
+
+    // Parse GPT experience title to extract company for matching
+    // Format: "SS&C Advent — Sr. Software Engineer (Jan 2019 - Present)" or "Senior Software Engineer | VC3 | Feb 2020 - Present"
+    const extractCompanyFromGPTTitle = (titleStr) => {
+      if (!titleStr) return "";
+      
+      // Try format: "Company — Title (Dates)" - handle various dash types
+      const dashPatterns = [" — ", " - ", " – ", " —", " — "];
+      for (const dash of dashPatterns) {
+        if (titleStr.includes(dash)) {
+          const parts = titleStr.split(dash).map(p => p.trim());
+          if (parts.length >= 1 && parts[0].length > 0) {
+            return parts[0]; // Company is the first part
+          }
+        }
+      }
+      
+      // Try format: "Title | Company | Dates"
+      if (titleStr.includes("|")) {
+        const parts = titleStr.split("|").map(p => p.trim()).filter(p => p.length > 0);
+        if (parts.length >= 2) {
+          return parts[1]; // Company is the second part
+        }
+      }
+      
+      return "";
+    };
+
+    // Match GPT experiences to basic resume experiences
+    // Use basic resume metadata (company, title, location, dates) but GPT's tailored details
+    const matchedExperience = basicResumeData.experience.map((basicExp, idx) => {
+      const basicCompany = normalizeCompanyName(basicExp.company || "");
+      
+      // First, try index-based matching (fastest and most reliable when order matches)
+      let matchedGPTExp = null;
+      if (idx < resumeContent.experience.length) {
+        const gptExpAtIndex = resumeContent.experience[idx];
+        const gptCompanyAtIndex = normalizeCompanyName(extractCompanyFromGPTTitle(gptExpAtIndex.title || ""));
+        
+        // Verify the company at this index matches
+        if (gptCompanyAtIndex && basicCompany && 
+            (gptCompanyAtIndex === basicCompany || 
+             gptCompanyAtIndex.includes(basicCompany) || 
+             basicCompany.includes(gptCompanyAtIndex))) {
+          matchedGPTExp = gptExpAtIndex;
+          console.log(`✅ Index-based match: "${basicExp.company}" at index ${idx}`);
+        }
+      }
+      
+      // If index-based match failed, try to find by company name across all GPT experiences
+      if (!matchedGPTExp) {
+        for (let gptIdx = 0; gptIdx < resumeContent.experience.length; gptIdx++) {
+          const gptExp = resumeContent.experience[gptIdx];
+          const gptCompany = normalizeCompanyName(extractCompanyFromGPTTitle(gptExp.title || ""));
+          
+          // Exact match or contains match
+          if (gptCompany && basicCompany && 
+              (gptCompany === basicCompany || 
+               gptCompany.includes(basicCompany) || 
+               basicCompany.includes(gptCompany))) {
+            matchedGPTExp = gptExp;
+            console.log(`✅ Company name match: "${basicExp.company}" found at GPT index ${gptIdx} (basic index ${idx})`);
+            break;
+          }
+        }
+      }
+      
+      // Final fallback: use index-based matching even if company names don't match
+      // (This handles cases where company name extraction fails but order is correct)
+      if (!matchedGPTExp && idx < resumeContent.experience.length) {
+        matchedGPTExp = resumeContent.experience[idx];
+        const extractedCompany = extractCompanyFromGPTTitle(matchedGPTExp.title || "");
+        console.log(`⚠️ Using index-based fallback for "${basicExp.company}" at index ${idx} (GPT title: "${matchedGPTExp.title}", extracted company: "${extractedCompany}")`);
+      }
+      
+      // Use basic resume metadata, but GPT's tailored details if available
+      // Template expects 'details', but basic resume may use 'bullets'
+      const gptDetails = matchedGPTExp?.details || [];
+      const basicDetails = basicExp.details || basicExp.bullets || [];
+      
+      if (!matchedGPTExp) {
+        console.error(`❌ No match found for "${basicExp.company}" at index ${idx} - using basic resume details`);
+      }
+      
+      return {
+        title: basicExp.title || "Engineer",
+        company: basicExp.company || "",
+        location: basicExp.location || null,
+        start_date: basicExp.start_date || "",
+        end_date: basicExp.end_date || "",
+        // Use GPT's tailored details if matched, otherwise fall back to basic resume
+        details: gptDetails.length > 0 ? gptDetails : basicDetails
+      };
+    });
+
+    console.log(`✅ Matched ${matchedExperience.length} experience entries (using basic resume metadata with GPT details)`);
+
     // Prepare data for template (using basic resume data)
     const templateData = {
       name: basicResumeData.name,
@@ -1003,14 +1108,7 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
       website: null, // Excluded from resume
       summary: cleanedSummary,
       skills: resumeContent.skills,
-      experience: basicResumeData.experience.map((job, idx) => ({
-        title: job.title || resumeContent.experience[idx]?.title || "Engineer",
-        company: job.company,
-        location: job.location,
-        start_date: job.start_date,
-        end_date: job.end_date,
-        details: resumeContent.experience[idx]?.details || []
-      })),
+      experience: matchedExperience,
       education: educationData
     };
 
