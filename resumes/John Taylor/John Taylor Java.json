@@ -1,75 +1,67 @@
 {
-    "name": "Nathan Kamenar",
-    "email": "nathankamenar124@outlook.com",
-    "phone": "+1 (218) 332-0680",
-    "address": "425 Arch Ave",
-    "location": "Greensburg, PA",
-    "postalCode": "15601",
-    "university": "Edinboro University of Pennsylvania",
-    "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a8",
-    "github": "https://github.com/debugmaster",
-    "summary": "Strategic Senior Full Stack Engineer with 9+ years of experience building scalable, production-grade web platforms with a primary focus on Java-based backend systems. Deep expertise in Spring Boot, Spring MVC, Hibernate, and JPA, designing modular microservices, REST/GraphQL APIs, and event-driven architectures. Experienced in integrating legacy enterprise systems and Oracle databases, while also leveraging Node.js and Python (FastAPI) for lightweight services and AI/ML pipelines. Proven ability to deliver high-performance, cloud-native applications on AWS, lead Agile teams, optimize distributed systems, and bridge backend intelligence with intuitive frontend experiences using React, Next.js, Angular, and TypeScript.",
+    "name": "John Taylor",
+    "email": "johntaylor8871@outlook.com",
+    "phone": "+1 (737) 244-0919",
+    "address": "3009 Stock Dr",
+    "location": "Austin, TX",
+    "postalCode": "78741",
+    "university": "University of Antelope Valley",
+    "linkedin": "https://www.linkedin.com/in/johntaylorcs",
+    "github": "https://github.com/johnataylor",
+    "summary": "Senior QA Engineer with 10+ years of experience ensuring quality, reliability, and performance of complex web and mobile applications. Strong background in test automation, API testing, and end-to-end validation across frontend, backend, and cloud-based systems. Experienced in designing scalable test frameworks, validating integrations with third-party services, and collaborating closely with engineering teams in Agile environments. Proficient in JavaScript, TypeScript, Python, and C#, with hands-on experience testing applications built with React, Node.js, and .NET on AWS and Azure. ",
     "skills": {
-        "Backend": ["Java (Spring Boot, Spring MVC, Hibernate, JPA)", "Node.js", "NestJS", "Python (FastAPI, Django, Flask)"],
-        "Frontend": ["React.js", "Next.js", "Angular", "Vue.js", "TypeScript"],
-        "AI / Machine Learning": ["FastAPI-based ML services", "TensorFlow", "scikit-learn", "PyTorch", "Pandas", "NumPy", "spaCy"],
-        "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB", "Elasticsearch", "Oracle"],
-        "Cloud & DevOps": ["AWS (ECS, Lambda, S3, RDS, CloudFormation)", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Jenkins"],
-        "Automation & Testing": ["Jest", "PyTest", "Mocha", "Postman", "Newman"],
-        "Tools & Methodologies": ["Git", "Agile/Scrum", "CI/CD", "REST", "GraphQL", "WebSockets", "Microservices", "Event-Driven Architecture"],
-        "Monitoring & Observability": ["Prometheus", "Grafana", "ELK Stack", "New Relic"]
+        "Testing & QA": ["Test Automation", "Manual Testing", "API Testing", "End-to-End Testing", "Integration Testing", "Regression Testing", "Test Case Design", "Test Strategy", "Defect Tracking"],
+        "Automation Tools": ["Jest", "React Testing Library", "Cypress", "xUnit", "Postman", "Supertest"],
+        "Programming & Scripting": ["JavaScript", "TypeScript", "Python", "C#"],
+        "Application Under Test (AUT) Technologies": ["React", "React Native", "Next.js", "Angular", "Node.js", "ASP.NET Core", ".NET"],
+        "APIs & Integrations": ["RESTful APIs", "GraphQL", "Stripe", "Twilio", "Identity Server"],
+        "Databases": ["PostgreSQL", "MySQL", "MongoDB", "SQL Server", "Azure Cosmos DB", "Redis"],
+        "Cloud & CI/CD": ["Microsoft Azure", "AWS", "GitHub Actions", "GitLab CI", "Azure DevOps", "Docker"],
+        "Security & Performance": ["BAC", "JWT", "OWASP Top 10 Awareness", "Authentication Testing", "Performance Validation"],
+        "Collaboration": ["Agile/Scrum", "Jira", "Confluence", "Git", "Slack", "Cross-functional Team Collaboration"]
+
     },
     "experience": [
         {
-            "company": "KeyLogic",
-            "title": "Senior Software Engineer",
+            "company": "Accenture",
+            "title": "Senior QA Engineer",
             "location": "",
-            "start_date": "Aug 2016",
+            "start_date": "Nov 2023",
             "end_date": "Present",
             "bullets": [
-                "Architected and developed scalable full-stack applications with Java as the core backend technology, leveraging Spring Boot, Spring MVC, Hibernate, and JPA for building robust RESTful and GraphQL APIs, while ensuring modular, maintainable service layers. Gained experience integrating with Oracle and PostgreSQL databases, bridging modern and legacy enterprise systems.",
-                "Designed and implemented event-driven microservices using Apache Kafka and RabbitMQ, enabling asynchronous processing, high-throughput communication, and improved fault tolerance across distributed systems.",
-                "Utilized Node.js and NestJS for lightweight backend services and Python (FastAPI) to integrate AI/ML pipelines for anomaly detection, forecasting, and analytics, enabling enhanced decision-making for enterprise workflows.",
-                "Built and maintained responsive frontend applications using React, Angular, Next.js, and TypeScript, integrating with backend APIs and real-time data streams via WebSockets and GraphQL.",
-                "Led cloud-native deployments on AWS (ECS, Lambda, S3, RDS, CloudFormation) and on-prem environments, implementing Infrastructure-as-Code with Terraform and CI/CD pipelines using GitHub Actions and Jenkins for automated testing, containerized deployments, and zero-downtime releases.",
-                "Established system-wide observability using Prometheus, Grafana, ELK Stack, and New Relic, achieving high availability, proactive monitoring, and performance optimization for production workloads.",
-                "Collaborated closely with data science teams to productionize ML models, exposing them through APIs for frontend and third-party consumption, ensuring seamless integration across the stack.",
-                "Mentored junior engineers, conducted code reviews, and contributed to architectural decisions, enforcing best practices in Java, Node.js, and cloud-native application development."
+                "Designed and executed comprehensive test strategies for web and mobile applications built with React, React Native, Node.js, and .NET.",
+                "Developed and maintained automated test suites for frontend, backend, and API layers using Jest, React Testing Library, Cypress, and xUnit.",
+                "Performed API testing and validation for RESTful services supporting user onboarding, authentication, and data management workflows.",
+                "Validated authentication and authorization flows, including role-based access control and identity management solutions.",
+                "Tested and verified third-party integrations such as payment processing and real-time notification services to ensure reliability and data integrity.",
+                "Conducted regression, smoke, and end-to-end testing as part of CI/CD pipelines to reduce production defects.",
+                "Monitored application health and test results using Azure Application Insights and collaborated with DevOps teams to support release quality.",
+                "Partnered closely with developers and product stakeholders to identify risks early and improve overall software quality."
             ]
         },
         {
-            "company": "KeyLogic Systems",
-            "title": "SharePoint Engineer",
+            "company": "Webhead",
+            "title": "Software Tester/QA Engineer",
             "location": "",
-            "start_date": "Jan 2016",
-            "end_date": "Jul 2016",
+            "start_date": "Jul 2015",
+            "end_date": "Sep 2023",
             "bullets": [
-                "Designed and customized SharePoint 2013 and SharePoint Online sites for document management, team collaboration, and workflow automation.",
-                "Built custom workflows using SharePoint Designer and Power Automate, reducing manual approval and reporting effort.",
-                "Extended SharePoint functionality using JavaScript, REST APIs, and SPFx-style custom components.",
-                "Managed permissions, content types, and site structures to support secure and scalable enterprise usage."
-            ]
-        },
-        {
-            "company": "ShahPoint",
-            "title": "SharePoint Engineer",
-            "location": "",
-            "start_date": "Mar 2013",
-            "end_date": "Dec 2015",
-            "bullets": [
-                "Developed and maintained SharePoint 2010/2013 sites for internal collaboration, knowledge management, and reporting.",
-                "Customized SharePoint UI using master pages, JavaScript, jQuery, and CSS to align with business branding and usability requirements.",
-                "Implemented automated workflows for document approvals and notifications using SharePoint Designer.",
-                "Supported SharePoint integrations and data migrations while assisting with performance tuning and issue resolution."
+                "Executed manual and automated testing for backend services built with .NET and ASP.NET Core, ensuring correctness of business logic and data processing.",
+                "Designed and maintained test cases and test data for applications using MongoDB and SQL-based databases.",
+                "Automated frontend test scenarios for React and Angular applications to validate user workflows and UI behavior.",
+                "Performed integration testing across distributed system components and external services.",
+                "Validated backend processes and data pipelines supported by Python-based automation scripts.",
+                "Increased test coverage through unit, integration, and API testing, reducing post-release defects.",
+                "Collaborated with cross-functional teams in Agile environments to support sprint planning, defect triage, and release readiness."
             ]
         }
     ],
     "education": [
         {
             "degree": "Bachelor’s degree in Computer Science",
-            "school": "Edinboro University of Pennsylvania",
-            "start_year": "2007",
-            "end_year": "2013"
+            "school": "University of Antelope Valley",
+            "start_year": "2011",
+            "end_year": "2014"
         }
     ]
 }

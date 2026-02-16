@@ -1,75 +1,85 @@
 {
-    "name": "Nathan Kamenar",
-    "email": "nathankamenar124@outlook.com",
+    "name": "Andrew James",
+    "email": "andrewjamesdev@outlook.com",
     "phone": "+1 (218) 332-0680",
-    "address": "425 Arch Ave",
-    "location": "Greensburg, PA",
-    "postalCode": "15601",
-    "university": "Edinboro University of Pennsylvania",
-    "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a8",
-    "github": "https://github.com/debugmaster",
-    "summary": "Strategic Senior Full Stack Engineer with 9+ years of experience building scalable, production-grade web platforms with Python at the core and modern JavaScript frameworks for the frontend. Expert in FastAPI, Django, and Flask for backend development, integrating AI/ML pipelines using TensorFlow, PyTorch, scikit-learn, Pandas, and NumPy, and designing event-driven microservices for high-performance systems. Skilled in cloud-native deployments on AWS (Lambda, ECS, S3, RDS, CloudFormation) and CI/CD automation using Docker, GitHub Actions, and Terraform. Proven ability to bridge backend intelligence with responsive frontend experiences using React, Next.js, Angular, and TypeScript, while mentoring teams and driving Agile best practices for maintainable, scalable solutions.",
+    "address": "415 Avenue I",
+    "location": "Dallas, TX",
+    "postalCode": "75203",
+    "university": "Argosy University",
+    "linkedin": "https://www.linkedin.com/in/andrewjamesdev/",
+    "github": "https://github.com/andrewjames",
+    "summary": "Senior QA Automation Lead / SDET with 8+ years of experience designing and scaling automated testing frameworks for high-traffic media, financial, and data-driven platforms. Proven expertise in end-to-end test automation across web, mobile, and API layers using Selenium, Cypress, and Playwright, with deep integration into CI/CD pipelines. Strong background in API, microservices, performance, and security testing, including compliance-driven environments (PCI DSS, HIPAA, GDPR). Known for driving shift-left testing, improving release confidence, and mentoring QA teams in fast-paced, high-stakes production environments.",
     "skills": {
-        "Backend": ["Python (FastAPI, Django, Flask)", "Node.js", "NestJS", "Express.js"],  
-        "Frontend": ["React.js", "Next.js", "Angular", "Vue.js", "TypeScript", "JavaScript"],
-        "AI / Machine Learning": ["TensorFlow", "PyTorch", "scikit-learn", "Pandas", "NumPy", "spaCy", "FastAPI-based ML services"],
-        "Cloud & DevOps": ["AWS (Lambda, ECS, S3, RDS, CloudFormation)", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Jenkins"],
-        "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB", "Elasticsearch"],
-        "Automation & Testing": ["PyTest", "Jest", "Mocha", "Postman", "Newman"],
-        "Tools & Methodologies": ["Git", "Agile/Scrum", "CI/CD", "REST", "GraphQL", "WebSockets", "Microservices", "Event-Driven Architecture"],
-        "Monitoring & Observability": ["Prometheus", "Grafana", "ELK Stack", "New Relic"]
+        "Test Automation & QA": ["Selenium", "Cypress", "Playwright", "Jest", "React Testing Library", "xUnit", "Postman", "Supertest", "End-to-End Testing", "Integration Testing", "API Testing", "Unit Testing", "Cross-Browser Testing (BrowserStack)"],
+        "Performance & Reliability": ["k6", "Grafana", "Load Testing", "Stress Testing", "Performance Monitoring", "Test Metrics & Reporting"],
+        "CI/CD & DevOps": ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "CI/CD Pipeline Integration", "Test Automation in DevOps Workflows"],
+        "Programming & Scripting": ["JavaScript", "TypeScript", "Python", "C#"],
+        "Frontend Technologies": ["React.js", "Angular", "Next.js", "HTML5", "CSS3"],
+        "Backend & APIs": ["Node.js", "Express.js", "ASP.NET Core", "RESTful APIs", "GraphQL", "Microservices Architecture"],
+        "Databases": ["PostgreSQL", "MySQL", "MongoDB", "SQL Server", "Redis"],
+        "Cloud Platforms": ["AWS", "Microsoft Azure", "Azure DevOps", "Application Insights"],
+        "Security & Compliance": ["OWASP Top 10", "Secure Authentication", "JWT", "Role-Based Access Control (RBAC)", "PCI DSS", "HIPAA", "GDPR", "SOC Compliance Testing"],
+        "Process & Collaboration": ["Agile/Scrum", "Shift-Left Testing", "TDD Support", "Jira", "Confluence", "Git", "Cross-Functional Team Collaboration", "QA Mentorship & Leadership"]
     },
     "experience": [
         {
-            "company": "KeyLogic",
-            "title": "Senior Software Engineer",
+            "company": "Soft Tech Consulting",
+            "title": "Senior QA Automation Lead / SDET",
             "location": "",
-            "start_date": "Aug 2016",
+            "start_date": "Jan 2024",
             "end_date": "Present",
             "bullets": [
-                "Architected and led the development of full-stack platforms with Python (FastAPI, Django, Flask) as the primary backend, and Node.js/NestJS for supporting microservices, designing modular APIs and event-driven architectures for scalable, high-throughput systems.",
-                "Developed and deployed AI/ML services using Python, integrating TensorFlow, PyTorch, scikit-learn, Pandas, and NumPy for predictive analytics, anomaly detection, and recommendation systems, exposed via REST and GraphQL APIs.",
-                "Built asynchronous and event-driven pipelines using Celery, RabbitMQ, Kafka, and Redis, improving inter-service communication, fault tolerance, and performance across distributed systems.",
-                "Led cloud-native deployments primarily on AWS (Lambda, ECS, S3, RDS, CloudFormation) with Infrastructure-as-Code using Terraform and automated CI/CD pipelines via GitHub Actions and Docker, ensuring fast, reliable releases.",
-                "Maintained high-performance, responsive frontend applications using React, Next.js, Angular, and TypeScript, integrating real-time data streams via WebSockets and REST APIs for dynamic user experiences.",
-                "Implemented comprehensive observability and monitoring using Prometheus, Grafana, ELK Stack, and New Relic, enabling proactive alerts, metrics-driven optimizations, and high system availability.",
-                "Collaborated closely with data science and ML teams to productionize models, including preprocessing pipelines, model versioning, and API endpoints for seamless frontend and partner integration.",
-                "Mentored engineers, led code reviews and architectural decisions, and drove Agile best practices, ensuring maintainable, scalable, and efficient Python-first full-stack solutions."
+                "Led end-to-end QA automation strategy for large-scale digital platforms handling high-traffic media and financial data, covering web, mobile, and API layers.",
+                "Designed and maintained scalable automation frameworks using Selenium, Cypress, Playwright, and Python, increasing overall automated test coverage to over 80%.",
+                "Implemented robust API and microservices testing for REST and GraphQL services, significantly improving data integrity and system reliability.",
+                "Integrated automated testing into CI/CD pipelines using Jenkins, GitLab CI, Docker, and Kubernetes, reducing manual testing effort by more than 60%.",
+                "Built and executed performance and load testing suites using k6 and Grafana, improving application response times and stability during peak usage.",
+                "Established security and compliance-focused testing practices aligned with PCI DSS, HIPAA, GDPR, and SOC standards for data-sensitive systems.",
+                "Collaborated closely with frontend and backend teams using React, Angular, Node.js, Java, and Python to support shift-left testing and TDD practices.",
+                "Implemented cross-browser and cross-device testing strategies using BrowserStack, ensuring consistent behavior across 25+ environments.",
+                "Created QA dashboards and reporting metrics to track test coverage, defect trends, and release readiness, enabling data-driven quality decisions.",
+                "Mentored and led QA engineers, setting best practices for automation, test design, and continuous improvement across distributed teams."
             ]
         },
         {
-            "company": "KeyLogic Systems",
-            "title": "SharePoint Engineer",
+            "company": "Ingenious",
+            "title": "Senior QA Engineer",
             "location": "",
-            "start_date": "Jan 2016",
-            "end_date": "Jul 2016",
+            "start_date": "Jul 2020",
+            "end_date": "Dec 2023",
             "bullets": [
-                "Designed and customized SharePoint 2013 and SharePoint Online sites for document management, team collaboration, and workflow automation.",
-                "Built custom workflows using SharePoint Designer and Power Automate, reducing manual approval and reporting effort.",
-                "Extended SharePoint functionality using JavaScript, REST APIs, and SPFx-style custom components.",
-                "Managed permissions, content types, and site structures to support secure and scalable enterprise usage."
+                "Architected automation frameworks with Cypress, executing tests on CNN platforms, delivering consistent data integrity during high-profile election broadcasts.",
+                "Streamlined backend validation for real-time data synchronization, improving API reliability by 50% during live events.",
+                "Integrated test automation into Jenkins pipelines, reducing manual testing by 65% and expediting deployment cycles.",
+                "Conducted cross-browser testing with BrowserStack, ensuring device compatibility across more than 25+ configurations.",
+                "Collaborated on TDD practices with Gherkin, initiating test involvement from project outset to optimize development cycles.",
+                "Executed stress tests on news platforms to ensure durable, downtime-resistant service during continuous live event coverage.",
+                "Created dynamic dashboards for automation metrics, facilitating informed QA decision making and alignment with strategic goals."
             ]
         },
         {
-            "company": "ShahPoint",
-            "title": "SharePoint Engineer",
+            "company": "CraftedQ",
+            "title": "QA Engineer",
             "location": "",
-            "start_date": "Mar 2013",
-            "end_date": "Dec 2015",
+            "start_date": "Feb 2018",
+            "end_date": "Jul 2020",
             "bullets": [
-                "Developed and maintained SharePoint 2010/2013 sites for internal collaboration, knowledge management, and reporting.",
-                "Customized SharePoint UI using master pages, JavaScript, jQuery, and CSS to align with business branding and usability requirements.",
-                "Implemented automated workflows for document approvals and notifications using SharePoint Designer.",
-                "Supported SharePoint integrations and data migrations while assisting with performance tuning and issue resolution."
+                "Developed Selenium-based test environments, driving 100% test coverage for multi-platform digital retailing solutions.",
+                "Automated CI testing earmarked through Jenkins, optimizing vetting cycles and minimizing discrepancies.",
+                "Configured scalable cloud-based tests with BrowserStack, enhancing parallel executions and reducing setup overhead.",
+                "Validated API integrity using Mocha and Postman, securing synchronization between core services.",
+                "Delivered distributed test schedules cutting execution times by 50% and increasing iteration frequency.",
+                "Built comprehensive reporting systems for QA tracking, offering insight into process optimization.",
+                "Aligned DevOps teams to streamline deployment cycles around QA gates, ensuring synchronized releases."
             ]
         }
     ],
     "education": [
         {
             "degree": "Bachelor’s degree in Computer Science",
-            "school": "Edinboro University of Pennsylvania",
-            "start_year": "2007",
-            "end_year": "2013"
+            "school": "Argosy University",
+            "start_year": "2013",
+            "end_year": "2017"
         }
     ]
 }
