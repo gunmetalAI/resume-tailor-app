@@ -1,0 +1,76 @@
+{
+    "name": "Nathan Kamenar",
+    "email": "nathankamenar124@outlook.com",
+    "phone": "+1 (218) 332-0680",
+    "address": "425 Arch Ave",
+    "location": "Greensburg, PA",
+    "postalCode": "15601",
+    "university": "Edinboro University of Pennsylvania",
+    "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a8",
+    "github": "https://github.com/debugmaster",
+    "summary": "Strategic Senior Full Stack Engineer with 9+ years of experience building scalable, production-grade web platforms using JavaScript-based frameworks and Python for AI-driven services. Deep expertise in Node.js, NestJS, and modern frontend frameworks for delivering high-performance, cloud-native applications. Proven experience integrating AI/ML pipelines via Python (FastAPI), designing event-driven microservices, and implementing CI/CD automation on AWS. Strong background in leading Agile teams, optimizing distributed systems, and bridging backend intelligence with intuitive frontend experiences using React and Next.js.",
+    "skills": {
+        "Backend": ["Node.js", "NestJS", "Express.js", "Python (FastAPI, Django, Flask)"],
+        "Frontend": ["React.js", "Next.js", "Angular", "Vue.js", "TypeScript"],
+        "AI / Machine Learning": ["FastAPI-based ML services", "TensorFlow", "scikit-learn", "PyTorch", "Pandas", "NumPy", "spaCy"],
+        "Cloud & DevOps": ["AWS (ECS, Lambda, S3, RDS, CloudFormation)", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Jenkins"],
+        "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB", "Elasticsearch"],
+        "Automation & Testing": ["Jest", "PyTest", "Mocha", "Postman", "Newman"],
+        "Tools & Methodologies": ["Git", "Agile/Scrum", "CI/CD", "REST", "GraphQL", "WebSockets", "Microservices", "Event-Driven Architecture"],
+        "Monitoring & Observability": ["Prometheus", "Grafana", "ELK Stack", "New Relic"]
+    },
+    "experience": [
+        {
+            "company": "KeyLogic",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Aug 2016",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and led the development of scalable backend platforms using Node.js, NestJS, and Express, designing modular microservices and API layers that supported high-throughput, low-latency enterprise systems.",
+                "Designed and deployed AI-enabled services using Python (FastAPI) to serve machine learning models for anomaly detection, forecasting, and analytics, reducing false positives and improving decision accuracy across data-driven workflows.",
+                "Built and maintained event-driven architectures using message queues and asynchronous processing patterns, significantly improving system scalability, fault tolerance, and inter-service communication efficiency.",
+                "Led cloud-native deployments on AWS (ECS, Lambda, S3, RDS, CloudFormation), implementing Infrastructure-as-Code and improving release consistency, environment parity, and deployment velocity.",
+                "Established and optimized CI/CD pipelines using GitHub Actions and Docker, enabling automated testing, security checks, and zero-downtime deployments while reducing manual release effort.",
+                "Developed responsive and high-performance frontend applications using React, Next.js, and TypeScript, integrating real-time data streams via WebSockets and REST APIs to deliver near-instant user feedback.",
+                "Implemented system-wide observability and monitoring using Prometheus, Grafana, and structured logging, achieving high availability and proactive alerting for production workloads.",
+                "Collaborated closely with data science teams to productionize ML models, exposing them through REST and GraphQL APIs and ensuring seamless consumption by frontend applications and external partners.",
+                "Mentored engineers and contributed to architectural decision-making, code reviews, and Agile ceremonies, driving consistent engineering standards and long-term platform maintainability."
+            ]
+        },
+        {
+            "company": "KeyLogic Systems",
+            "title": "SharePoint Engineer",
+            "location": "",
+            "start_date": "Jan 2016",
+            "end_date": "Jul 2016",
+            "bullets": [
+                "Designed and customized SharePoint 2013 and SharePoint Online sites for document management, team collaboration, and workflow automation.",
+                "Built custom workflows using SharePoint Designer and Power Automate, reducing manual approval and reporting effort.",
+                "Extended SharePoint functionality using JavaScript, REST APIs, and SPFx-style custom components.",
+                "Managed permissions, content types, and site structures to support secure and scalable enterprise usage."
+            ]
+        },
+        {
+            "company": "ShahPoint",
+            "title": "SharePoint Engineer",
+            "location": "",
+            "start_date": "Mar 2013",
+            "end_date": "Dec 2015",
+            "bullets": [
+                "Developed and maintained SharePoint 2010/2013 sites for internal collaboration, knowledge management, and reporting.",
+                "Customized SharePoint UI using master pages, JavaScript, jQuery, and CSS to align with business branding and usability requirements.",
+                "Implemented automated workflows for document approvals and notifications using SharePoint Designer.",
+                "Supported SharePoint integrations and data migrations while assisting with performance tuning and issue resolution."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computer Science",
+            "school": "Edinboro University of Pennsylvania",
+            "start_year": "2007",
+            "end_year": "2013"
+        }
+    ]
+}

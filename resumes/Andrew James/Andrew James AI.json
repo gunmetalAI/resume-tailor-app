@@ -1,0 +1,75 @@
+{
+    "name": "Nathan Kamenar",
+    "email": "nathankamenar124@outlook.com",
+    "phone": "+1 (218) 332-0680",
+    "address": "425 Arch Ave",
+    "location": "Greensburg, PA",
+    "postalCode": "15601",
+    "university": "Edinboro University of Pennsylvania",
+    "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a8",
+    "github": "https://github.com/debugmaster",
+    "summary": "Strategic Senior Full Stack Engineer with 9+ years of experience building scalable, production-grade web platforms with Python at the core and modern JavaScript frameworks for the frontend. Expert in FastAPI, Django, and Flask for backend development, integrating AI/ML pipelines using TensorFlow, PyTorch, scikit-learn, Pandas, and NumPy, and designing event-driven microservices for high-performance systems. Skilled in cloud-native deployments on AWS (Lambda, ECS, S3, RDS, CloudFormation) and CI/CD automation using Docker, GitHub Actions, and Terraform. Proven ability to bridge backend intelligence with responsive frontend experiences using React, Next.js, Angular, and TypeScript, while mentoring teams and driving Agile best practices for maintainable, scalable solutions.",
+    "skills": {
+        "Backend": ["Python (FastAPI, Django, Flask)", "Node.js", "NestJS", "Express.js"],  
+        "Frontend": ["React.js", "Next.js", "Angular", "Vue.js", "TypeScript", "JavaScript"],
+        "AI / Machine Learning": ["TensorFlow", "PyTorch", "scikit-learn", "Pandas", "NumPy", "spaCy", "FastAPI-based ML services"],
+        "Cloud & DevOps": ["AWS (Lambda, ECS, S3, RDS, CloudFormation)", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Jenkins"],
+        "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB", "Elasticsearch"],
+        "Automation & Testing": ["PyTest", "Jest", "Mocha", "Postman", "Newman"],
+        "Tools & Methodologies": ["Git", "Agile/Scrum", "CI/CD", "REST", "GraphQL", "WebSockets", "Microservices", "Event-Driven Architecture"],
+        "Monitoring & Observability": ["Prometheus", "Grafana", "ELK Stack", "New Relic"]
+    },
+    "experience": [
+        {
+            "company": "KeyLogic",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Aug 2016",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and led the development of full-stack platforms with Python (FastAPI, Django, Flask) as the primary backend, and Node.js/NestJS for supporting microservices, designing modular APIs and event-driven architectures for scalable, high-throughput systems.",
+                "Developed and deployed AI/ML services using Python, integrating TensorFlow, PyTorch, scikit-learn, Pandas, and NumPy for predictive analytics, anomaly detection, and recommendation systems, exposed via REST and GraphQL APIs.",
+                "Built asynchronous and event-driven pipelines using Celery, RabbitMQ, Kafka, and Redis, improving inter-service communication, fault tolerance, and performance across distributed systems.",
+                "Led cloud-native deployments primarily on AWS (Lambda, ECS, S3, RDS, CloudFormation) with Infrastructure-as-Code using Terraform and automated CI/CD pipelines via GitHub Actions and Docker, ensuring fast, reliable releases.",
+                "Maintained high-performance, responsive frontend applications using React, Next.js, Angular, and TypeScript, integrating real-time data streams via WebSockets and REST APIs for dynamic user experiences.",
+                "Implemented comprehensive observability and monitoring using Prometheus, Grafana, ELK Stack, and New Relic, enabling proactive alerts, metrics-driven optimizations, and high system availability.",
+                "Collaborated closely with data science and ML teams to productionize models, including preprocessing pipelines, model versioning, and API endpoints for seamless frontend and partner integration.",
+                "Mentored engineers, led code reviews and architectural decisions, and drove Agile best practices, ensuring maintainable, scalable, and efficient Python-first full-stack solutions."
+            ]
+        },
+        {
+            "company": "KeyLogic Systems",
+            "title": "SharePoint Engineer",
+            "location": "",
+            "start_date": "Jan 2016",
+            "end_date": "Jul 2016",
+            "bullets": [
+                "Designed and customized SharePoint 2013 and SharePoint Online sites for document management, team collaboration, and workflow automation.",
+                "Built custom workflows using SharePoint Designer and Power Automate, reducing manual approval and reporting effort.",
+                "Extended SharePoint functionality using JavaScript, REST APIs, and SPFx-style custom components.",
+                "Managed permissions, content types, and site structures to support secure and scalable enterprise usage."
+            ]
+        },
+        {
+            "company": "ShahPoint",
+            "title": "SharePoint Engineer",
+            "location": "",
+            "start_date": "Mar 2013",
+            "end_date": "Dec 2015",
+            "bullets": [
+                "Developed and maintained SharePoint 2010/2013 sites for internal collaboration, knowledge management, and reporting.",
+                "Customized SharePoint UI using master pages, JavaScript, jQuery, and CSS to align with business branding and usability requirements.",
+                "Implemented automated workflows for document approvals and notifications using SharePoint Designer.",
+                "Supported SharePoint integrations and data migrations while assisting with performance tuning and issue resolution."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computer Science",
+            "school": "Edinboro University of Pennsylvania",
+            "start_year": "2007",
+            "end_year": "2013"
+        }
+    ]
+}

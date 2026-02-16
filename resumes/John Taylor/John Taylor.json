@@ -1,0 +1,35 @@
+{
+  "name": "Nathan Kamenar",
+  "email": "nathankamenar124@outlook.com",
+  "phone": "+1 (218) 332-0680",
+  "address": "425 Arch Ave",
+  "location": "Greensburg, PA",
+  "postalCode": "15601",
+  "university": "Edinboro University of Pennsylvania",
+  "linkedin": "https://www.linkedin.com/in/nathan-kamenar-72ba84a8",
+  "github": "https://github.com/debugmaster",
+  "experience": [
+    {
+      "company": "KeyLogic",
+      "title": "Senior Software Engineer",
+      "location": "",
+      "start_date": "Aug 2016",
+      "end_date": "Present"
+    },
+    {
+      "company": "KeyLogic Systems",
+      "title": "SharePoint Engineer",
+      "location": "",
+      "start_date": "Jan 2016",
+      "end_date": "Jul 2016"
+    },
+    {
+      "company": "ShahPoint",
+      "title": "SharePoint Engineer",
+      "location": "",
+      "start_date": "Mar 2013",
+      "end_date": "Dec 2015"
+    }
+  ],
+  "education": []
+}
