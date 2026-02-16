@@ -36,32 +36,6 @@
                 "Collaborated closely with data science and ML teams to productionize models, including preprocessing pipelines, model versioning, and API endpoints for seamless frontend and partner integration.",
                 "Mentored engineers, led code reviews and architectural decisions, and drove Agile best practices, ensuring maintainable, scalable, and efficient Python-first full-stack solutions."
             ]
-        },
-        {
-            "company": "KeyLogic Systems",
-            "title": "SharePoint Engineer",
-            "location": "",
-            "start_date": "Jan 2016",
-            "end_date": "Jul 2016",
-            "bullets": [
-                "Designed and customized SharePoint 2013 and SharePoint Online sites for document management, team collaboration, and workflow automation.",
-                "Built custom workflows using SharePoint Designer and Power Automate, reducing manual approval and reporting effort.",
-                "Extended SharePoint functionality using JavaScript, REST APIs, and SPFx-style custom components.",
-                "Managed permissions, content types, and site structures to support secure and scalable enterprise usage."
-            ]
-        },
-        {
-            "company": "ShahPoint",
-            "title": "SharePoint Engineer",
-            "location": "",
-            "start_date": "Mar 2013",
-            "end_date": "Dec 2015",
-            "bullets": [
-                "Developed and maintained SharePoint 2010/2013 sites for internal collaboration, knowledge management, and reporting.",
-                "Customized SharePoint UI using master pages, JavaScript, jQuery, and CSS to align with business branding and usability requirements.",
-                "Implemented automated workflows for document approvals and notifications using SharePoint Designer.",
-                "Supported SharePoint integrations and data migrations while assisting with performance tuning and issue resolution."
-            ]
         }
     ],
     "education": [
