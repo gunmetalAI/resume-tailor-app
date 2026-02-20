@@ -289,11 +289,47 @@ Return ONLY the category on line 1 and tech stacks on line 2. No prefixes, no ex
     const formattedBasicResume = formatBasicResume(basicResumeData);
     console.log("Basic resume loaded and formatted for prompt");
 
+    // Calculate years of experience
+    const calculateYears = (experience) => {
+      if (!experience || experience.length === 0) return 0;
+
+      const parseDate = (dateStr) => {
+        if (dateStr.toLowerCase() === "present") return new Date();
+        return new Date(dateStr);
+      };
+
+      const earliest = experience.reduce((min, job) => {
+        const date = parseDate(job.start_date);
+        return date < min ? date : min;
+      }, new Date());
+
+      const years = (new Date() - earliest) / (1000 * 60 * 60 * 24 * 365);
+      return Math.round(years);
+    };
+
+    // Calculate years of experience from basic resume
+    const yearsOfExperience = calculateYears(basicResumeData.experience);
+    // Add 1 to years for display (e.g., 6 years becomes 7+ years)
+    const yearsForSummary = yearsOfExperience + 1;
+
     // STEP 3: Create the prompt with basic resume, job description, and tailoring guide
     console.log("Step 3: Preparing tailoring prompt with basic resume and job description...");
 
     // Load the tailoring guide (single file for all profiles)
     const tailoringGuide = loadTailoringGuide();
+
+    // Helper function to get title based on category
+    const getTitleForCategory = (category) => {
+      const titleMap = {
+        "AI/ML/Data": "Senior AI Engineer",
+        "Web": "Senior Software Engineer",
+        "Mobile": "Senior Software Engineer",
+        "QA/Automation/Testing": "Senior QA Engineer"
+      };
+      return titleMap[category] || "Senior Software Engineer";
+    };
+
+    const expectedTitle = getTitleForCategory(techCategory);
 
     // Build the comprehensive prompt with basic resume
     const tailoringPrompt = `You are a world-class ATS optimization expert. Your task is to tailor a basic resume to match a specific job description.
@@ -308,6 +344,13 @@ ${jd}
 
 ---
 
+## JOB CATEGORY:
+Category: ${techCategory}
+Expected Title: ${expectedTitle}
+Years of Experience (for summary): ${yearsForSummary}+ (calculated as ${yearsOfExperience} + 1)
+
+---
+
 ## TAILORING GUIDE:
 ${tailoringGuide}
 
@@ -318,8 +361,10 @@ ${tailoringGuide}
 2. Each company experience's bullets number must be the same as the number of bullets in the BASIC RESUME for that company.
 3. Tailor the content (title, summary, skills, and experience bullets) to match the JOB DESCRIPTION requirements.
 4. Follow the TAILORING GUIDE above for formatting, keyword optimization, and ATS scoring guidelines.
-5. Ensure all experience entries match the BASIC RESUME work history (same companies, titles, and date ranges).
-6. Enhance and customize the experience bullets to align with JD requirements while staying truthful to the candidate's background.
+5. **IMPORTANT:** Use the Expected Title "${expectedTitle}" for the resume title (based on category ${techCategory}). Do NOT use the exact job title from the JD.
+6. Ensure all experience entries match the BASIC RESUME work history (same companies, titles, and date ranges).
+7. **🚨 CRITICAL - Historical Accuracy:** DO NOT include AI/ML/LLM technologies (TensorFlow, PyTorch, LangChain, GPT, LLM, machine learning models, neural networks) in work experience before 2020. AI/ML was NOT widely used in production before 2020. For pre-2020 AI-related roles, focus on Python, data analysis, data processing, statistical analysis, ETL, or traditional software engineering instead.
+8. Enhance and customize the experience bullets to align with JD requirements while staying truthful to the candidate's background.
 
 Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}], "education":[{"degree":"...","school":"...","start_year":"...","end_year":"..."}, {...}]}`;
 

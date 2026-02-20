@@ -23,15 +23,21 @@ Analyze JD "About Us" section for **10-15 domain/compliance keywords** specific 
 ---
 
 ### **2. TITLE**
-- Use EXACT job title from JD
-- Examples: "Senior Data Scientist", "Senior Full Stack Engineer", "DevOps Engineer"
+- Use the **Expected Title** provided in the **JOB CATEGORY** section above
+- The Expected Title is determined based on the job category:
+  - **AI/ML/Data** → "Senior AI Engineer"
+  - **Web** → "Senior Software Engineer"
+  - **Mobile** → "Senior Software Engineer"
+  - **QA/Automation/Testing** → "Senior QA Engineer"
+- **CRITICAL:** Do NOT use the exact job title from the JD. Always use the Expected Title from the JOB CATEGORY section.
 
 ---
 
 ### **3. SUMMARY** (5-6 lines, 8-12 JD keywords + 3-5 domain keywords)
 
 **Structure:**
-- **Line 1:** [JD Title] with [years]+ years in [domain from JD] across startup and enterprise environments
+- **Line 1:** [Category-based Title] with [years+1]+ years in [domain from JD] across startup and enterprise environments
+  - **IMPORTANT:** Always add 1 to the calculated years of experience. For example, if the candidate has 6 years of experience, write "7+ years"
 - **Line 2:** Expertise in [domain keyword] + [3-4 EXACT JD technologies WITH versions if specified]
 - **Line 3:** Proven track record in [domain keyword] + [key achievement with metric: %, $, time, scale]
 - **Line 4:** Proficient in [3-4 more JD technologies/methodologies]
@@ -87,6 +93,11 @@ Total: ~70 skills (scannable and professional)
 - Generate the SAME number of bullets per each companies as in BASIC RESUME
 - 20–40 words per bullet, optimized for clarity and natural senior-engineer tone.
 - For each work experience, ensure all technologies listed were widely available and commonly used in production during that role's time period; do not include tools, frameworks, or practices released after the role ended or unlikely to have been adopted in that era.
+- **🚨 CRITICAL - AI/ML Technologies Timeline:**
+  - **DO NOT include AI/ML/LLM experience, tools, or frameworks (e.g., TensorFlow, PyTorch, LangChain, GPT, LLM, machine learning models, neural networks) in work experience before 2020.**
+  - AI/ML was NOT widely used in production before 2020. Including it would be historically inaccurate.
+  - **If JD is about AI/ML and the role is before 2020:** Focus on Python, data analysis, data processing, statistical analysis, data pipelines, ETL, data warehousing, or traditional software engineering instead. These are historically accurate for pre-2020 data/AI-related work.
+  - **For roles 2020 and later:** AI/ML technologies are acceptable and should be included if relevant to the JD.
 - Include 2-4 JD keywords per bullet
 - EVERY bullet needs a metric (%, $, time, scale, users)
 - Metrics have to be approximate. Use ranges or natural phrasing (e.g., '~40%', 'significant reduction', 'hundreds of thousands of users') when precise figures may feel unnatural. Ensure at least 50–60% of bullets include a metric, while the remainder focus on scope, ownership, or architectural impact.

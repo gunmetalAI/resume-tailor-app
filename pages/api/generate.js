@@ -56,6 +56,33 @@ export default async function handler(req, res) {
 
     const profileData = JSON.parse(fs.readFileSync(profilePath, "utf-8"));
 
+    // Helper function to get title based on category (used in both manual and normal paths)
+    const getTitleForCategory = (category) => {
+      const titleMap = {
+        "AI/ML/Data": "Senior AI Engineer",
+        "Web": "Senior Software Engineer",
+        "Mobile": "Senior Software Engineer",
+        "QA/Automation/Testing": "Senior QA Engineer"
+      };
+      return titleMap[category] || "Senior Software Engineer";
+    };
+
+    // Helper function to infer category from title (for manual AI response path)
+    const inferCategoryFromTitle = (title) => {
+      if (!title) return "Web";
+      const titleLower = title.toLowerCase();
+      if (titleLower.includes("ai") || titleLower.includes("ml") || titleLower.includes("machine learning") || titleLower.includes("data scientist")) {
+        return "AI/ML/Data";
+      }
+      if (titleLower.includes("qa") || titleLower.includes("tester") || titleLower.includes("test") || titleLower.includes("automation")) {
+        return "QA/Automation/Testing";
+      }
+      if (titleLower.includes("mobile") || titleLower.includes("ios") || titleLower.includes("android")) {
+        return "Mobile";
+      }
+      return "Web"; // Default
+    };
+
     // If manual AI response is provided, skip Steps 1-3 and go directly to JSON parsing
     if (manualAiResponse) {
       console.log("Using manual AI response - skipping Steps 1-3, going directly to PDF generation");
@@ -385,6 +412,7 @@ export default async function handler(req, res) {
 
       console.log(`✅ Matched ${matchedExperience.length} experience entries (using basic resume metadata with GPT details)`);
 
+
       // Helper function to clean resume title by removing parenthetical info and everything after role keywords
       const cleanResumeTitle = (title) => {
         if (!title) return title;
@@ -413,8 +441,23 @@ export default async function handler(req, res) {
         return title;
       };
 
-      // Clean the title
-      const cleanedTitle = cleanResumeTitle(resumeContent.title || "Senior Software Engineer");
+      // Infer category from title for manual AI response path
+      const inferredCategory = inferCategoryFromTitle(resumeContent.title);
+      const expectedTitle = getTitleForCategory(inferredCategory);
+      
+      // Check if AI's title matches one of our expected category-based titles
+      const aiTitle = resumeContent.title || "";
+      const allExpectedTitles = [
+        "Senior AI Engineer",
+        "Senior Software Engineer",
+        "Senior QA Engineer"
+      ];
+      
+      // If AI title matches an expected title, use it; otherwise use expected title for inferred category
+      const finalTitle = allExpectedTitles.includes(aiTitle) ? aiTitle : expectedTitle;
+      
+      // Clean the title (in case AI added extra info)
+      const cleanedTitle = cleanResumeTitle(finalTitle);
       
       // Clean the summary by replacing any full title references with cleaned title
       let cleanedSummary = resumeContent.summary || "";
@@ -801,6 +844,8 @@ Return ONLY the category on line 1 and tech stacks on line 2. No prefixes, no ex
 
     // Calculate years of experience from basic resume
     const yearsOfExperience = calculateYears(basicResumeData.experience);
+    // Add 1 to years for display (e.g., 6 years becomes 7+ years)
+    const yearsForSummary = yearsOfExperience + 1;
 
     // Prepare variables for prompt template (using basic resume data)
     const workHistory = basicResumeData.experience.map((job, idx) => {
@@ -823,6 +868,8 @@ Return ONLY the category on line 1 and tech stacks on line 2. No prefixes, no ex
     // Load the tailoring guide (single file for all profiles)
     const tailoringGuide = loadTailoringGuide();
 
+    const expectedTitle = getTitleForCategory(techCategory);
+
     // Build the comprehensive second prompt with basic resume
     const tailoringPrompt = `You are a world-class ATS optimization expert. Your task is to tailor a basic resume to match a specific job description.
 
@@ -836,6 +883,13 @@ ${jd}
 
 ---
 
+## JOB CATEGORY:
+Category: ${techCategory}
+Expected Title: ${expectedTitle}
+Years of Experience (for summary): ${yearsForSummary}+ (calculated as ${yearsOfExperience} + 1)
+
+---
+
 ## TAILORING GUIDE:
 ${tailoringGuide}
 
@@ -846,8 +900,10 @@ ${tailoringGuide}
 2. Each company experience's bullets number must be the same as the number of bullets in the BASIC RESUME for that company.
 3. Tailor the content (title, summary, skills, and experience bullets) to match the JOB DESCRIPTION requirements.
 4. Follow the TAILORING GUIDE above for formatting, keyword optimization, and ATS scoring guidelines.
-5. Ensure all experience entries match the BASIC RESUME work history (same companies, titles, and date ranges).
-6. Enhance and customize the experience bullets to align with JD requirements while staying truthful to the candidate's background.
+5. **IMPORTANT:** Use the Expected Title "${expectedTitle}" for the resume title (based on category ${techCategory}). Do NOT use the exact job title from the JD.
+6. Ensure all experience entries match the BASIC RESUME work history (same companies, titles, and date ranges).
+7. **🚨 CRITICAL - Historical Accuracy:** DO NOT include AI/ML/LLM technologies (TensorFlow, PyTorch, LangChain, GPT, LLM, machine learning models, neural networks) in work experience before 2020. AI/ML was NOT widely used in production before 2020. For pre-2020 AI-related roles, focus on Python, data analysis, data processing, statistical analysis, ETL, or traditional software engineering instead.
+8. Enhance and customize the experience bullets to align with JD requirements while staying truthful to the candidate's background.
 
 Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Skill1","Skill2"]},"experience":[{"title":"...","details":["bullet1","bullet2"]}], "education":[{degree: "...", school: "...", start_year: "...", end_year: "..."}, {...}]}`;
 
@@ -988,8 +1044,21 @@ Return ONLY valid JSON: {"title":"...","summary":"...","skills":{"Category":["Sk
       return title;
     };
 
-    // Clean the title
-    const cleanedTitle = cleanResumeTitle(resumeContent.title || "Senior Software Engineer");
+    // Use expected title if AI didn't return a valid title, or if AI's title doesn't match expected pattern
+    // (expectedTitle is already defined above in the prompt building section)
+    // Check if AI's title matches one of our expected category-based titles
+    const aiTitle = resumeContent.title || "";
+    const allExpectedTitles = [
+      "Senior AI Engineer",
+      "Senior Software Engineer",
+      "Senior QA Engineer"
+    ];
+    
+    // If AI title matches an expected title, use it; otherwise use expected title for this category
+    const finalTitle = allExpectedTitles.includes(aiTitle) ? aiTitle : expectedTitle;
+    
+    // Clean the title (in case AI added extra info)
+    const cleanedTitle = cleanResumeTitle(finalTitle);
     
     // Clean the summary by replacing any full title references with cleaned title
     let cleanedSummary = resumeContent.summary || "";
