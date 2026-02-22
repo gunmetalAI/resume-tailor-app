@@ -15,18 +15,33 @@
             "company": "SS&C Advent",
             "title": "Sr. Software Engineer",
             "location": "",
-            "start_date": "Jan 2019",
+            "start_date": "Mar 2024",
             "end_date": "Present",
             "bullets": [
-                "Engineered enterprise-grade web platforms using Ruby on Rails for core backend services and React / Angular for modern, responsive frontend experiences.",
-                "Designed and maintained Rails-based APIs, implementing RESTful endpoints, service objects, and background workflows using Sidekiq and Redis to support high-volume business operations.",
-                "Led data modeling and persistence strategies across PostgreSQL and MongoDB, optimizing ActiveRecord queries, indexes, and transactional boundaries.",
-                "Built and deployed AI-powered features using Python, FastAPI, and TensorFlow/PyTorch, integrating predictive analytics and intelligent search into Rails-backed systems.",
-                "Implemented comprehensive automated testing using RSpec, Jest, React Testing Library, Cypress, and xUnit, significantly reducing regression issues and improving release stability.",
-                "Optimized application performance through caching strategies, asynchronous processing, and database query tuning, improving response times and overall system throughput.",
-                "Developed and maintained CI/CD pipelines with GitHub Actions and Azure DevOps, enabling automated testing, zero-downtime deployments, and environment-based releases.",
-                "Collaborated closely with architects, product managers, and QA teams on system design, code reviews, and architectural decisions to ensure scalable and maintainable solutions.",
-                "Mentored junior engineers on Rails best practices, testing strategies, and clean architecture principles within an Agile/Scrum environment."
+                "Architected scalable Node.js backend services supporting enterprise SaaS workflows and high-throughput user activity.",
+                "Led design of RESTful API contracts and service boundaries, improving reliability and long-term maintainability.",
+                "Owned CI/CD pipelines using GitHub Actions and Azure DevOps, automating testing, builds, and cloud deployments.",
+                "Drove performance optimization initiatives including advanced caching strategies and asynchronous processing across services.",
+                "Played a key role in architecture reviews and technical decision-making for Node.js and full-stack services.",
+                "Partnered with frontend, platform, and data teams to align Node.js services with product and scalability requirements.",
+                "Mentored junior engineers, promoting best practices in Node.js development, testing discipline, and Agile delivery."
+            ]
+        },
+        {
+            "company": "SS&C Advent",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jan 2019",
+            "end_date": "Mar 2024",
+            "bullets": [
+                "Engineered enterprise web and mobile applications using React, Angular, and React Native, delivering responsive and high-performance cross-platform solutions.",
+                "Designed and maintained Node.js backend services, implementing RESTful APIs for core platform features and internal workflows.",
+                "Built and optimized PostgreSQL and MongoDB data layers, improving query performance, data integrity, and support for high-volume transactions.",
+                "Integrated AI-enabled backend services using Python and FastAPI to support intelligent search, recommendations, and data-driven features.",
+                "Implemented unit and integration testing using Jest, React Testing Library, Cypress, and xUnit, reducing regressions and improving release stability.",
+                "Improved application performance through caching strategies, asynchronous processing, and optimized data access patterns.",
+                "Collaborated with product managers and QA teams to translate requirements into scalable Node.js solutions within Agile/Scrum teams.",
+                "Participated in code reviews and debugging sessions, contributing to shared standards for clean architecture and maintainable code."
             ]
         },
         {

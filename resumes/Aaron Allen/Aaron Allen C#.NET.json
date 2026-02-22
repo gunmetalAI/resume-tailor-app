@@ -15,18 +15,33 @@
             "company": "SS&C Advent",
             "title": "Sr. Software Engineer",
             "location": "",
-            "start_date": "Jan 2019",
+            "start_date": "Mar 2024",
             "end_date": "Present",
             "bullets": [
-                "Architected and delivered enterprise-grade backend systems using C#/.NET Core and ASP.NET Core, designing RESTful APIs, microservices, and background processing pipelines supporting high-volume, business-critical workflows.",
-                "Led development of modern frontend applications using React, Angular, and React Native, improving usability and reducing feature delivery time through reusable component architectures and clean API integrations.",
-                "Designed and optimized SQL Server and PostgreSQL data models using Entity Framework Core, improving query performance and reducing database-related incidents through indexing, query tuning, and controlled migrations.",
-                "Integrated Python-based AI/ML services into .NET platforms using FastAPI and TensorFlow/PyTorch, enabling intelligent search, recommendation features, and predictive analytics used by internal teams and customer-facing applications.",
-                "Implemented comprehensive unit, integration, and end-to-end testing (xUnit, NUnit, Jest, React Testing Library, Cypress), increasing test coverage and significantly reducing production defects and regression issues.",
-                "Improved application performance and scalability by implementing Redis caching, asynchronous processing, and optimized data access patterns, reducing API response times and improving system stability under peak load.",
-                "Designed and maintained CI/CD pipelines using Azure DevOps and GitHub Actions, automating builds, tests, and deployments and reducing release cycles from days to hours.",
-                "Participated in architecture reviews and technical decision-making, ensuring solutions met security, maintainability, and scalability requirements for enterprise environments.",
-                "Mentored junior engineers through code reviews, pair programming, and technical guidance, improving team productivity and promoting best practices in design patterns, testing, and Agile development."
+                "Architected and delivered scalable backend services using C#/.NET Core, ASP.NET Core, and microservices patterns, supporting high-volume enterprise workloads.",
+                "Led frontend initiatives using React and React Native, improving feature delivery speed through component standardization and improved API contracts.",
+                "Integrated AI/ML services using Python, FastAPI, and TensorFlow/PyTorch, enabling predictive analytics and recommendation capabilities across customer-facing and internal systems.",
+                "Improved system scalability and reliability by implementing Redis caching, advanced asynchronous processing, and optimized data access strategies.",
+                "Designed and owned CI/CD pipelines using Azure DevOps and GitHub Actions, automating builds, testing, and deployments and reducing release cycles from days to hours.",
+                "Played a key role in architecture reviews and technical decision-making, ensuring security, scalability, and maintainability across enterprise platforms.",
+                "Mentored junior engineers through code reviews, pair programming, and technical guidance, promoting best practices in testing, design patterns, and Agile delivery."
+            ]
+        },
+        {
+            "company": "SS&C Advent",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jan 2019",
+            "end_date": "Mar 2024",
+            "bullets": [
+                "Engineered enterprise-grade backend systems using C#/.NET Core and ASP.NET Core, building RESTful APIs and background processing pipelines supporting business-critical workflows.",
+                "Developed modern frontend applications using React and Angular, delivering reusable components and clean API integrations to improve usability and development efficiency.",
+                "Designed and optimized SQL Server and PostgreSQL data models with Entity Framework Core, improving query performance through indexing, tuning, and controlled schema migrations.",
+                "Integrated Python-based services into .NET platforms using FastAPI, enabling intelligent search, recommendation features, and data-driven workflows.",
+                "Implemented unit and integration testing with xUnit, NUnit, and Jest, improving test coverage and reducing regression issues during frequent releases.",
+                "Improved application performance by implementing asynchronous processing and optimized data access patterns, reducing API response times under load.",
+                "Collaborated with product managers and QA teams to translate requirements into scalable technical solutions within Agile/Scrum environments.",
+                "Participated in code reviews and debugging sessions, contributing to shared standards for maintainability, testing, and clean architecture."
             ]
         },
         {

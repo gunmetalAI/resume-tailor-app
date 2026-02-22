@@ -15,18 +15,33 @@
             "company": "SS&C Advent",
             "title": "Sr. Software Engineer",
             "location": "",
-            "start_date": "Jan 2019",
+            "start_date": "Mar 2024",
             "end_date": "Present",
+            "bullets": [
+                "Led the design and delivery of AI-driven platform features, ensuring scalability, reliability, and maintainability across distributed services.",
+                "Owned CI/CD pipelines using GitHub Actions and Azure DevOps, automating testing, builds, and deployments to cloud environments.",
+                "Guided architecture decisions for AI and data-intensive services, improving system observability, fault tolerance, and performance under load.",
+                "Conducted code reviews and enforced engineering best practices, improving code quality and long-term maintainability.",
+                "Mentored junior and mid-level engineers, providing technical guidance on AI integration, backend design, and performance optimization.",
+                "Partnered with product, QA, and data teams to align AI initiatives with business goals and measurable outcomes.",
+                "Drove continuous optimization of AI-enabled services through profiling, monitoring, and iterative improvements in production environments."
+            ]
+        },
+        {
+            "company": "SS&C Advent",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jan 2019",
+            "end_date": "Mar 2024",
             "bullets": [
                 "Engineered enterprise web and mobile applications using React, Angular, and React Native, delivering responsive and high-performance cross-platform solutions.",
                 "Designed and maintained scalable Node.js backend services, implementing RESTful APIs for core platform features and internal workflows.",
                 "Managed PostgreSQL and MongoDB databases, optimizing queries, ensuring data integrity, and supporting high-volume transactional operations.",
-                "Built and deployed AI-powered features using Python, FastAPI, and TensorFlow/PyTorch, including intelligent search, recommendation engines, and predictive data analytics.",
-                "Implemented unit, integration, and end-to-end testing with Jest, React Testing Library, Cypress, and xUnit, maintaining high code quality and reducing production defects.",
+                "Built AI-powered backend services using Python and FastAPI, integrating TensorFlow and PyTorch models for intelligent search, recommendations, and predictive analytics.",
+                "Collaborated with product managers and designers to translate business requirements into production-ready AI-enabled features.",
+                "Implemented unit, integration, and end-to-end testing with Jest, React Testing Library, Cypress, and xUnit, improving test coverage and reducing regressions.",
                 "Optimized application performance through caching strategies, asynchronous processing, and query optimization, improving load times and system responsiveness.",
-                "Developed and maintained CI/CD pipelines with GitHub Actions and Azure DevOps, automating testing, builds, and deployments to cloud environments.",
-                "Participated in architecture design and code reviews, collaborating with product and QA teams to ensure maintainable, modular, and scalable code.",
-                "Mentored junior engineers and contributed to team best practices, including coding standards, design patterns, and Agile development processes."
+                "Actively participated in Agile/Scrum ceremonies, contributing to sprint planning, estimations, and iterative feature delivery."
             ]
         },
         {

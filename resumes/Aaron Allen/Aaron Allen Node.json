@@ -15,18 +15,33 @@
             "company": "SS&C Advent",
             "title": "Sr. Software Engineer",
             "location": "",
-            "start_date": "Jan 2019",
+            "start_date": "Mar 2024",
             "end_date": "Present",
             "bullets": [
+                "Architected scalable Node.js backend services supporting enterprise SaaS workflows and high-throughput user activity.",
+                "Led design of RESTful API contracts and service boundaries, improving reliability and long-term maintainability.",
+                "Owned CI/CD pipelines using GitHub Actions and Azure DevOps, automating testing, builds, and cloud deployments.",
+                "Drove performance optimization initiatives including advanced caching strategies and asynchronous processing across services.",
+                "Played a key role in architecture reviews and technical decision-making for Node.js and full-stack services.",
+                "Partnered with frontend, platform, and data teams to align Node.js services with product and scalability requirements.",
+                "Mentored junior engineers, promoting best practices in Node.js development, testing discipline, and Agile delivery."
+            ]
+        },
+        {
+            "company": "SS&C Advent",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jan 2019",
+            "end_date": "Mar 2024",
+            "bullets": [
                 "Engineered enterprise web and mobile applications using React, Angular, and React Native, delivering responsive and high-performance cross-platform solutions.",
-                "Designed and maintained scalable Node.js backend services, implementing RESTful APIs for core platform features and internal workflows.",
-                "Managed PostgreSQL and MongoDB databases, optimizing queries, ensuring data integrity, and supporting high-volume transactional operations.",
-                "Built and deployed AI-powered features using Python, FastAPI, and TensorFlow/PyTorch, including intelligent search, recommendation engines, and predictive data analytics.",
-                "Implemented unit, integration, and end-to-end testing with Jest, React Testing Library, Cypress, and xUnit, maintaining high code quality and reducing production defects.",
-                "Optimized application performance through caching strategies, asynchronous processing, and query optimization, improving load times and system responsiveness.",
-                "Developed and maintained CI/CD pipelines with GitHub Actions and Azure DevOps, automating testing, builds, and deployments to cloud environments.",
-                "Participated in architecture design and code reviews, collaborating with product and QA teams to ensure maintainable, modular, and scalable code.",
-                "Mentored junior engineers and contributed to team best practices, including coding standards, design patterns, and Agile development processes."
+                "Designed and maintained Node.js backend services, implementing RESTful APIs for core platform features and internal workflows.",
+                "Built and optimized PostgreSQL and MongoDB data layers, improving query performance, data integrity, and support for high-volume transactions.",
+                "Integrated AI-enabled backend services using Python and FastAPI to support intelligent search, recommendations, and data-driven features.",
+                "Implemented unit and integration testing using Jest, React Testing Library, Cypress, and xUnit, reducing regressions and improving release stability.",
+                "Improved application performance through caching strategies, asynchronous processing, and optimized data access patterns.",
+                "Collaborated with product managers and QA teams to translate requirements into scalable Node.js solutions within Agile/Scrum teams.",
+                "Participated in code reviews and debugging sessions, contributing to shared standards for clean architecture and maintainable code."
             ]
         },
         {

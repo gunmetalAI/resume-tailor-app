@@ -15,17 +15,33 @@
             "company": "SS&C Advent",
             "title": "Sr. Software Engineer",
             "location": "",
-            "start_date": "Jan 2019",
+            "start_date": "Mar 2024",
             "end_date": "Present",
             "bullets": [
-                "Engineered cross-platform mobile applications using React Native, delivering consistent user experiences across iOS and Android devices.",
-                "Developed and integrated mobile features such as offline data storage, background synchronization, and secure authentication flows, improving usability in low-connectivity environments.",
-                "Designed and consumed RESTful and GraphQL APIs from mobile clients, collaborating closely with backend teams to ensure efficient data transfer and scalability.",
-                "Optimized mobile application performance through asynchronous processing, state management optimization, and API response tuning, resulting in faster load times and smoother UI interactions.",
-                "Implemented unit, integration, and end-to-end testing for mobile flows using Jest, React Testing Library, and Cypress, reducing production regressions.",
-                "Automated mobile CI/CD pipelines with GitHub Actions and Azure DevOps, streamlining build, test, and release workflows for multi-environment deployments.",
-                "Collaborated in architecture design reviews, ensuring mobile-first considerations such as battery usage, network efficiency, and platform-specific behavior.",
+                "Led development of cross-platform mobile initiatives using React Native, driving architectural consistency and reusable component patterns.",
+                "Designed and optimized mobile-first data flows with a focus on battery usage, network efficiency, and responsive UI behavior.",
+                "Owned mobile CI/CD pipelines using GitHub Actions and Azure DevOps, automating build, test, and release workflows across environments.",
+                "Partnered with backend and platform teams to define API contracts and improve mobile scalability and reliability.",
+                "Conducted mobile architecture and code reviews, ensuring adherence to performance, security, and maintainability standards.",
+                "Drove mobile performance optimization efforts, improving load times, stability, and overall user experience.",
                 "Mentored junior engineers on mobile best practices, component architecture, and performance-aware development."
+            ]
+        },
+        {
+            "company": "SS&C Advent",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jan 2019",
+            "end_date": "Mar 2024",
+            "bullets": [
+                "Engineered cross-platform mobile applications using React Native, delivering consistent user experiences across iOS and Android devices.",
+                "Developed mobile features including offline data storage, background synchronization, and secure authentication flows to support low-connectivity scenarios.",
+                "Integrated RESTful and GraphQL APIs into mobile clients, collaborating with backend teams to ensure efficient data transfer and scalability.",
+                "Optimized mobile performance through asynchronous processing, state management improvements, and API response tuning.",
+                "Implemented unit and integration testing for mobile flows using Jest and React Testing Library, reducing regression issues during releases.",
+                "Collaborated with designers and product managers to translate UX requirements into reliable mobile implementations.",
+                "Diagnosed and resolved mobile-specific issues related to device performance, network reliability, and platform behavior.",
+                "Participated in Agile/Scrum ceremonies, contributing to sprint planning, estimations, and iterative delivery of mobile features."
             ]
         },
         {

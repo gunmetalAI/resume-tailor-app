@@ -15,18 +15,33 @@
             "company": "SS&C Advent",
             "title": "Sr. Software Engineer",
             "location": "",
-            "start_date": "Jan 2019",
+            "start_date": "Mar 2024",
             "end_date": "Present",
             "bullets": [
-                "Architected and delivered full-stack systems using Golang (Gin, Fiber) and Java (Spring Boot) for backend services, with React and Angular frontends, and Node.js for auxiliary services.",
-                "Designed and maintained polyglot microservice architectures, using Golang for latency-sensitive cloud-native services and Java/JVM for transaction-heavy workloads, integrating gRPC for internal service communication.",
-                "Built high-performance REST/GraphQL APIs backed by PostgreSQL, MongoDB, and Redis, including schema design, indexing strategies, cache optimization, and service orchestration.",
-                "Developed AI-powered features using Python, FastAPI, TensorFlow, and PyTorch, implementing predictive analytics, recommendation engines, and intelligent search functionality.",
-                "Implemented unit, integration, and end-to-end testing with Go testing framework, Jest, React Testing Library, Cypress, and xUnit, ensuring production stability and reliability.",
-                "Optimized application performance through caching, asynchronous processing, query tuning, and backend profiling, reducing latency across services.",
-                "Developed and maintained CI/CD pipelines using GitHub Actions and Azure DevOps, enabling automated multi-environment deployments and cloud-native orchestration.",
-                "Participated in architecture design and code reviews, collaborating with product and QA teams to ensure modular, maintainable, and scalable systems.",
-                "Mentored junior engineers and contributed to team best practices, including coding standards, design patterns, Agile processes, and service-level documentation."
+                "Architected polyglot microservice systems using Golang for latency-sensitive services and Java for transaction-heavy workloads.",
+                "Led design of high-performance APIs and internal gRPC services, improving reliability and reducing inter-service latency.",
+                "Owned performance optimization initiatives including backend profiling, cache strategies, and asynchronous processing across distributed services.",
+                "Designed and maintained CI/CD pipelines using GitHub Actions and Azure DevOps, enabling automated cloud-native deployments.",
+                "Guided architectural decisions around service boundaries, data ownership, and scalability in distributed environments.",
+                "Conducted code reviews and enforced engineering standards to improve maintainability, testability, and system resilience.",
+                "Mentored junior engineers on Go best practices, microservice design, and production debugging techniques."
+            ]
+        },
+        {
+            "company": "SS&C Advent",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jan 2019",
+            "end_date": "Mar 2024",
+            "bullets": [
+                "Developed backend services using Golang with Gin and Fiber, building REST and GraphQL APIs for cloud-native applications.",
+                "Contributed to Java Spring Boot services for transaction-heavy workflows while supporting Node.js services for auxiliary platform functionality.",
+                "Built and maintained PostgreSQL and MongoDB data layers, implementing schema design, indexing strategies, and query optimization.",
+                "Integrated Redis caching to improve response times and reduce load on backend services.",
+                "Implemented internal service communication using gRPC, supporting scalable microservice interactions.",
+                "Developed AI-enabled backend features using Python and FastAPI, integrating predictive analytics and intelligent search into platform workflows.",
+                "Implemented unit and integration testing using the Go testing framework, xUnit, Jest, and Cypress to improve reliability and reduce regressions.",
+                "Collaborated with product managers, QA, and senior engineers in Agile/Scrum teams to deliver scalable features on predictable release cycles."
             ]
         },
         {

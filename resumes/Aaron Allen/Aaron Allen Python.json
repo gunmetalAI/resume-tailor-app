@@ -15,19 +15,33 @@
             "company": "SS&C Advent",
             "title": "Sr. Software Engineer",
             "location": "",
-            "start_date": "Jan 2019",
+            "start_date": "Mar 2024",
             "end_date": "Present",
             "bullets": [
-                "Architected and maintained Python-first backend systems using FastAPI and Django, delivering secure, high-performance APIs and asynchronous task processing pipelines.",
-                "Developed full-stack web and mobile applications using React, Angular, and React Native, integrating with Python backend services for real-time data workflows.",
-                "Managed PostgreSQL, MongoDB, and Snowflake databases, implementing query optimization, indexing strategies, and high-volume transactional operations.",
-                "Built and deployed AI/ML features using Python, FastAPI, TensorFlow, and PyTorch, including intelligent search, predictive analytics, and recommendation engines.",
-                "Designed and operated RESTful and GraphQL APIs, optimizing for throughput, maintainability, and long-term scalability.",
-                "Implemented unit, integration, and end-to-end testing with PyTest, Jest, React Testing Library, Cypress, and xUnit, improving code reliability and deployment confidence.",
-                "Automated system tasks and deployments using PowerShell, Docker, and CI/CD pipelines, improving operational efficiency.",
-                "Optimized application performance through caching, asynchronous processing, and profiling, reducing latency and improving responsiveness.",
+                "Architected Python-first backend systems using FastAPI and Django, supporting scalable, enterprise-grade data and API workloads.",
+                "Led development of AI and ML-powered services using TensorFlow and PyTorch for predictive analytics, recommendations, and intelligent search.",
+                "Defined API standards and service boundaries to improve long-term scalability, observability, and maintainability.",
+                "Owned performance optimization initiatives including advanced caching strategies, asynchronous task pipelines, and backend profiling.",
+                "Designed and maintained CI/CD pipelines for Python services, improving deployment reliability and release velocity.",
                 "Contributed to C++ modules for legacy system integration and high-performance computation tasks.",
-                "Participated in architecture and code reviews, mentoring junior engineers, and promoting Python best practices, clean code, and maintainable system design."
+                "Mentored junior engineers and led code reviews, promoting Python best practices, clean architecture, and maintainable system design."
+            ]
+        },
+        {
+            "company": "SS&C Advent",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jan 2019",
+            "end_date": "Mar 2024",
+            "bullets": [
+                "Developed and maintained Python backend services using FastAPI and Django, delivering secure and high-performance RESTful APIs.",
+                "Built full-stack web and mobile applications using React, Angular, and React Native, integrating Python services for real-time data workflows.",
+                "Designed and optimized PostgreSQL and MongoDB databases, implementing indexing strategies and query tuning for high-volume transactions.",
+                "Implemented AI and data-driven features using Python and FastAPI, supporting intelligent search, analytics, and recommendation workflows.",
+                "Designed and consumed RESTful and GraphQL APIs, ensuring maintainability and scalability across services.",
+                "Implemented unit and integration testing using PyTest and xUnit, improving code reliability and reducing regressions.",
+                "Automated routine tasks and deployments using Docker, PowerShell, and CI/CD pipelines to improve operational efficiency.",
+                "Optimized application performance through caching, asynchronous processing, and profiling to reduce latency."
             ]
         },
         {

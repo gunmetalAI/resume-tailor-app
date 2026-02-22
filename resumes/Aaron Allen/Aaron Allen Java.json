@@ -15,18 +15,33 @@
             "company": "SS&C Advent",
             "title": "Sr. Software Engineer",
             "location": "",
-            "start_date": "Jan 2019",
+            "start_date": "Mar 2024",
             "end_date": "Present",
             "bullets": [
-                "Architected and delivered enterprise-grade full-stack applications using Java and Kotlin with Spring Boot, Spring MVC, and Hibernate, implementing modular, scalable backend services for core financial workflows.",
-                "Developed RESTful and GraphQL APIs using Spring Boot (Java/Kotlin), translating complex business requirements into transactional, high-performance services backed by PostgreSQL, MongoDB, and SQL Server.",
-                "Built responsive frontend interfaces with React, Angular, and React Native, integrating backend APIs, authentication flows, and real-time data updates.",
-                "Designed and deployed AI-powered features using Python, FastAPI, and TensorFlow/PyTorch, including predictive analytics, intelligent search, and recommendation engines.",
-                "Implemented microservices and background processing pipelines leveraging Kotlin and Java, asynchronous processing, scheduled jobs, and message-driven architectures.",
-                "Established secure authentication and authorization across distributed systems using OAuth2, JWT, and RBAC, aligning with enterprise security standards.",
-                "Built CI/CD pipelines using GitHub Actions and Azure DevOps, automating testing, builds, and cloud deployments, supporting multiple environments.",
-                "Optimized system performance with query tuning, caching strategies, asynchronous processing, and application profiling, improving throughput and response times.",
-                "Mentored junior engineers and conducted architecture and code reviews, promoting maintainable, modular code and team best practices."
+                "Architected and delivered modular, scalable backend systems using Java and Kotlin with Spring Boot for enterprise-grade financial platforms.",
+                "Led design of high-performance REST and GraphQL services, ensuring transactional integrity and scalability under peak load.",
+                "Designed and integrated AI-powered services using Python, FastAPI, and TensorFlow or PyTorch to enable predictive analytics, intelligent search, and recommendations.",
+                "Defined service boundaries and microservice architectures, guiding asynchronous processing and message-driven designs across distributed systems.",
+                "Designed and owned CI/CD pipelines using GitHub Actions and Azure DevOps, automating testing, builds, and multi-environment deployments.",
+                "Drove system-wide performance optimization initiatives, improving throughput, latency, and operational stability.",
+                "Mentored junior engineers and led architecture and code reviews, promoting clean design, testing discipline, and long-term maintainability."
+            ]
+        },
+        {
+            "company": "SS&C Advent",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jan 2019",
+            "end_date": "Mar 2024",
+            "bullets": [
+                "Developed enterprise backend services using Java and Kotlin with Spring Boot, Spring MVC, and Hibernate, supporting core financial and operational workflows.",
+                "Implemented RESTful and GraphQL APIs using Spring Boot, translating complex business requirements into transactional and reliable services.",
+                "Designed and maintained data persistence layers backed by PostgreSQL, MongoDB, and SQL Server, including schema design and query optimization.",
+                "Built responsive frontend interfaces using React and Angular, integrating backend APIs, authentication flows, and real-time data updates.",
+                "Implemented background processing and scheduled jobs using Java and Kotlin, supporting asynchronous and message-driven workflows.",
+                "Contributed to secure authentication and authorization mechanisms using OAuth2, JWT, and role-based access control.",
+                "Optimized application performance through query tuning, caching strategies, and JVM-level profiling.",
+                "Collaborated with product managers and QA teams in Agile/Scrum environments to deliver features across multiple release cycles."
             ]
         },
         {
