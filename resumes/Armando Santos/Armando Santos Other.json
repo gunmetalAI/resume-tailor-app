@@ -1,0 +1,64 @@
+{
+    "name": "Armando Santos",
+    "email": "armandosantoscode@outlook.com",
+    "phone": "linkedin.com/in/armando-prates-dos-santos-732610167/",
+    "address": "",
+    "location": "São Paulo",
+    "postalCode": "",
+    "university": "Centro Universitário Senac",
+    "linkedin": "https://www.linkedin.com/in/armando-prates-dos-santos-732610167/",
+    "github": "https://github.com/gunmetalAI",
+    "summary": "Senior Full Stack Developer with 10+ years of experience building scalable, business-critical applications using JavaScript, TypeScript, and Python across modern backend and frontend architectures. Strong expertise in React, Node.js, REST APIs, and cloud-native systems, delivering high-availability platforms with measurable performance gains. Proven track record in backend system design, API architecture, and cloud deployments, improving system performance by up to 45% in production environments. Highly experienced with CI/CD pipelines, containerization, and Agile engineering practices. Recognized technical leader and mentor, driving code quality, architectural consistency, and long-term maintainability across distributed teams.",
+    "skills": {
+        "Backend": ["Node.js", "NestJS", "Express.js", "Python (FastAPI, Django, Flask)"],
+        "Frontend": ["React.js", "Next.js", "Angular", "Vue.js", "TypeScript"],
+        "AI / Machine Learning": ["FastAPI-based ML services", "TensorFlow", "scikit-learn", "PyTorch", "Pandas", "NumPy", "spaCy"],
+        "Cloud & DevOps": ["AWS (ECS, Lambda, S3, RDS, CloudFormation)", "Docker", "Kubernetes", "Terraform", "GitHub Actions", "Jenkins"],
+        "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "DynamoDB", "Elasticsearch"],
+        "Automation & Testing": ["Jest", "PyTest", "Mocha", "Postman", "Newman"],
+        "Tools & Methodologies": ["Git", "Agile/Scrum", "CI/CD", "REST", "GraphQL", "WebSockets", "Microservices", "Event-Driven Architecture"],
+        "Monitoring & Observability": ["Prometheus", "Grafana", "ELK Stack", "New Relic"]
+    },
+    "experience": [
+        {
+            "company": "h2o-facilities LATAM",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Sep 2021",
+            "end_date": "Present",
+            "bullets": [
+                "Architected and developed full stack solutions using Node.js, Python, TypeScript, and React, supporting business-critical platforms used by 100K+ users across LATAM.",
+                "Designed scalable backend architectures and REST APIs, increasing system throughput by 45% while maintaining 99.9% uptime in cloud environments.",
+                "Led architectural decisions and conducted in-depth code reviews, acting as technical reference for a 10-engineer team, improving overall code quality by 35%.",
+                "Implemented CI/CD pipelines using cloud-native tooling, reducing deployment cycles from hours to under 15 minutes per release.",
+                "Collaborated closely with Product, QA, and DevOps teams throughout the full SDLC, reducing production incidents by 30%.",
+                "Mentored junior and mid-level developers, accelerating onboarding and increasing team delivery velocity by 25%.",
+                "Enhanced frontend applications with React and TypeScript, improving usability metrics and reducing user-reported issues by 20%.",
+                "Continuously refined engineering standards and best practices, strengthening long-term scalability and maintainability of core platforms."
+            ]
+        },
+        {
+            "company": "3E Engenharia em Eficiência Energética",
+            "title": "Software Engineer",
+            "location": "",
+            "start_date": "Jun 2016",
+            "end_date": "Dec 2020",
+            "bullets": [
+                "Developed backend services using Python and Node.js, supporting energy efficiency platforms processing millions of data points annually.",
+                "Built and optimized REST APIs, improving data integration performance by 40% across internal and external systems.",
+                "Implemented frontend features with React and JavaScript, enhancing data visualization and increasing user productivity by 30%.",
+                "Worked within Agile, cross-functional teams to deliver features faster, reducing delivery timelines by 20%.",
+                "Supported cloud-based deployments on AWS, improving platform reliability and achieving 99.7% availability.",
+                "Acted as technical mentor for junior developers, improving onboarding efficiency and code consistency by 25%."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bacharelado em Engenharia, Tecnologia em Engenharia da Computação",
+            "school": "Centro Universitário Senac",
+            "start_year": "2008",
+            "end_year": "2011"
+        }
+    ]
+}

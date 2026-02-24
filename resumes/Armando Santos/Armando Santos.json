@@ -1,0 +1,29 @@
+{
+  "name": "Armando Santos",
+  "email": "armandosantoscode@outlook.com",
+  "phone": "linkedin.com/in/armando-prates-dos-santos-732610167/",
+  "address": "",
+  "location": "São Paulo",
+  "postalCode": "",
+  "university": "Centro Universitário Senac",
+  "linkedin": "https://www.linkedin.com/in/armando-prates-dos-santos-732610167/",
+  "github": "https://github.com/gunmetalAI",
+  "experience": [
+      {
+          "company": "h2o-facilities LATAM",
+          "title": "Senior Software Engineer",
+          "location": "",
+          "start_date": "Sep 2021",
+          "end_date": "Present"
+      },
+      {
+          "company": "3E Engenharia em Eficiência Energética",
+          "title": "Software Engineer",
+          "location": "",
+          "start_date": "Jun 2016",
+          "end_date": "Dec 2020"
+      }
+  ],
+  "education": [
+  ]
+}

@@ -309,8 +309,7 @@ Return ONLY the category on line 1 and tech stacks on line 2. No prefixes, no ex
 
     // Calculate years of experience from basic resume
     const yearsOfExperience = calculateYears(basicResumeData.experience);
-    // Add 1 to years for display (e.g., 6 years becomes 7+ years)
-    const yearsForSummary = yearsOfExperience + 1;
+    const yearsForSummary = yearsOfExperience;
 
     // STEP 3: Create the prompt with basic resume, job description, and tailoring guide
     console.log("Step 3: Preparing tailoring prompt with basic resume and job description...");
@@ -321,7 +320,7 @@ Return ONLY the category on line 1 and tech stacks on line 2. No prefixes, no ex
     // Helper function to get title based on category
     const getTitleForCategory = (category) => {
       const titleMap = {
-        "AI/ML/Data": "Senior AI Engineer",
+        "AI/ML/Data": "Senior Software Engineer",
         "Web": "Senior Software Engineer",
         "Mobile": "Senior Software Engineer",
         "QA/Automation/Testing": "Senior QA Engineer"
@@ -347,7 +346,7 @@ ${jd}
 ## JOB CATEGORY:
 Category: ${techCategory}
 Expected Title: ${expectedTitle}
-Years of Experience (for summary): ${yearsForSummary}+ (calculated as ${yearsOfExperience} + 1)
+Years of Experience (for summary): ${yearsForSummary}+ (calculated as ${yearsOfExperience})
 
 ---
 
