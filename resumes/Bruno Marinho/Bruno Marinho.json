@@ -1,0 +1,44 @@
+{
+    "name": "Bruno Marinho",
+    "email": "brunomarinho2013@outlook.com",
+    "phone": "linkedin.com/in/bruno-m-8b02a6385",
+    "address": "R. Felipe Uebel, 707, Santo Andre",
+    "location": "São Leopoldo, Rio Grande do Sul, Brazil",
+    "postalCode": "93044-000",
+    "university": "Federal University of Rio de Janeiro",
+    "linkedin": "https://www.linkedin.com/in/bruno-m-8b02a6385/",
+    "github": "https://github.com/willy-willy-coder",
+    "summary": "Senior Full Stack Python Developer with 12+ years of experience designing, developing, and deploying web applications and AI-powered solutions in retail, insurance, logistics, and enterprise systems. Proficient in Python (FastAPI, Django, Flask), React.js, Next.js, Node.js, and integrating LLMs, NLP models, and AI pipelines for automation and predictive analytics. Skilled in RESTful and GraphQL API design, microservices architecture, database design (PostgreSQL, MongoDB), and cloud deployments (AWS, Azure). Strong expertise in unit and integration testing (Jest, PyTest, Supertest), performance optimization, CI/CD, and DevOps practices. Experienced in Agile environments, collaborating with cross-functional teams to deliver scalable, maintainable, and high-performance applications.",
+    "skills": ["JavaScript (ES6+)", "TypeScript", "Python", "Node.js", "React.js", "Next.js", "Angular", "Express.js", "FastAPI", "Django", "Flask", "RESTful APIs", "GraphQL", "Microservices", "LLMs", "NLP models", "AI pipelines", "Predictive Analytics", "Redux Toolkit", "Material UI", "Tailwind CSS", "RxJS", "React Hook Form", "PostgreSQL", "MongoDB", "Redis", "Firebase", "Database Design", "Query Optimization", "AWS", "Azure", "Docker", "Kubernetes", "Terraform", "CI/CD (Jenkins, GitLab)", "Test-Driven Development (TDD)", "Jest", "Supertest", "PyTest", "Jasmine/Karma", "Capybara", "xUnit", "NUnit", "Agile (Scrum, Kanban)", "Serverless Architecture", "Performance Optimization", "Version Control (Git)"],
+    "experience": [
+        {
+            "company": "Turing",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Apr 2022",
+            "end_date": "Present"
+        },
+        {
+            "company": "Andela",
+            "title": "Senior Software Engineer",
+            "location": "",
+            "start_date": "Apr 2018",
+            "end_date": "Mar 2022"
+        },
+        {
+            "company": "Accenture Brasil",
+            "title": "Software Developer",
+            "location": "",
+            "start_date": "Feb 2014",
+            "end_date": "Jan 2018"
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor’s degree in Computer Science",
+            "school": "Federal University of Rio de Janeiro",
+            "start_year": "Mar 2010",
+            "end_year": "Dec 2013"
+        }
+    ]
+}
